@@ -1,16 +1,16 @@
 # Site settings
 title: Kode Kitab
-email: hemantkumar@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  
+  Kode kitab is a code book, literally. Other than an alliteration in 
+  somewhat English and the Hindi language this is a place for me to pen 
+  down my thoughts and lessons learnt while creating software so that 
+  I do not forget.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://hemantkumar.net" # the base hostname & protocol for your site
 twitter_username: _hemantksingh
 github_username:  hemantksingh
 linkedin_username: hemantkrsingh
-facebook_username: hemantksingh
 
 # Build settings
 markdown: kramdown

@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi I,m Hemant - a software engineer based in Manchester UK currently working at ThoughtWorks. Writing software for the past 8 years I have learnt a few lessons that I try to share in this space. I spend a lot of time thinking about how to build software the '*right*' way (if there is such a thing) and care about how it is built. Be it designing large scale databases or business critical applications, the opportunity of coming up with a software solution to a business problem and improving it over time is an absorbing exercise. I believe in lean development, just enough design up-front and delivering effective software through TDD.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I'm interested in functional programming, designing distributed systems and studying interaction mechanisms between distributed software components. I also write and speak about different ways of writing software and testing it. Amidst rambling about stuff I also manage to do some work which is available on my [GitHub](https://github.com/hemantksingh) page. It has a list of random things from simple code katas to configuring a nodejs server using [Vagrant](https://www.vagrantup.com/).
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Professionally, I have designed and led the development of [Advanced Legal's](http://advanced-legal.co.uk/) digital form production, document production and workflow management systems. Prior to this I worked at [Standard Life](http://standardlife.co.uk/), building complex insurance systems and business workflows for processing life and pension policies.
+
+When not at work - cricket, squash, yoga and photography keep me occupied. Incidentally I also happen to have completely dispassionate and neutral opinions and views encompassing politics, history, Indian philosophy and cultural thought. Some of my musings can be found on [Twitter](https://twitter.com/_hemantksingh) and in this space too.

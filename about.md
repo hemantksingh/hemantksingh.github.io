@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: About Hemant Kumar
 ---
 
 Hi I'm Hemant - a software engineer based in Manchester UK currently working at [ThoughtWorks](http://www.thoughtworks.com/). Writing software for the past 8 years I have learnt a few lessons that I try to share in this space. I spend a lot of time thinking about how to build software the '*right*' way (if there is such a thing) and care about how it is built. Be it designing large scale databases or business critical applications, the opportunity of coming up with a software solution to a business problem and improving it over time is an absorbing exercise. I believe in lean development, just enough design up-front and delivering effective software through TDD.

@@ -1,0 +1,29 @@
+---
+layout: page
+title: Kode Kitab
+permalink: /kodekitab/
+description: Kode Kitab is a code book, literally. Other than an alliteration in 
+  somewhat English and the Hindi language this is a place for me to pen 
+  down my thoughts and lessons learnt while creating software so that 
+  I do not forget. You may call it a blog too, but I am still figuring out how to write one.
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.categories contains 'kodekitab' %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

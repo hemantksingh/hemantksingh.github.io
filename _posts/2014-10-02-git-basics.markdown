@@ -5,6 +5,7 @@ date: '2014-10-02T11:23:00.000-08:00'
 author: Hemant Kumar
 tags: git
 categories: kodekitab
+comments: true
 modified_time: '2015-02-26T11:23:46.244-08:00'
 ---
 

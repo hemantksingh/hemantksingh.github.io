@@ -9,11 +9,9 @@ comments: true
 modified_time: '2015-05-18T07:50:46.244-08:00'
 ---
 
-Mocks are widely used in most development teams I've worked with practising TDD. According to [Uncle Bob](http://blog.8thlight.com/uncle-bob/2014/05/10/WhenToMock.html) *A mock object is a very powerful tool, providing two major benefits: isolation and introspection. But like all power tools, mocks come with a cost*.
+Mocks are widely used in most development teams I've worked with practising TDD. According to [Uncle Bob](http://blog.8thlight.com/uncle-bob/2014/05/10/WhenToMock.html) *A mock object is a very powerful tool, providing two major benefits: isolation and introspection. But like all power tools, mocks come with a cost*. He goes on to list the benefits as well as possible issues of using mocks. Between the two extremes of too many mocks and no mocks I tend to start with no mocks until I absolutely and necessarily need one. Therefore, I am always interested in techniques that allow me the freedom of working without learning an external mocking framework. In statically typed languages like Java and C#, interface based poymorphism allows us to use mocked implementations for tests. Functional programming provides an alternative to interface based polymorphism.
 
-He goes on to list the benefits as well as possible issues of using mocks. Between the two extremes of too many mocks and no mocks I tend to start with no mocks until I absolutely and necessarily need one. Therefore, I am always interested in techniques that allow me the freedom of working without learning an external mocking framework. In statically typed languages like Java and C#, interface based poymorphism allows us to use mocked implementations for tests. Functional programming provides an alternative to interface based polymorphism.
-
-Consider a problem where the quality of an item needs to be kept up to date for inventory management purposes. I am using Java in this example just because I have tried to learn a Java mocking framework recently - [Mockito](http://mockito.org/). It can better illustrate the pain I've had to go through trying to learn Mockito's domain specific language and combination of dots and parentheses and this could have been true for any other framework too.
+Consider a problem where the quality of an item needs to be kept up to date for inventory management purposes. I am using Java in this example just because I have had to learn a Java mocking framework - [Mockito](http://mockito.org/) on a recent project. It can better illustrate the pain I've had to go through trying to learn Mockito's domain specific language and its combination of dots and parentheses. This pain is not specific to Mockito and could very well be present for any other framework as well.
 
 ```java
 
@@ -61,7 +59,7 @@ public void ensuresUpdatedItemIsSaved() {
 }
 ```
 
-The test now establishes the correctness of the item being saved but I've had to write a lot of frameworky code in order to achieve that. Apart from figuring out whether the parantheses should go before or after the 'verify' it also requires an understanding of the domain specific language of the mocking framework. Frankly the 3 lines of code before the assertion is just noise, I'd rather do without. It is just an obstruction in the way of the most important part of the test i.e. the assertion. When I or someone else revists this test for a change it shouldn't require navigating through all this noise to reach the assertion. So is there an alternative?
+The test now establishes the correctness of the item being saved but I've had to write a lot of frameworky code in order to achieve that. Apart from figuring out whether the parantheses should go before or after the 'verify' it also requires an understanding of the domain specific language of the mocking framework. Frankly the 3 lines of code before the assertion is just noise, I'd rather do without. It is just an obstruction in the way of the most important part of the test i.e. the assertion. When I or someone else revists this test for a future change it shouldn't require navigating through all this noise to reach the assertion. So is there an alternative?
 
 Provided the ItemRepository has a single method, as explained in a [previous post](http://hemantkumar.net/kodekitab/2015/01/04/from-object-to-function-composition.html) Single-method interfaces are easy to replace with the usage of closures and "function pointers". 
 

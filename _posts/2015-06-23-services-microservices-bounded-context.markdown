@@ -11,9 +11,10 @@ modified_time: '2015-08-03T08:08:46.244-08:00'
 
 I was at the DDD exchange recently where we had the likes of [Udi Dahan](https://twitter.com/UdiDahan), [Eric Evans](https://twitter.com/ericevans0) and [Scott Wlaschin](https://twitter.com/ScottWlaschin) on the panel. In a post event Q&A session I asked the panel - *"Is microservices SOA renamed? "* which triggered an hour long debate. The panelists argued amongst themselves about what exactly a service or a microservice means. By the end of the debate I doubt any one was any more wiser. Clearly there was no consensus on the definition of the word service and what it means. It is a term that is widely used and abused in our industry but we do not seem to have a common understanding of it. This raised a few questions in my head. Disappointed with the expert advice, I decided to look out for a definition of my own.
 
-The dictionary definition of a service is - *"the action of helping or doing work for someone"*. Is a microservice significantly different from a service? In order to come to a definitive answer, lets recollect the knowledge that is already out there. 
+The dictionary definition of a service is - *“the action of helping or doing work for someone”*. Is a microservice significantly different from this definition? In order to come to a definitive answer, lets recollect the knowledge that is already out there. 
 
-####*"Microservices aim to do SOA well, it is a specific approach of achieving SOA in the same way as XP and Scrum are specific approaches for Agile software development."* - Sam Newman (Building Microservices)####
+<blockquote>“ Microservices aim to do SOA well, it is a specific approach of achieving SOA in the same way as XP and Scrum are specific approaches for Agile software development.” - Sam Newman (Building Microservices)
+</blockquote>
 
 Now according to SOA (Service orientated architecture) a service has the following tenets:
 

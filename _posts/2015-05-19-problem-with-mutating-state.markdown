@@ -6,13 +6,13 @@ author: Hemant Kumar
 tags: functional
 categories: kodekitab
 comments: true
-modified_time: '2015-07-27T23:50:46.244-08:00'
+modified_time: '2015-08-03T23:50:46.244-08:00'
 ---
 
 The purpose of any computer program is to take some inputs and produce an output. Producing an output causes the program to have an effect which means during its execution cycle, the program changes certain values. A live program models the real world where things change frequently over time and in parallel. But while writing programs we only have a static view of the problem domain and with the best of intentions and tools at hand we try to manage state change in our program as it would happen in the real world. This leaves us having to deal with values that change over time. Are OO languages capable of handling this complexity easily or do we need to look further?
 
 
-*“No man ever steps in the same river twice, for it's not the same river and he's not the same man.” - Heraclitus*
+<blockquote>“No man ever steps in the same river twice, for it's not the same river and he's not the same man.” - Heraclitus</blockquote>
 
 Rich Hickey in his [keynote](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey) at the JVM Languages summit talked about value, identity and state. Values are essentially constants that do not change.  The flowing water in a river makes the river change constantly over time, this introduces the concept of identity. Identity is a succession of related values where the current one is caused from the previous. State is the value of an identity at a given time. 
 

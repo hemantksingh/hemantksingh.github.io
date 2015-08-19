@@ -11,14 +11,14 @@ modified_time: '2015-08-03T08:08:46.244-08:00'
 
 I was at the DDD exchange recently where we had the likes of [Udi Dahan](https://twitter.com/UdiDahan), [Eric Evans](https://twitter.com/ericevans0) and [Scott Wlaschin](https://twitter.com/ScottWlaschin) on the panel. In a post event Q&A session I asked the panel - *"Is microservices SOA renamed? "* which triggered an hour long debate. The panelists argued amongst themselves about what exactly a service or a microservice means. By the end of the debate I doubt any one was any more wiser. Clearly there was no consensus on the definition of the word service and what it means. It is a term that is widely used and abused in our industry but we do not seem to have a common understanding of it. This raised a few questions in my head. Disappointed with the expert advice, I decided to look out for a definition of my own.
 
-The dictionary definition of a service is - *“the action of helping or doing work for someone”*. Is a microservice significantly different from this definition? In order to come to a definitive answer, lets recollect the knowledge that is already out there. 
+The dictionary tells me that a service is - *“the action of helping or doing work for someone”*. Is a microservice significantly different from this definition? In order to come to a definitive answer, lets recollect the knowledge that is already out there. 
 
 <blockquote>“ Microservices aim to do SOA well, it is a specific approach of achieving SOA in the same way as XP and Scrum are specific approaches for Agile software development.” - Sam Newman (Building Microservices)
 </blockquote>
 
 Now according to SOA (Service orientated architecture) a service has the following tenets:
 
-* Services are autonomous - Coherent single responsibility.
+* Services are autonomous - Cohesive single responsibility.
 * Services have explicit boundaries - Loosely coupled, owns its data and business rules.
 * Service share contract and schema, not Class or Type or a Database
 * Service compatibility is based upon policy - Explicitly state the constraints (structural and behavioral) which the service imposes on its usage.
@@ -27,14 +27,14 @@ These tenets do not appear to be too different from the object oriented design p
 
 #What is a Service?#
 
-* Autonomy of a service suggests it is independent of other services to perform its tasks, therefore in order to be independent it needs to have one and only one well defined responsibility. It is a technical authority for a specific business capability. 
-* Boundaries are drawn to restrict free movement and ensure all movement is governed by a set of rules. In the context of a service this restriction is enforced on free movement of data across a service boundary. All data and business rules reside within the service making the service autonomous and defining an explicit boundary.
+* Autonomy of a service suggests it is independent of other services to perform its tasks, therefore in order to be independent it needs to have one and only one well defined responsibility. Uncle Bob has summarised SRP rather fittingly - *“Gather together those things that change for the same reason and separate those things that change for different reasons.”* In short a service should not have more than on reason to change.
+* Boundaries are drawn to restrict free movement and ensure all movement is governed by a set of rules. In the context of a service this restriction is enforced on free movement of data across a service boundary. All data and business rules reside within the service imposing strict restrictions on any movement in and out.
 * Services interact with other services through a shared contract by sending messages. These messages contain stable data (immutable, think events). The data going through service boundaries is minimal and very basic.
-* Usage of a service enforces certain constraints, the incoming messages conform to an expected structure and format.
+* Usage of a service enforces certain constraints, the incoming messages conform to an expected structure and format. 
 
 #What a service is NOT?#
 * Anything with the word *Service* appended to it does not automatically qualify it to be a service.
-* A service that has only a function is a function not a service, like calculation, validation. Making it remotely callable through RPC/SOAP still does not make it a service. A service is a bit more coarse-grained and it satisfies a business need.
+* A service that has only a function is a function not a service, like calculation, validation (not be confused with DDD's *Domain Services* which is a more granular concept). Making it remotely callable through RPC/SOAP still does not make it a service.
 * A service that has only data is a database not a service. Doing CRUD through REST over HTTP does not change that.
 
 Philip Kruchten’s 4+1 [Architecture View Model](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model) describes software architecture based on multiple concurrent views.

@@ -6,15 +6,15 @@ author: Hemant Kumar
 tags: git
 categories: kodekitab
 comments: true
-modified_time: '2015-02-26T11:23:46.244-08:00'
+modified_time: '2015-10-15T11:23:46.244-08:00'
 ---
 
 # Git overview #
 * Distributed Version Control
 * Data Consistency and Integrity
 * Performance - Diffs are local therefore quicker, do not have to go over the network to perform diffs.
-* Merging - Auto merging updates the changed file(s) if the changes are not on the same line of the changed file.
-* Conflicts (changes on the same lines of the changed file) have to be merged manually.
+* Merging - Automatic merge if there are no conflicts (more than one change at the same position of the modified file). 
+* Conflicts have to be merged manually.
 
 
 ### Git commands ###
@@ -214,6 +214,15 @@ Go back to the previous commit
 {% highlight sh %}
 $ git reset --hard HEAD~1
 {% endhighlight %}
+
+****************************************************************
+**Finding commits**
+
+Find a commit with text "text to find"
+{% highlight sh %}
+$ git log --grep="text to find" --pretty=oneline
+{% endhighlight %}
+
 ****************************************************************
 **Stash your work**
 

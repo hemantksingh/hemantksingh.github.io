@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Services, microservices, bounded context, actors.. the lot
-date: '2015-07-30T07:23:00.000-08:00'
+date: '2015-10-30T07:23:00.000-08:00'
 author: Hemant Kumar
 tags: microservices, bounded context, soa
 categories: kodekitab
 comments: true
-modified_time: '2015-10-29T08:08:46.244-08:00'
+modified_time: '2015-10-30T08:08:46.244-08:00'
 ---
 
 I was at the DDD exchange recently where we had the likes of [Udi Dahan](https://twitter.com/UdiDahan), [Eric Evans](https://twitter.com/ericevans0) and [Scott Wlaschin](https://twitter.com/ScottWlaschin) on the panel. In a post event Q&A session I asked the panel - *"Is microservices SOA renamed? "* which triggered an hour long debate. The panelists argued amongst themselves about what exactly a service or a microservice means. By the end of the debate I doubt any one was any more wiser. Clearly there was no consensus on the definition of the word service and what it means. It is a term that is widely used and abused in our industry but we do not seem to have a common understanding of it. This raised a few questions in my head. Disappointed with the expert advice, I decided to look out for a definition of my own.

@@ -8,4 +8,4 @@ twitter_username: _hemantksingh
 github_username:  hemantksingh
 linkedin_username: hemantkrsingh
 footer: © Hemant Kumar | Hosted by GitHub and powered by Jekyll
-markdown: Redcarpet
+markdown: kramdown

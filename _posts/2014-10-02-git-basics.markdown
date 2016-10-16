@@ -224,6 +224,15 @@ $ git log --grep="text to find" --pretty=oneline
 {% endhighlight %}
 
 ****************************************************************
+**Create patch**
+
+Creating a patch
+{% highlight sh %}
+$ git diff > <name>.patch
+{% endhighlight %}
+
+
+****************************************************************
 **Stash your work**
 
 {% highlight sh %}

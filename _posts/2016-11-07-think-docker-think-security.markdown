@@ -27,7 +27,7 @@ So what sort of security issues should you be worried about that could be exploi
 
 * ***Tampered images***: You need to be sure that the image that you are running is from a trusted source and not from an attacker who has tricked you. The images that you run should also be up to date, scanned and without any known security vulnerabilities.
 
-* ***Secret Distribution***: Secrets for your applications (like API keys and Database passwords) need to be protected from falling into the wrong hands. You need to be very careful before putting these as plain text in source code, especially in a Dockerfile. Once the secret has made it into the Dockerfile, even if you remove the secret later, an attacker can still retrieve it from the history of the Docker image built from the your Dockerfile. Ideally using a secret vault for storing application secrets and allowing restricted access to the secret vault serves as a secure mechanism to distribute secrets.
+* ***Secret Distribution***: Secrets for your applications (like API keys and Database passwords) need to be protected from falling into the wrong hands. You need to be very careful before putting these as plain text in source code; for example in a Dockerfile. Once the secret has made it into the Dockerfile, even if you remove the secret later, an attacker can still retrieve it from the history of the Docker image built from the Dockerfile. Ideally using a secret vault for storing application secrets and allowing restricted access to the secret vault serves as a secure mechanism to distribute secrets.
 
 ## Mitigations
 

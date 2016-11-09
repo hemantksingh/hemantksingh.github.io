@@ -9,15 +9,17 @@ comments: true
 modified_time: '2016-11-07T07:23:00.000-08:00'
 ---
 
-Docker is pretty cool, the ability to completely abstract the underlying operating system (OS) and run your app across multiple platforms is pretty awesome. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments. I have been using Docker for local development, testing as well as in production. It is great to get started with when setting up local builds and running tests in a repeatable manner. But running Docker in a production environment is a different cup of tea. You need to be aware of the potential security risks and their mitigation.
+Docker is pretty cool, the ability to completely abstract the underlying operating system (OS) and run your app across multiple platforms (local machine, cloud, on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running, is awesome. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments.
+
+I have been using Docker for local development, testing as well as in production. It is great to get started with setting up local builds and running tests in a repeatable and consistent manner. But using Docker to run your app in production and putting it on the internet is a different ballgame. You need to be aware of the potential security risks and the mitigation techniques.
 
 ## The Basics
-Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight, it is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
+Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight. It is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
 
-Docker uses the resource isolation features of the Linux kernel such as **cgroups** and **kernel namespaces**, and a **union file system** (such as AUFS) to allow independent isolated containers to run within a single Linux instance. *Namesapces* allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.
+Docker uses the resource isolation features of the Linux kernel such as **Namespaces**, **cgroups** and **capabilities** to allow independent isolated containers to run within a single Linux instance. *Namesapces* allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.
 
 ## Things that could go wrong
-So what sort of security issues should you be worried about that could be exploited? I was at a GOTO conference in Stockholm this year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some mentioned below. The following list is not a comprehensive one but should get you thinking. You can look at [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) to get an elaborate list of security recommendations.
+So what sort of security issues should you be worried about that could affect the way you run your apps inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking. You can look at [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) to get an elaborate list of docker security recommendations.
 
 * ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
 
@@ -31,7 +33,7 @@ So what sort of security issues should you be worried about that could be exploi
 
 ## Mitigations
 
-Now that we know the possible security issues with containers, following are some precautions that can be taken in order to mitigate the security risks.
+Now that we know some of the key container security issues, lets look at some precautions that can be taken in order to mitigate these security risks.
 
 ### Host and kernel
 Use a good quality supported host system for running containers with regular security updates. Keep the kernel updated with the latest security fixes. The security of the kernel is paramount.

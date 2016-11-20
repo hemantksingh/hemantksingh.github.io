@@ -13,7 +13,7 @@ Docker is pretty cool, the ability to completely abstract the underlying operati
 
 I have been using Docker for local development, testing as well as in production. It is great to get started with setting up local builds and running tests in a repeatable and consistent manner. But using Docker to run your app in production and putting it on the internet is a different ballgame. You need to be aware of the potential security risks and the mitigation techniques.
 
-## The Basics
+## The basics
 Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight. It is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
 
 Docker uses the resource isolation features of the Linux kernel such as **Namespaces**, **cgroups** and **capabilities** to allow independent isolated containers to run within a single Linux instance. *Namesapces* allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.

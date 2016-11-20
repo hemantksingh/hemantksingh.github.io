@@ -5,6 +5,7 @@ date: '2016-11-20T02:46:00.000-08:00'
 author: Hemant Kumar
 tags: demonetisation
 categories: politics
+comments: true
 modified_time: '2016-11-20T02:46:00.000-08:00'
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Demonetisation: Surgical strike or carpet bomb
+title: "Demonetisation: Surgical strike or carpet bomb"
 date: '2016-11-20T02:46:00.000-08:00'
 author: Hemant Kumar
 tags: demonetisation

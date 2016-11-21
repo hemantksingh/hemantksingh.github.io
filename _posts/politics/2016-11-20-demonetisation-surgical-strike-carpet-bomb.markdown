@@ -15,9 +15,9 @@ At 8pm on the 8th of November prime minister Narendra Modi announced that from m
 * Stamping out black money
 * Move towards a cashless economy
 
-This was a bold move as a surprise of this nature is meant to disrupt an economy in which 90% of all transactions are conducted in cash and the two cancelled notes account for 86% of all the currency in circulation. This was both economically and politically a risky move . The prime minister even had to make an emotional plea to the nation to back him and stick with the hardships caused by demonetisation for 50 days. In the past couple of weeks there has been a lot of anguish and distress amongst the general public with hours of queues outside banks and even [deaths](http://www.huffingtonpost.in/2016/11/17/day-9-demonetisation-death-toll-rises-to-55/) being reported.
+This was a bold move as a surprise of this nature is meant to disrupt an economy in which 90% of all transactions are conducted in cash and the two cancelled notes account for 86% of all the currency in circulation. This was both economically and politically a risky move . The prime minister even had to make an emotional plea to the nation to back him and stick with the hardships caused by demonetisation for 50 days. In the past couple of weeks there has been a lot of anguish and distress amongst the general public with hours of queu'es outside banks and even [deaths](http://www.huffingtonpost.in/2016/11/17/day-9-demonetisation-death-toll-rises-to-55/) being reported.
 
-The media has called this a surgical strike on black money and corruption. Is this a gamechanger in terms of getting rid of the black money and corruption in India or are we paying too high a price for a supposedly illusive benefit? Lets begin by looking closely at the three objectives individually.
+The media has called this a surgical strike on black money and corruption. Is this really a game changer that will get rid of the black money and corruption in India or are we paying too high a price for a supposedly elusive benefit? Let's begin by looking closely at the three objectives individually.
 
 ### Removal of counterfeit currency
 **Benefit:** Funding for terror and other subversive activities in counterfeit currency will be removed.
@@ -27,7 +27,7 @@ The media has called this a surgical strike on black money and corruption. Is th
 ### Stamping out of black money
 **Benefit:** Approximately $14 to $44 billion of back money will be extinguished.
 
-According to the Ministry of Finance 2012 report, roughly 6 percent of the total black money is held in cash. Large proportions of black money is invested in real estate or gold and most of all moved abroad. Only a fraction of the funds received from illicit tax evading activities is kept in cash. Therefore the amount recovered due to demonetisation is a very small proportion. Even the 6 percent might not be completely coming back in to the banks as people who hold that cash could and are laundering their black money by paying anywhere between 10 to 30%. Although the shock therapy prevents hoarders from diverting their money quickly but the target is too small to fetch or remove the entire $14 to $44 billion.
+According to the Ministry of Finance 2012 report, roughly 6 percent of the total black money is held in cash. Large proportions of black money is invested in real estate or gold and most of all moved abroad. Only a fraction of the funds received from illicit tax evading activities is kept in cash. Therefore the amount recovered due to demonetisation is a very small proportion. Even the 6 percent might not be completely coming back into the banks as people who hold that cash could and are laundering their black money by paying anywhere between 10 to 30%. Although the shock therapy prevents hoarders from diverting their money quickly but the target is too small to fetch or remove the entire $14 to $44 billion.
 
 ### Move towards a cashless economy
 **Benefit:** Higher traceability of transactions, more businesses come under the tax net, higher revenues for government.

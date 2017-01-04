@@ -9,7 +9,7 @@ comments: true
 modified_time: '2016-11-07T07:23:00.000-08:00'
 ---
 
-Docker is pretty cool, the ability to completely abstract the underlying operating system (OS) and run your app across multiple platforms (local machine, cloud, on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running, is awesome. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments.
+Docker provides the flexibility to completely abstract the underlying operating system (OS) and run your app across multiple platforms (local machine, cloud, on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments.
 
 I have been using Docker for local development, testing as well as in production. It is great to get started with setting up local builds and running tests in a repeatable and consistent manner. But using Docker to run your app in production and putting it on the internet is a different ballgame. You need to be aware of the potential security risks and the mitigation techniques.
 

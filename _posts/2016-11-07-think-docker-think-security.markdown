@@ -25,7 +25,7 @@ Docker uses the resource isolation features of the Linux kernel such as **Namesp
 *Capabilites* are a set of privileges that can be independently enabled or disabled for a process to provide or restrict access to the system. Removing capabilities can cause applications to break, therefore deciding which ones to keep and remove is a balancing act. By default, Docker containers run with a subset of capabilities, so for example, a container will not normally be able to modify capabilities for other containers. A complete list of removed capabilities can be found on Daniel Walsh's [post](https://opensource.com/business/14/9/security-for-docker) on docker security.  
 
 ## Things that could go wrong
-So what sort of security issues should you be worried about that could affect the way you run your apps inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking. You can look at [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) to get an elaborate list of docker security recommendations.
+So what sort of security issues should you be worried about that could affect the way you run your apps inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking.
 
 * ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
 
@@ -39,7 +39,7 @@ So what sort of security issues should you be worried about that could affect th
 
 ## Mitigations
 
-Now that we know some of the key container security issues, lets look at some precautions that can be taken in order to mitigate these security risks.
+Now that we know some of the key container security issues, lets look at some ways to prevent them. You can look at [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) to get an elaborate list of docker security recommendations. Defence in Depth is a common approach to security that involves building multiple layers of defences in order to hinder attackers. The following mitigations are based on securing the host, container and image in a container based environment.
 
 ### Host and kernel
 Use a good quality supported host system for running containers with regular security updates. Keep the kernel updated with the latest security fixes. The security of the kernel is paramount.

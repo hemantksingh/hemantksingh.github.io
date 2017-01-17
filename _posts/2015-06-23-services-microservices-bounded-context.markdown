@@ -25,14 +25,14 @@ Now according to SOA (Service orientated architecture) a service has the followi
 
 These tenets do not appear to be too different from the object oriented design principles. Can we define a service based on the above principles? Lets look at the tenets a bit closely.
 
-#What is a Service?#
+# What is a Service?
 
 * Autonomy of a service suggests it is independent of other services to perform its tasks, therefore in order to be independent it needs to have one and only one well defined responsibility. Uncle Bob has summarised SRP rather fittingly - *“Gather together those things that change for the same reason and separate those things that change for different reasons.”* In short a service should not have more than one reason to change.
 * Boundaries are drawn to restrict free movement and ensure all movement is governed by a set of rules. In the context of a service this restriction is enforced on free movement of data across a service boundary. All data and business rules reside within the service imposing strict restrictions on any movement in and out.
 * Services interact with other services through a shared contract by sending messages. These messages contain stable data (i.e. immutable, think events). The data going through service boundaries is minimal and very basic.
 * Usage of a service enforces certain constraints, the incoming messages conform to an expected structure and format.
 
-#What a service is NOT?#
+# What a service is NOT?
 * Anything with the word *Service* appended to it does not automatically qualify as a service.
 * A service that has only a function is a function not a service, like calculation, validation (not be confused with DDD's *Domain Services* which is a more granular concept). Making it remotely callable through RPC/SOAP still does not make it a service.
 * A service that only has data is a database not a service. Doing CRUD through REST over HTTP does not change that.

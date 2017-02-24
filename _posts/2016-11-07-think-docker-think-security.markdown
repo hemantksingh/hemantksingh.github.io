@@ -9,9 +9,9 @@ comments: true
 modified_time: '2016-11-07T07:23:00.000-08:00'
 ---
 
-Docker allows you to completely abstract the underlying operating system and run your app across multiple platforms (local machine, cloud, on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments, allowing agile, continuous application delivery.
+Docker allows you to completely abstract the underlying operating system and run your app across multiple platforms (local machine, cloud or on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments, allowing agile, continuous application delivery.
 
-I have been using Docker for local development, testing and for running apps in production. Docker is pretty swift to get started with, allows rapid app development, setting up builds and running tests in a repeatable and consistent manner. But do you get the same flexibility while running your apps in production? Because you are working with the Docker abstraction do you need to worry about any underlying security risks or is that all taken care of and should you even care?
+I have been using Docker for local development, testing and for running apps in production. Docker is pretty swift to get started with, allows rapid app development, setting up builds and running tests in a repeatable and consistent manner. But is this flexibility worth it when it comes to running your apps in production? Because you are working with the Docker abstraction, do you need to worry about any underlying security risks, is it all taken care of or should you even care?
 
 ## The basics
 Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight. It is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
@@ -24,8 +24,8 @@ Docker uses the resource isolation features of the Linux kernel such as **Namesp
 
 *Capabilites* are a set of privileges that can be independently enabled or disabled for a process to provide or restrict access to the system. Removing capabilities can cause applications to break, therefore deciding which ones to keep and remove is a balancing act. By default, Docker containers run with a subset of capabilities, so for example, a container will not normally be able to modify capabilities for other containers. A complete list of removed capabilities can be found [here](https://opensource.com/business/14/9/security-for-docker).  
 
-## Things that could go wrong
-So what sort of security issues should you be worried about that could affect the way you run your apps inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking.
+## Security challenges
+So what sort of security issues should you be worried about that could affect apps running inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking.
 
 * ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
 
@@ -39,19 +39,29 @@ So what sort of security issues should you be worried about that could affect th
 
 ## Mitigations
 
-Now that we know some of the key container security issues, lets look at some ways to prevent them. You can look at [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) to get an elaborate list of docker security recommendations. Defence in Depth is a common approach to security that involves building multiple layers of defences in order to hinder attackers. The following mitigations are based on securing the host, container and image in a container based environment.
+Having gone through key Docker security issues, lets look at some ways to prevent them. [CIS Docker Benchmark](https://benchmarks.cisecurity.org/tools2/docker/CIS_Docker_1.11.0_Benchmark_v1.0.0.pdf) provides an elaborate list of docker security recommendations. Defence in Depth is a common approach to security that involves building multiple layers of defences in order to hinder attackers. The following mitigations are based on securing the host, container and image in a container based environment.
 
 ### Host and kernel
-Use a good quality supported host system for running containers with regular security updates. Keep the kernel updated with the latest security fixes. The security of the kernel is paramount.
+
+* Use a good quality supported host system for running containers with regular security updates. Keep the kernel updated with the latest security fixes. The security of the kernel is paramount.
+
+* Apart from updating and patching the kernel, it might be worth considering running a hardened kernel using patches such as those provided by grsecurity (https://grsecurity.net/) and *PAX* (https://pax.grsecurity.net/). This provides extra protection against attackers manipulating program execution by modifying memory (such as *buffer overflow attacks*).
 
 ### Run containers with
-  * Minimum set of privileges (non admin). A docker container runs as root by default, if there is no user specified.
-  * Limited file system (Readonly access)
-  * Limited resources (CPU and memory)
-  * No access to privileged ports
+  * Minimum set of privileges (non admin). When a vulnerability is exploited, it generally provides the attacker with access and privileges equal to those of the application or process that has been compromised. Ensuring that containers operate with the least privileges and access required to get the job done reduces your exposure to risk. A docker container runs as root by default, if there is no user specified. Create a non privileged user and switch to it using a `USER` statement before an entrypoint script in the `Dockerfile`.
+
+  * Limited file system (Readonly access). Prevents attackers from writing a script and tricking your application from running it. This can be done by passing `--read-only` flag to `docker run`.
+
+  * Limited resources (CPU and memory). Limiting memory and CPU prevents against DoS attacks. `docker run` provides options `-m` and `-c` for setting the memory and cpu requirements respectively for running a container.
+
+  * Limited networking. By default containers running on the same host can talk to each other whether or not ports have been explicitly published or exposed. A container should open only the ports it needs to use in production, to prevent compromised containers from being able to attack other containers.
+
+  * No access to privileged ports. Only root has access to privileged ports, so if you're talking to a privileged port you know you're talking to root.
 
 
 ### Docker images
-* Only run images from trusted parties.
+* Only run images from trusted parties. Control the inflow of docker images into your development environment. This means using only approved private registries and approved images and versions.
+
 * Run regular scans on your docker images for vulnerabilities.
-* If needed, remove unwanted packages with major and critical vulnerabilities from the base image to reduce the attack surface.
+
+* If needed, remove unwanted packages that your application does not depend upon with major and critical vulnerabilities from the base image to reduce the attack surface.

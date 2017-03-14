@@ -14,7 +14,7 @@ The purpose of any computer program is to take some inputs and produce an output
 
 <blockquote>“No man ever steps in the same river twice, for it's not the same river and he's not the same man.” - Heraclitus</blockquote>
 
-Rich Hickey in his [keynote](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey) at the JVM Languages summit talked about value, identity and state. Values are essentially constants that do not change.  The flowing water in a river makes the river change constantly over time, this introduces the concept of identity. Identity is a succession of related values where the current one is caused from the previous. State is the value of an identity at a given time. 
+Rich Hickey in his [keynote](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey) at the JVM Languages summit talked about value, identity and state. Values are essentially constants that do not change.  The flowing water in a river makes the river change constantly over time, this introduces the concept of identity. Identity is a succession of related values where the current one is caused from the previous. State is the value of an identity at a given time.
 
 ```java
 1; // value (immutable)
@@ -33,6 +33,6 @@ One of the main ideas of Functional programming is to manage side effects. It en
 * Fewer concurrency issues, there are isolated parts of a functional program that do some assignments.
 * Never ask "What's the state?" While debugging a system you don't have to ask what the state of the system is.
 
-#Is it time to give up the assignment statement?#
+# Time to give up the assignment statement?
 
 The addition of more cores to computer hardware means, the individual throughput of each core goes down but the throughput of the chip with multiple processors goes up if you can take advantage of the multiple cores. We as programmers may have to deal with multiple cores not the operating system any more. Our ability to write multi-threaded programs will depend upon the scarce and disciplined use of the assignment statement.

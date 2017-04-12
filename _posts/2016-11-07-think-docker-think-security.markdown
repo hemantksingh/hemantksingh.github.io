@@ -3,7 +3,7 @@ layout: post
 title: Think Docker! Think Security!
 date: '2016-11-07T07:23:00.000-08:00'
 author: Hemant Kumar
-tags: docker, microservices, security
+tags: docker, microservices, security, devops
 categories: kodekitab
 comments: true
 modified_time: '2016-11-07T07:23:00.000-08:00'
@@ -60,8 +60,9 @@ Having gone through key Docker security issues, lets look at some ways to preven
 
 
 ### Docker images
-* Only run images from trusted parties. Control the inflow of docker images into your development environment. This means using only approved private registries and approved images and versions.
+* Only run images from trusted parties. Control the inflow of docker images into your development environment. This means using only approved private registries and approved images and versions. As of Docker 1.8 a new security feature was implemented called Docker Content Trust. This feature allows you to verify the authenticity, integrity, and publication date of all Docker images available on the Docker Hub Registry. This feature is not enabled by default but if you enable it by `export DOCKER_CONTENT_TRUST=1` Docker notifies you, when you attempt to pull down an image that isn't signed.
+![Docker Content Trust]({{ site.url }}/assets/docker-content-trust.png)
 
-* Run regular scans on your docker images for vulnerabilities.
+* Run regular scans on your docker images for vulnerabilities. Vulnerability management is tricky because source images aren't always patched. Even if you get the base layer up to date, you probably also have tens or hundreds of other components in your images that aren’t covered by the base layer package manager. Because the environment changes so frequently, traditional approaches to patch management are irrelevant. To stay in front of the problem you have to a) find vulnerabilities as part of the continuous integration (CI) process, and b) use quality gates to prevent the deployment of unsafe and non compliant images in the first place. Docker Hub has its own [image scanning tool](https://docs.docker.com/docker-cloud/builds/image-scan/) and there are paid options like [Twistlock](https://www.twistlo ck.com/) that provide image vulnerability analysis as well as a container security monitoring.
 
 * If needed, remove unwanted packages that your application does not depend upon with major and critical vulnerabilities from the base image to reduce the attack surface.

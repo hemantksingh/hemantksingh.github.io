@@ -3,11 +3,12 @@ layout: post
 title: Voice to the Mango People
 date: '2013-12-24T02:21:00.000-08:00'
 author: Hemant Kumar
-tags: 
+tags:
 categories: politics
 modified_time: '2013-12-24T05:09:24.314-08:00'
 blogger_id: tag:blogger.com,1999:blog-4346681821231783111.post-1328059198720487996
 blogger_orig_url: http://thehemantkumar.blogspot.com/2013/12/voice-to-mango-people.html
+redirect_from: "politics/2013/12/24/voice-to-mango-people.html"
 ---
 
 A lot has been said and written about the Aam Aadmi Party phenomenon. It originated from an anti corruption movement, had a stupendous electoral performance and is now on the verge of forming a government in Delhi. Before the Delhi election results were announced, the claim to form the government was far from reality even for the most ardent AAP supporter. The emergence of AAP as a political force in the national capital has disrupted conventional politics. Ever since their formation, they have brought the issues of corruption, honesty and political propriety at the forefront of our political discourse. The future of AAP as a political force in India is far from having been realised and will depend a lot upon their administrative performance, but the impact that they are having on India's political culture and representative democracy is extraordinary.

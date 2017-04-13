@@ -7,6 +7,7 @@ tags: docker, microservices, security, devops
 categories: kodekitab
 comments: true
 modified_time: '2016-11-07T07:23:00.000-08:00'
+redirect_from: "/kodekitab/2016/11/07/think-docker-think-security.html"
 ---
 
 Docker allows you to completely abstract the underlying operating system and run your app across multiple platforms (local machine, cloud or on-premise data centre) as long as the destination has the Docker runtime (Docker daemon) running. With Docker, the Continuous Delivery philosophy *Build once deploy anywhere* really comes to the fore. You build your binary artifact as a Docker image that includes all the application stack and requirements once and deploy the same image to various environments. This ensures the binary is built once and the same source code is promoted in subsequent deployments, allowing agile, continuous application delivery.

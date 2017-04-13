@@ -7,6 +7,7 @@ tags: functional
 categories: kodekitab
 comments: true
 modified_time: '2015-08-03T23:50:46.244-08:00'
+redirect_from: "/kodekitab/2015/05/19/problem-with-mutating-state.html"
 ---
 
 The purpose of any computer program is to take some inputs and produce an output. Producing an output causes the program to have an effect which means during its execution cycle, the program changes certain values. A live program models the real world where things change frequently over time and in parallel. But while writing programs we only have a static view of the problem domain and with the best of intentions and tools at hand we try to manage state change in our program as it would happen in the real world. This leaves us having to deal with values that change over time. Are OO languages capable of handling this complexity easily or do we need to look further?

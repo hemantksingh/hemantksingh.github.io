@@ -4,10 +4,11 @@ title: Democrazy
 date: '2012-11-22T18:03:00.000-08:00'
 author: Hemant Kumar
 tags:
-categories: politics 
+categories: politics
 modified_time: '2015-07-29T22:21:33.441-08:00'
 blogger_id: tag:blogger.com,1999:blog-4346681821231783111.post-6836111133140079040
 blogger_orig_url: http://thehemantkumar.blogspot.com/2012/11/democrazy.html
+redirect_from: "/politics/2012/11/23/democrazy.html"
 ---
 
 The time and effort we spend talking about the Indian democracy and how every Indian swears by it comes a cropper when events like what happened in Mumbai following Bal Thackeray's death occur. The recent arrest of two Mumbai girls for posting an allegedly defamatory comment on Facebook is a case in point. The intolerance of our so called democracy is such that a reasonable opinion expressed in anguish on social media can make you end up in jail and result in a violent attack on your next of kin. The absurdity doesn't stop here, it also means your friend is arrested too for the heinous crime of liking your Facebook post.

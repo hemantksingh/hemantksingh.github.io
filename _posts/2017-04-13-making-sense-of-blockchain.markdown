@@ -7,6 +7,7 @@ tags: blockchain, cryptocurrency, cryptography
 categories: kodekitab
 comments: true
 modified_time: '2017-04-13T11:31:00.000-08:00'
+redirect_from: "/kodekitab/2017/04/13/making-sense-of-blockchain.html/"
 ---
 
  Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of their business transactions that can be relied upon to verify each transaction. They usually achieves this by maintaining a central store for recording these transactions. Blockchain attempts to reduce the cost and increase trust in business transactions by using distributed transaction store on peer to peer networks rather than a central authority. In simple terms rather than a single authority like a bank responsible for maintaining the transactions, it is now a group of people running blockchain servers that do this. This decentralized approach allows customers to make an exchange (e.g. pay for an item) without third party involvement. This has profound implications for a wide variety of business processes in the financial, healthcare and the energy industry to name a few.

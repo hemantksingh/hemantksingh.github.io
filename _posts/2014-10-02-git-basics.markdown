@@ -7,13 +7,14 @@ tags: git
 categories: kodekitab
 comments: true
 modified_time: '2015-10-15T11:23:46.244-08:00'
+redirect_from: "/kodekitab/2014/10/02/git-basics.html"
 ---
 
 # Git overview #
 * Distributed Version Control
 * Data Consistency and Integrity
 * Performance - Diffs are local therefore quicker, do not have to go over the network to perform diffs.
-* Merging - Automatic merge if there are no conflicts (more than one change at the same position of the modified file). 
+* Merging - Automatic merge if there are no conflicts (more than one change at the same position of the modified file).
 * Conflicts have to be merged manually.
 
 
@@ -181,11 +182,11 @@ $ git reset origin/branchName --hard
 
 Remove local commit but keep changes  
 {% highlight sh %}
-$ git reset <sha1-commit-id>  #Undoes the commit after sha1-commit-id 
+$ git reset <sha1-commit-id>  #Undoes the commit after sha1-commit-id
 #and keeps the changes in working directory
 {% endhighlight %}
 ****************************************************************
-**Rearrange commits** 
+**Rearrange commits**
 {% highlight sh %}
 $ git rebase -i
 {% endhighlight %}
@@ -246,7 +247,7 @@ $ git stash save <comment>
 
 List the stashes
 {% highlight sh %}  
-$ git stash list 
+$ git stash list
 {% endhighlight %}
 
 Apply a stash
@@ -268,7 +269,7 @@ $ git stash (Stash your work)
 $ git stash branch <branchName> #Switch to a new branch that contains the stashed work
 {% endhighlight %}
 
-This creates a new branch for you, checks out the commit you were on when you stashed your work, 
+This creates a new branch for you, checks out the commit you were on when you stashed your work,
 reapplies your work there, and then drops the stash if applied successfully.
 
 ****************************************************************

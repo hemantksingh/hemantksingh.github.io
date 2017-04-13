@@ -3,12 +3,13 @@ layout: post
 title: How did AAP win the way it did? By saying Sorry!!
 date: '2015-02-14T05:47:00.000-08:00'
 author: Hemant Kumar
-tags: 
+tags:
 categories: politics
 comments: true
 modified_time: '2015-02-20T01:48:20.735-08:00'
 blogger_id: tag:blogger.com,1999:blog-4346681821231783111.post-332510392421523154
 blogger_orig_url: http://thehemantkumar.blogspot.com/2015/02/how-did-aap-win-way-it-did-by-saying.html
+redirect_from: "/politics/2015/02/14/how-did-aap-win-way-it-did-by-saying.html"
 ---
 
 Apart from the well known reasons that have been written about and discussed ad nauseam ranging from AAP’s issue based politics to BJP’s overconfidence, complacency, negative campaign, inability to reign in its communal forces to the Congress’s sheer ineptitude to come to terms with contemporary politics, it is interesting to look beyond these to try and understand the unprecedented mandate received by AAP. So how did a party that was written off after the general elections to such an extent that the BJP did not even deem fit to campaign in Delhi up until the last few weeks, achieve such a resounding victory? By saying the magic word: Sorry!

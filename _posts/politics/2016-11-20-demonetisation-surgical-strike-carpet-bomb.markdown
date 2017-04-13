@@ -7,6 +7,7 @@ tags: demonetisation
 categories: politics
 comments: true
 modified_time: '2016-11-20T02:46:00.000-08:00'
+redirect_from: "/politics/2016/11/20/demonetisation-surgical-strike-carpet-bomb"
 ---
 
 At 8pm on the 8th of November prime minister Narendra Modi announced that from midnight all 500-rupee and 1,000-rupee notes would cease to be legal tender. This deliberate shock demonetisation policy was announced with the following 3 main objectives:

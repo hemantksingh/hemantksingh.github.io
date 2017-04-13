@@ -9,3 +9,6 @@ github_username:  hemantksingh
 linkedin_username: hemantkrsingh
 footer: © Hemant Kumar | Hosted by GitHub and powered by Jekyll
 markdown: kramdown
+permalink: /:title.html
+gems:
+  - jekyll-redirect-from

@@ -27,14 +27,20 @@ An assignment statement however, mutates state and introduces the concept of tim
 
 When you have a function that gives you a side effect then you need another function to undo the side effect. This leads to [**non deterministic**](https://en.wikipedia.org/wiki/Nondeterministic_algorithm) results  that introduce [**accidental complexity**](https://en.wikipedia.org/wiki/No_Silver_Bullet) (problems which engineers create and fix). For example a program whose output is influenced by the particular order of execution of threads or by a call to `gettimeofday` or some other non-repeatable thing is generally best considered as non-deterministic. This accidental complexity is inherent in OO languages. When you open a file you must also close it. Functions with side effects are also separated in time - opening a graphical context must precede closing it, using an unmanaged resource in .NET must always precede disposing it. If these functions are not called in the correct order it leads to memory leaks. OO languages support garbage collection to manage some side effects but not all.
 
+# Managing side effects
 One of the main ideas of Functional programming is to manage side effects. It enables programs to make decisions based on stable values rather than those that change over time (like rivers). Evaluation of a **pure function** or **higher order function** has *no side effects*. f(x) is always the same, no matter what. This leads to [**referential transparency**](https://wiki.haskell.org/Referential_transparency) which implies that provided a set of inputs a function will always result in the same output or it will have the same behaviour.
 
-A pure function is **stateless** rather than stateful i.e it does not update any shared memory. This means that execution of a pure function has no affect on the output of the execution of any other function. In practice, applications need to have some side effects. Simon Peyton-Jones, a major contributor to the functional programming language Haskell, said the following: *"In the end, any program must manipulate state. A program that has no side effects whatsoever is a kind of black box. All you can tell is that the box gets hotter."* The key is to limit side effects, clearly identify them, and avoid scattering them throughout the code.
+A pure function is **stateless** rather than stateful i.e it does not update any shared state/memory. This means that execution of a pure function has no affect on the output of the execution of any other function. In practice, applications need to have some side effects. Simon Peyton-Jones, a major contributor to the functional programming language Haskell, said the following: *"In the end, any program must manipulate state. A program that has no side effects whatsoever is a kind of black box. All you can tell is that the box gets hotter."* The key is to limit side effects, clearly identify them, and avoid scattering them throughout the code. In the context of a function this can be achieved when a function depends only on its input and returns a value without:
 
-* Functional programs are simpler which makes them easier to write and maintain.
-* No temporal coupling - order in which functions are called becomes irrelevant.
-* Fewer concurrency issues, there are isolated parts of a functional program that do some assignments.
-* Never ask "What's the state?" While debugging a system you don't have to ask what the state of the system is.
+* Accessing global memory/state
+* Modifying its input(s)
+* Changing shared memory/state
+
+Functional programs attempt to remove the non determinism and complexity introduced by restricting side effects. This makes them easier to write and maintain:
+
+* Without temporal coupling - order in which functions are called becomes irrelevant.
+* Fewer concurrency issues due to restricted updates to shared memory/state.
+* Less debugging without having to constantly ask "*What is the state?*" in a debugging session.
 
 # Time to give up the assignment statement?
 

@@ -34,18 +34,18 @@ A pure function is **stateless** rather than stateful i.e it does not update any
 
 <blockquote>"In the end, any program must manipulate state. A program that has no side effects whatsoever is a kind of black box. All you can tell is that the box gets hotter" - *Simon Peyton-Jones (Haskell contributor)*</blockquote>
 
-The key is to limit side effects, clearly identify them, and avoid scattering them throughout your application. This can be achieved by having more and more pure functions that depend only on the input and return a value without:
+The key is to limit side effects, clearly identify them, and avoid scattering them throughout your application. This can be achieved by having more and more pure functions inside your application that depend only on the input and return a value without:
 
 * Accessing global memory/state
 * Modifying input(s)
 * Changing shared memory/state
 
-Functional programs attempt to remove the non determinism and complexity in your application by containing side effects. This makes them easier to write and maintain:
+It is interesting to note in an imperative style, the above situations result as a use of the assignment statement. Functional programs attempt to remove the non determinism and complexity in your application by containing side effects. This makes them easier to write and maintain:
 
 * Without temporal coupling - order in which functions are called becomes irrelevant.
 * Fewer concurrency issues due to restricted updates to shared memory/state.
-* Less debugging without having to constantly ask "*What is the application state ?*" in the debugger.
+* Less time spent in the debugger without having to constantly ask "*What is the application state ?*"
 
 # Time to give up the assignment statement?
 
-The addition of more cores to computer hardware means, the individual throughput of each core goes down but the throughput of the chip with multiple processors goes up if you can take advantage of the multiple cores. We as programmers may have to deal with multiple cores not the operating system any more. Our ability to write multi-threaded programs will depend upon the scarce and disciplined use of the assignment statement.
+The addition of more cores to computer hardware means, the individual throughput of each core goes down but the throughput of the chip with multiple processors goes up, if you can take advantage of the multiple cores. In order to utilise all those cores, we will have to learn to write more pure functions. Our ability to write multi-threaded programs will depend upon the scarce and disciplined use of the assignment statement.

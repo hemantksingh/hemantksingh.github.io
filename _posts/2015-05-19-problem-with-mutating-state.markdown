@@ -13,7 +13,7 @@ redirect_from: "/kodekitab/2015/05/19/problem-with-mutating-state.html"
 The purpose of any computer program is to take some inputs and produce an output. Producing an output causes the program to have an effect which means during its execution cycle, the program changes certain values. A live program models the real world where things change frequently over time and in parallel. But while writing programs we only have a static view of the problem domain and with the best of intentions and tools at hand we try to manage state change in our program as it would happen in the real world. This leaves us having to deal with values that change over time. Are OO languages capable of handling this complexity easily or do we need to look further?
 
 
-<blockquote>“No man ever steps in the same river twice, for it's not the same river and he's not the same man.” - Heraclitus</blockquote>
+<blockquote>“No man ever steps in the same river twice, for it's not the same river and he's not the same man.” - *Heraclitus*</blockquote>
 
 Rich Hickey in his [keynote](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey) at the JVM Languages summit talked about value, identity and state. Values are essentially constants that do not change.  The flowing water in a river makes the river change constantly over time, this introduces the concept of identity. Identity is a succession of related values where the current one is caused from the previous. State is the value of an identity at a given time.
 
@@ -30,17 +30,21 @@ When you have a function that gives you a side effect then you need another func
 # Managing side effects
 One of the main ideas of Functional programming is to manage side effects. It enables programs to make decisions based on stable values rather than those that change over time (like rivers). Evaluation of a **pure function** or **higher order function** has *no side effects*. f(x) is always the same, no matter what. This leads to [**referential transparency**](https://wiki.haskell.org/Referential_transparency) which implies that provided a set of inputs a function will always result in the same output or it will have the same behaviour.
 
-A pure function is **stateless** rather than stateful i.e it does not update any shared state/memory. This means that execution of a pure function has no affect on the output of the execution of any other function. In practice, applications need to have some side effects. Simon Peyton-Jones, a major contributor to the functional programming language Haskell, said the following: *"In the end, any program must manipulate state. A program that has no side effects whatsoever is a kind of black box. All you can tell is that the box gets hotter."* The key is to limit side effects, clearly identify them, and avoid scattering them throughout the code. In the context of a function this can be achieved when a function depends only on its input and returns a value without:
+A pure function is **stateless** rather than stateful i.e it does not update any shared state/memory. This means that execution of a pure function has no effect on the output of the execution of any other function in your application. However in practice, applications do need to have some side effects.
+
+<blockquote>"In the end, any program must manipulate state. A program that has no side effects whatsoever is a kind of black box. All you can tell is that the box gets hotter" - *Simon Peyton-Jones (Haskell contributor)*</blockquote>
+
+The key is to limit side effects, clearly identify them, and avoid scattering them throughout your application. This can be achieved by having more and more pure functions that depend only on the input and return a value without:
 
 * Accessing global memory/state
-* Modifying its input(s)
+* Modifying input(s)
 * Changing shared memory/state
 
-Functional programs attempt to remove the non determinism and complexity introduced by restricting side effects. This makes them easier to write and maintain:
+Functional programs attempt to remove the non determinism and complexity in your application by containing side effects. This makes them easier to write and maintain:
 
 * Without temporal coupling - order in which functions are called becomes irrelevant.
 * Fewer concurrency issues due to restricted updates to shared memory/state.
-* Less debugging without having to constantly ask "*What is the state?*" in a debugging session.
+* Less debugging without having to constantly ask "*What is the application state ?*" in the debugger.
 
 # Time to give up the assignment statement?
 

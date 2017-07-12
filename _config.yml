@@ -1,7 +1,7 @@
 # Site settings
 title: Hemant Kumar
 description: > # this means to ignore newlines until "baseurl:"
-  Political animal, Software engineer, Thoughtworker and father to a little dude.
+  Political animal, Software engineer and father to a little dude.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hemantkumar.net" # the base hostname & protocol for your site
 twitter_username: _hemantksingh

@@ -10,25 +10,28 @@ modified_time: '2015-10-30T08:08:46.244-08:00'
 redirect_from: "/kodekitab/2015/10/30/services-microservices-bounded-context.html"
 ---
 
-I was at the DDD exchange recently where we had the likes of [Udi Dahan](https://twitter.com/UdiDahan), [Eric Evans](https://twitter.com/ericevans0) and [Scott Wlaschin](https://twitter.com/ScottWlaschin) on the panel. In a post event Q&A session I asked the panel - *"Is microservices SOA renamed? "* which triggered an hour long debate. The panelists argued amongst themselves about what exactly a service or a microservice means. By the end of the debate I doubt any one of us was any more wiser. Clearly there was no consensus on the definition of the word service and what it means. It is a term that is widely used and abused in our industry but we do not seem to have a common understanding of it. This raised a few questions in my head. Disappointed with the expert advice, I decided to look out for a definition of my own.
+I was at the DDD exchange recently where we had the likes of [Udi Dahan](https://twitter.com/UdiDahan), [Eric Evans](https://twitter.com/ericevans0) and [Scott Wlaschin](https://twitter.com/ScottWlaschin) on the panel. In a post event Q&A session I asked the panel - *"Is microservices SOA renamed? "* which triggered an hour long debate. The panelists argued amongst themselves about what exactly a service or a microservice means. By the end of the debate I doubt any one of us was any more wiser. Clearly there was no consensus on the definition of a microservice and what it actually means. It is quite a buzzword but no one on the panel seemed to have a common understanding of it. This raised a few questions in my head. Disappointed with the expert advice, I decided to look out for a definition of my own.
 
-The dictionary tells me that a service is - *“the action of helping or doing work for someone”*. Is a microservice significantly different from this definition? In order to come to a definitive answer, lets recollect the knowledge that is already out there.
+As what's needed in such a situation, I looked up the dictionary for the word service - *“the action of helping or doing work for someone”*. Does a microservice fit into this general definition? In order to come up with a more definitive answer, lets recollect the knowledge that is already out there.
 
-<blockquote>“ Microservices aim to do SOA well, it is a specific approach of achieving SOA in the same way as XP and Scrum are specific approaches for Agile software development.” - Sam Newman (Building Microservices)
+<blockquote>“Microservices aim to do SOA well, it is a specific approach of achieving SOA in the same way as XP and Scrum are specific approaches for Agile software development.” - Sam Newman (Building Microservices)
 </blockquote>
 
-Now according to SOA (Service orientated architecture) a service has the following tenets:
+If microservices is about doing SOA (Service orientated architecture) well, it is probably worth looking at the SOA tenets:
 
 * Services are autonomous - Cohesive single responsibility.
 * Services have explicit boundaries - Loosely coupled, owns its data and business rules.
 * Service share contract and schema, not Class or Type or a Database
 * Service compatibility is based upon policy - Explicitly state the constraints (structural and behavioral) which the service imposes on its usage.
 
-These tenets do not appear to be too different from the object oriented design principles. Can we define a service based on the above principles? Lets look at the tenets a bit closely.
+These tenets do not appear to be too different from the object oriented principles. According to Alan Kays description of Smalltalk in 1971
+<blockquote>An object is a little computer that has its own memory, you send messages to it in order to tell it to do something. It can interact with other objects through messages in order to get that task done.</blockquote>
+
+An object's private memory provides it the autonomy and  message based communication an explicit boundary from other objects. Can we define a service based on the above principles? Lets look at the tenets a bit closely.
 
 # What is a Service?
 
-* Autonomy of a service suggests it is independent of other services to perform its tasks, therefore in order to be independent it needs to have one and only one well defined responsibility. Uncle Bob has summarised SRP rather fittingly - *“Gather together those things that change for the same reason and separate those things that change for different reasons.”* In short a service should not have more than one reason to change.
+* Autonomy of a service suggests it is independent of other services to perform its tasks, therefore in order to be independent it needs to have one and only one well defined responsibility. Uncle Bob has summarised SRP rather well - *“Gather together those things that change for the same reason and separate those things that change for different reasons.”* In short a service should not have more than one reason to change.
 * Boundaries are drawn to restrict free movement and ensure all movement is governed by a set of rules. In the context of a service this restriction is enforced on free movement of data across a service boundary. All data and business rules reside within the service imposing strict restrictions on any movement in and out.
 * Services interact with other services through a shared contract by sending messages. These messages contain stable data (i.e. immutable, think events). The data going through service boundaries is minimal and very basic.
 * Usage of a service enforces certain constraints, the incoming messages conform to an expected structure and format.
@@ -45,18 +48,14 @@ Philip Kruchten’s 4+1 [Architecture View Model](https://en.wikipedia.org/wiki/
 						4+1 Architecture View Model
 
 
-I see defining services as breaking an overall system into smaller isolated sub systems so that adding features to the overall system requires touching as few sub systems as possible. This decomposition can be at the `logical level` (business capabilities - the reason for something to exist), `component level` (dlls, jars, source code repos), `process level` (web app, http endpoints) or the `physical level` (machines, hosts). **Bounded context** in DDD terminology focuses on the logical separation whereas **Microservice** focuses on the physical separation. The philosophy of slicing up your system into manageable chunks still remains.
+I see defining services as breaking an overall system into smaller isolated sub systems so that adding features to the overall system requires touching as few sub systems as possible. This decomposition can be at the `logical level` (business capabilities - the reason for something to exist), `component level` (dlls, jars, source code repos), `process level` (web app, http endpoints) or the `physical level` (machines, hosts). **Bounded context** in DDD terminology focuses on the logical separation whereas **Microservice** focuses on the physical separation. The idea of slicing up your system into manageable chunks is the key here.
 
 # What is an Actor?
 The **Actor model** allows dividing a system or application into smaller isolated tasks or actors that can run concurrently. When an actor wants to communicate with another actor, it sends a message rather than contacting it directly, all messaging being asynchronous. Traditional approaches to concurrency are based on synchronizing shared mutable state which is difficult to get right. Wouldn't it be better not having to deal with coordinating threads, synchronization and locks? Actors achieve this by changing internal state between processing messages but avoiding sharing state. When there are no shared state mutations, synchronization and locking are no more required. Apart from concurrency and performance gains there are other benefits with the actor based approach like hot code replacements.
 
-Having closely looked at the SOA tenets that govern the service partitioning rules and the levels at which partitioning can occur, be it a service, a microservice, an actor or even an object what we really want is isolation. We want a small computer with private memory that you can interact with through a contract. This small computer can also be an object. In Smalltalk 1971
+# In summary
+Partitioning can occur at different levels, be it a service, a microservice, an actor or even an object. What we really gain from this partitioning is isolation. We want a small computer with private memory that you can interact with through a contract, without any back door access to their private internal state. Isolation is easily compromised in objects. We often break encapsulation by sharing an object's private memory through public getters and setters in languages like Java and C#. Actors enforce this isolation by restricting access to private memory (internal state). Microservies make it even harder to break the isolation by often introducing physical separation and communication over a network.
 
-<blockquote>An object is a little computer that has its own memory, you send messages to it in order to tell it to do something. It can interact with other objects through messages in order to get that task done.</blockquote>
+<blockquote>Each service ends up having its own process or/and network boundary. The contract is a service updates it's shared memory and exposes a mechanism to read from its shared memory but the service itself is the only one that is allowed to write to it.</blockquote>
 
-We often break encapsulation by sharing private memory through public getters and setters on objects in languages like Java and C#. Actors enforce this isolation by restricting access to private memory (internal state). You can apply the same isolation principle to a service or microservice.
-
-<blockquote>Each service has its own process boundary. The contract is a service updates it's shared memory and exposes a mechanism to read from its shared memory but the service itself is the only one that is allowed to write to it.</blockquote>
-
-
-Adding features to your system will invariably involve touching more than one sub system at a given time but depending upon how well the system has been partitioned, ideally it should involve touching as few sub systems as possible. Loosely coupled systems allow failure isolation, allow services and consumers to evolve independently of each other and lower the risk of future changes, therefore reducing complexity, effort and cost.
+Turns out, there is nothing new that microservices offer, rather they try to reinforce a lot of the old ideas like SOA and object oriented principles that we have known for sometime. Adding features to your system will invariably involve touching more than one sub system at a given time but depending upon how well the system is isolated, it should involve touching as few sub systems as possible. Isolation gives you all the good stuff - loosely coupled systems, failure isolation, independent evolution and scale. But distributed mircoservices is not the only way to achieve isolation. Modularised monoliths can very well be isolated too, they probably need a bit more discipline.

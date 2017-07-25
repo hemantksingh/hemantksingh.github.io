@@ -17,6 +17,7 @@ Blockchain attempts to reduce the cost and increase trust in business transactio
 
 ![Blockchain]({{ site.url }}/assets/blockchain.jpg)
 
+
 ## Underlying technology
 
 * **Peer to peer network**

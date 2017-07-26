@@ -10,10 +10,11 @@ modified_time: '2017-04-13T11:31:00.000-08:00'
 redirect_from: "/kodekitab/2017/04/13/making-sense-of-blockchain.html/"
 ---
 
- **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of banking transactions. Government agencies provide evidence of land title, driving license records, medical records and other assets by often maintaining a transaction log. They usually achieve this trust by maintaining a central store for recording transactions that can be relied upon to verify each transaction. This means that onus of maintaining the security and sanctity of this central store also lies with the authority owning it. This gives the central authority or the intermediary facilitating commerce between the transacting parties, great responsibility as well as control. The intermediary can pretty much dictate the rules of commerce that every transacting party needs to abide by. The intermediary can also be a single point of failure.
+ **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of banking transactions. Government agencies provide evidence of land title, driving license records, medical records and other assets by often maintaining a transaction log. They usually achieve this trust by maintaining a central store for recording transactions that can be relied upon to verify each transaction. This means that the onus of maintaining the security and sanctity of this central store also lies with the authority owning it. This gives the central authority or the intermediary facilitating commerce between the transacting parties, great responsibility as well as control. The intermediary can pretty much dictate the rules of commerce that every transacting party needs to abide by. The intermediary can also be a single point of failure.
 
 * Can a single authority prevent any illegitimate records being added or updated to the central store?
-* How tamper proof is the central store and is it independently verifiable in a transparent manner in case of a dispute?
+* How tamper proof is the central store and is it independently and transparently verifiable in case of a dispute?
+* How efficient is the intermediary in fulfilling the transactions? Machine to machine communication takes place at a mind boggling rate but machine to machine payments can sometimes take days to clear because they have to go through the intermediary's centralized clearing system.
 
 ## Decentralized trust and control
 Blockchain attempts to reduce the cost and increase trust in business transactions by using an immutable distributed transaction store on peer to peer networks rather than a central store. In simple terms rather than a single authority like a bank responsible for maintaining the transactions, it is now a group of people running blockchain servers that do this. They ensure that the information stored in the distributed ledger is immutable and verifiable by applying techniques like cryptography and hashing (explained below). This decentralized approach allows customers to make an exchange (e.g. pay for an item) without the involvement of an intermediary.
@@ -25,12 +26,12 @@ Blockchain attempts to reduce the cost and increase trust in business transactio
 
 * **Peer to peer network**
 A group of computers that can communicate among
-themselves without relying on a single central authority or having a single point of failure
+themselves without relying on a single central authority or having a single point of failure.
 
 * **Asymmetric cryptography**
 A way to send a message encrypted for specific recipients
 such that anyone can verify the sender’s authenticity but
-only intended recipients can read the message contents
+only intended recipients can read the message contents.
 
 * **Cryptographic hashing**
 A way to generate a small, unique “fingerprint” for any data allowing quick comparison of large data sets and a secure way to verify data has not been altered. A simplified explanation of cryptographic hashing is available [here](https://www.miracl.com/press/the-essence-of-the-blockchain).

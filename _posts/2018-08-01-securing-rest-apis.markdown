@@ -113,6 +113,6 @@ establish authenticity (message sent by a known sender), integrity (message wasn
 
 When signing, the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. A **timestamp** and **nonce** is used to generate the signature. This helps to prevent replay attacks. The signature  prevents repurposing the request for something else entirely.
 
-![message-signing.jpg](../assets/message-signing.jpg "Message Signing|Verification")
+![message-signing.jpg](../assets/message-signing.jpg "Message Signing")
 
 A service (when acting as a **receiver**) has a list of **public keys** for all other services that want to talk to it and provides its **public key** (when acting as a **sender**) to other services that it wants to talk to.

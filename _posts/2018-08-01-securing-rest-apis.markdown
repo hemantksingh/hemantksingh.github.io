@@ -9,7 +9,7 @@ comments: true
 modified_time: '2017-08-01T11:31:00.000-08:00'
 ---
 
-RESTful services are often stateless therefore each request needs to be authenticated individually. When looking at any security aspect, a lot of terms often get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security basics out of the way.
+RESTful services are stateless therefore each request needs to be authenticated individually. State here means the resource state, not the state of a session. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely. Leaving stateful services aside, what options do we have to authenticate RESTful services? When looking at any security aspect, often a lot of terms get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security jargon out of the way.
 
 *Oversimplification Disclaimer - I have tried to explain the security basics in a general context, which might result in missing some of the technical nuances. Most of these terms are also applicable in a more wider security context.*
 

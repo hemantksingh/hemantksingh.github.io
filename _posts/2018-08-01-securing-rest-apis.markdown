@@ -9,17 +9,19 @@ comments: true
 modified_time: '2017-08-01T11:31:00.000-08:00'
 ---
 
-RESTful services are stateless therefore each request needs to be authenticated individually. State here means the resource state, not the state of a session. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely. Leaving stateful services aside, what options do we have to authenticate RESTful services? When looking at any security aspect, often a lot of terms get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security jargon out of the way.
+RESTful services are stateless therefore each request needs to be authenticated individually. State here means the state of the resource, not session state. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely. Leaving stateful services aside, what options do we have to authenticate RESTful services? This post looks into Basic Authentication, MAC (Message Authentication Code), Digital Signatures and OAuth as a means to secure REST APIs.
+
+When looking at any security aspect, often a lot of terms get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security jargon out of the way.
 
 *Oversimplification Disclaimer - I have tried to explain the security basics in a general context, which might result in missing some of the technical nuances. Most of these terms are also applicable in a more wider security context.*
 
-* **Authentication** - You know who you are talking to through validation of the sender's identity. Client sends credentials across (either in plaintext or encrypted) to the server that validates them.
+* **Authentication** - Validation of the sender's identity so that receiver knows who they are talking to; e.g. client sends credentials (either in plaintext or encrypted) to the server that validates them.
 
 * **Authorization** - Verification that the sender has access to a certain resource. Happens post authentication.
 
-* **Integrity** - Message contents of an API request haven't changed in transit.
+* **Integrity** - Ensuring message contents of a request haven't changed in transit.
 
-* **Non-repudiation** - The sender cannot deny having sent the message; e.g. your bank cannot deny having sent a bank statement if it has a valid stamp of the bank on it.
+* **Non-repudiation** - Ensuring that the sender cannot deny having sent the message; e.g. your bank cannot deny having sent you a bank statement if it has a valid stamp of the bank on it.
 
 * **Confidentiality** - No one can see the message contents in transit from sender to receiver.
 
@@ -60,7 +62,7 @@ There are a few issues with HTTP Basic Authentication:
 * The password is cached by the browser, at a minimum for the length of the window / process. (Can be silently reused by any other request to the server, e.g. CSRF).
 * The password may be stored permanently in the browser, if the user requests. (Same as previous point, in addition might be stolen by another user on a shared machine).
 
-Using HTTPS only solves the first issue. Even then, credentials are only protected until SSL/TLS termination, any internal routing, logging, etc. can expose the plaintext password. Does HTTPS protect the credentials in transit? Yes. Is that enough? Usually, No. Basic Authentication with HTTPS provides you **confidentiality** only in a specific window in which SSL is on. There probably is a reason why it is called basic.
+Using HTTPS only solves the first issue. Even then, the credentials are only protected until SSL/TLS termination, any internal network routing, logging, etc. can expose the plaintext credentials. Does HTTPS protect the credentials in transit? Yes. Is that enough? Usually, No. Basic Authentication with HTTPS provides you **confidentiality** only for a window during which  SSL/TLS is on. In an enterprise, more often than not SSL/TLS termination occurs much before the request reaches your API server.
 
 ## MAC (Message  Authentication Code)
 Basic Auth over HTTP exposes credentials in transit and does not guarantee integrity of the message. MAC on the other hand is used to send hashed version of credentials and the message. It can be used to **authenticate** a message and verify its **integrity**. MAC is symmetric, i.e. it uses the same key to produce a MAC value for a message and to verify the MAC value for the message.
@@ -109,7 +111,7 @@ If the timestamp is not within a certain range (say 10 minutes) of the receiver'
 
 ## Message signing using Digital Signature
 Digital signatures use asymmetric public key cryptography to
-establish authenticity (message sent by a known sender), integrity (message wasn't tampered with) and non-repudiation (message sent by the sender cannot be denied).
+establish **authenticity** (message sent by a known sender), **integrity** (message wasn't tampered with) and **non-repudiation** (message sent by the sender cannot be denied).
 
 When signing, the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. A **timestamp** and **nonce** is used to generate the signature. This helps to prevent replay attacks. The signature  prevents repurposing the request for something else entirely.
 

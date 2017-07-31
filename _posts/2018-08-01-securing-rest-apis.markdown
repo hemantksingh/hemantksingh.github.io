@@ -118,3 +118,10 @@ When signing, the sender uses **their private key** to write message's signature
 ![message-signing.jpg](../assets/message-signing.jpg "Message Signing")
 
 A service (when acting as a **receiver**) has a list of **public keys** for all other services that want to talk to it and provides its **public key** (when acting as a **sender**) to other services that it wants to talk to.
+
+## OAuth2
+OAuth2 is an open specification to allow secure authorization in a simple and standard method from web, mobile and desktop applications. It works for mobile, web and desktop clients.
+
+Federated security allows for clean separation between the service and the associated authentication and authorization mechanism. Outsourcing authentication to a service that the user trusts, such as a social identity provider - facebook to cure password headaches across multiple applications.
+
+OpenID Connect - REST identity layer on top of OAuth2. OAuth is for authorization but lot of applications require to know the users identity too. OpenID Connect adds identity to OAuth2.

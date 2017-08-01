@@ -3,7 +3,7 @@ layout: post
 title: Securing REST APIs
 date: '2017-08-01T11:31:00.000-08:00'
 author: Hemant Kumar
-tags: restapi, security, cryptography, authentication
+tags: restapi, security, cryptography, authentication, HMAC, OAuth, digital signatures
 categories: kodekitab
 comments: true
 modified_time: '2017-08-01T11:31:00.000-08:00'
@@ -120,16 +120,28 @@ A service (when acting as a **receiver**) has a list of **public keys** for all 
 
 Digital signatures can be safely used without SSL (although SSL is still recommended if the data transferred is sensitive). However, this level of security comes with a price: generating and validating signatures can be a complex process.
 
-## OAuth
+## OAuth2
 
-OAuth is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications. It enables **federated security** to allow clear separation between the API and the associated authentication and authorization mechanism. This means you can build out the authorization server as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients. You also have the option of outsourcing the authorization as a service that the user trusts, such as a social identity provider like facebook, and focus on building your resource APIs.
+OAuth2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables **federated security** to allow clear separation between your API and the associated authentication and authorization mechanism. This means you can either
+* build out the **authorization server** as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients, or you can
+* outsource the **authorization server** as a service that the user trusts, such as a social identity provider like facebook.
 
-### OAuth1
+This allows you to focus on building and scaling your resource APIs independent of authorization.
 
-OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but as discussed above, comes with the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, it no longer becomes possible to make API calls like this:
+OAuth2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token, but in essence each flow involves obtaining authorization to get an access token and using the access token to make requests on behalf of the user.
+
+
+OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
+
+`/.well-known/openid-configuration` endpoint is used for retrieving the user identity, list of claims for the user and groups the user belongs to in order to determine their access level.
+
+
+### OAuth1 or OAuth2
+
+OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but with digital signatures as discussed above, you incur the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, it is no longer possible to make API calls like this:
 
 ```
-curl --user bob:pa55 https://api.example.com/profile
+curl --user foo:bar https://api.example.com/users
 ```
 
 Some services such as Twitter started providing “signature generator” tools in their developer websites so that you could generate a curl command from the website without using a library. For example, the tool on Twitter generates a curl command such as:
@@ -140,8 +152,6 @@ curl --get 'https://api.twitter.com/1.1/statuses/show.json' \
 --header 'Authorization: OAuth oauth_consumer_key="xRhHSKcKLl9VF7fbyP2eEw", oauth_nonce="33ec5af28add281c63db55d1839d90f1", oauth_signature="oBO19fJO8imCAMvRxmQJsA6idXk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1471026075", oauth_token="12341234-ZgJYZOh5Z3ldYXH2sm5voEs0pPXOPv8vC0mFjMFtG", oauth_version="1.0"'
 ```
 
-### OAuth2
-
 OAuth2 mandates TLS, so you no longer need to use cryptographic algorithms to create, generate, and validate signatures. In an attempt to reduce complexity all the encryption is delegated to transport layer (TLS). With OAuth 2.0 [bearer tokens](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/bearer-tokens/), only the token itself is needed in the request, so the API invocation again becomes simple:
 
 ```
@@ -149,20 +159,6 @@ curl https://api.example.com/profile -H "Authorization: Bearer XXXXXXXXXXX"
 ```
 
 The tradeoff is all requests must be made over HTTPS. This provides a good balance between ease of use of APIs and good security practices.
-
-OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
-
-`/.well-known/openid-configuration` is used for retrieving the user identity, list of claims for the user and groups the user belongs to in order to determine their access level.
-
-Grant types
-
-Authorization code - Server applications or webapps (Confidential client - can keep secrecy of client secret), auth code generated after user authorizes the application. The app server then exchanges the auth code for an access token.
-
-Implicit - Browser based or mobile apps (Public clients), skips auth code generation, instead access token is returned immediately. No refresh tokens
-
-Password - exchange username and password for access token. Should only be done by trusted apps not 3rd party.
-
-Client credentials - application accessing its own resource. Exchanging `client_id` and `client_secret` for an access token.
 
 # In summary
 Before deciding on an approach towards securing APIs, it is important to understand what are you going to secure and what is the sensitivity of the data being managed? APIs handling things like personal data, user credentials or financial data will need a different security approach than an API  handling, say traffic updates. It is also worth defining the scope of your API security. Securing network and server infrastructure for things like intrusion, eves dropping via packet sniffing and physical security often lie outside the scope of API security. For highly sensitive data, digital signatures maybe a necessity, but if you are looking for flexibility and performance at scale OAuth2 is a valid option to chose.

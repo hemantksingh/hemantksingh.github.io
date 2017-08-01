@@ -43,7 +43,7 @@ Different key is used between sender and receiver to encrypt and decrypt the mes
 In order to solve the 2nd secure communication problem mentioned above, you use a [digital signature](https://en.wikipedia.org/wiki/Digital_signature). Digitally signing data is equivalent to a physical signature that can only be produced by the signing authority and verified by anyone who has visibility of the signing authority's signature.  Signing uses public key encryption where the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. It is a means of attaching identity to a key. It is discussed in further detail under [message signing using digital signature](## Message signing using Digital Signature).
 
 # Approaches to securing RESTful APIs
-Now that we have got the security semantics covered, we can look at the different techniques to secure RESTful APIs. It is worth noting that following techniques cover different aspects of security. Opting for a particular technique may depend on specific security requirements of your application. For example basic authentication without HTTPS can provide authenticity but no integrity or confidentiality.
+Having covered the security semantics, we can now look at the different techniques to secure RESTful APIs. It is worth noting that following techniques cover different aspects of security. Opting for a particular technique may depend on specific security requirements of your application. For example basic authentication without HTTPS can provide authenticity but no integrity or confidentiality.
 
 ## Basic Authentication
 The most simple way to authenticate senders is to use HTTP basic authentication. Sender's credentials (username and password) are base64 encoded and sent across in an HTTP header.
@@ -74,13 +74,13 @@ For accessing a protected resource
 /users/username/account
 ```
 
-HMAC (Hash-based message authentication) an implementation of MAC involves calculation of an HMAC
+HMAC (Hash-based message authentication) an implementation of MAC involves calculation of an HMAC value
 
 ```
 value = base64encode(hmac("sha256", "secret", "GET+/users/username/account"))
 ```
 
-The digest then is sent over as an HTTP header:
+The HMAC value then is sent over as an HTTP header:
 
 ```
 GET /users/username/account HTTP/1.1
@@ -122,19 +122,17 @@ Digital signatures can be safely used without SSL (although SSL is still recomme
 
 ## OAuth2
 
-OAuth2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables **federated security** to allow clear separation between your API and the associated authentication and authorization mechanism. This means you can either
+OAuth2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables [federated security](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/federation) to allow clear separation between your API and the associated authentication and authorization mechanism. This means you can either
 * build out the **authorization server** as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients, or you can
 * outsource the **authorization server** as a service that the user trusts, such as a social identity provider like facebook.
 
 This allows you to focus on building and scaling your resource APIs independent of authorization.
 
-OAuth2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token, but in essence each flow involves obtaining authorization to get an access token and using the access token to make requests on behalf of the user.
+OAuth2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token, but in essence each flow involves obtaining authorization to get an access token and using the access token to make requests on behalf of the user. An access token is a [JSON web token (JWT)](https://tools.ietf.org/html/rfc7519) encoded in base64URL format that contains a header, payload, and signature. A resource server can authorize the client to access particular resources based on the scopes and claims in the access token.
 
+The authorization server provides `/.well-known/openid-configuration` service discovery endpoint to be used by clients and resource APIs to interact with the authorization server.
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
-
-`/.well-known/openid-configuration` endpoint is used for retrieving the user identity, list of claims for the user and groups the user belongs to in order to determine their access level.
-
 
 ### OAuth1 or OAuth2
 

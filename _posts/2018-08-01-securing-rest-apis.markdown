@@ -151,3 +151,15 @@ curl https://api.example.com/profile -H "Authorization: Bearer XXXXXXXXXXX"
 The tradeoff is all requests must be made over HTTPS. This provides a good balance between ease of use of APIs and good security practices.
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
+
+`/.well-known/openid-configuration` is used for retrieving the user identity, list of claims for the user and groups in order to determine access level.
+
+Grant types
+
+Authorization code - Server applications or webapps (Confidential client - can keep secrecy of client secret), auth code generated after user authorizes the application. The app server then exchanges the auth code for an access token.
+
+Implicit - Browser based or mobile apps (Public clients), skips auth code generation, instead access token is returned immediately. No refresh tokens
+
+Password - exchange username and password for access token. Should only be done by trusted apps not 3rd party.
+
+Client credentials - application accessing its own resource. Exchanging `client_id` and `client_secret` for an access token.

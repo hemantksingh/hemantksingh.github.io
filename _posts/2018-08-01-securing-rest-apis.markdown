@@ -9,7 +9,7 @@ comments: true
 modified_time: '2017-08-01T11:31:00.000-08:00'
 ---
 
-RESTful services are stateless therefore each request needs to be authenticated individually. State here means the state of the resource, not session state. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely. Leaving stateful services aside, what options do we have to authenticate RESTful services? This post looks into Basic Authentication, MAC (Message Authentication Code), Digital Signatures and OAuth as a means to secure REST APIs.
+RESTful services are stateless therefore each request needs to be authenticated individually. State in REST terminology means the state of the resource that the API manages, not session state. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely, as it is prone to replay and impersonation attacks. So what options do we have to secure RESTful services? This post looks into Basic Authentication, MAC (Message Authentication Code), Digital Signatures and OAuth.
 
 When looking at any security aspect, often a lot of terms get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security jargon out of the way.
 
@@ -126,7 +126,7 @@ OAuth is an open protocol to allow secure authorization in a simple and standard
 
 ### OAuth1
 
-OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but as discussed above, comes with the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, it is no longer possible to invoke your API like this:
+OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but as discussed above, comes with the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, it no longer becomes possible to make API calls like this:
 
 ```
 curl --user bob:pa55 https://api.example.com/profile
@@ -152,7 +152,7 @@ The tradeoff is all requests must be made over HTTPS. This provides a good balan
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
 
-`/.well-known/openid-configuration` is used for retrieving the user identity, list of claims for the user and groups in order to determine access level.
+`/.well-known/openid-configuration` is used for retrieving the user identity, list of claims for the user and groups the user belongs to in order to determine their access level.
 
 Grant types
 
@@ -163,3 +163,6 @@ Implicit - Browser based or mobile apps (Public clients), skips auth code genera
 Password - exchange username and password for access token. Should only be done by trusted apps not 3rd party.
 
 Client credentials - application accessing its own resource. Exchanging `client_id` and `client_secret` for an access token.
+
+# In summary
+Before deciding on an approach towards securing APIs, it is important to understand what are you going to secure and what is the sensitivity of the data being managed? APIs handling things like personal data, user credentials or financial data will need a different security approach than an API  handling, say traffic updates. It is also worth defining the scope of your API security. Securing network and server infrastructure for things like intrusion, eves dropping via packet sniffing and physical security often lie outside the scope of API security. For highly sensitive data, digital signatures maybe a necessity, but if you are looking for flexibility and performance at scale OAuth2 is a valid option to chose.

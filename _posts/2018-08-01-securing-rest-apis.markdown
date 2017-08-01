@@ -74,10 +74,10 @@ For accessing a protected resource
 /users/username/account
 ```
 
-HMAC (Hash-based message authentication) an implementation of MAC involves calculation of a digest
+HMAC (Hash-based message authentication) an implementation of MAC involves calculation of an HMAC
 
 ```
-digest = base64encode(hmac("sha256", "secret", "GET+/users/username/account"))
+value = base64encode(hmac("sha256", "secret", "GET+/users/username/account"))
 ```
 
 The digest then is sent over as an HTTP header:
@@ -85,25 +85,25 @@ The digest then is sent over as an HTTP header:
 ```
 GET /users/username/account HTTP/1.1
 Host: api.example.com
-Authentication: hmac username:[digest]
+Authentication: hmac username:[value]
 ```
 
-### Prevent digest (hash) reuse
+### Prevent hash reuse
 
-Hashing the same message repeatedly results in the same digest. There's nothing stopping the digest falling into the wrong hands and being used to make valid requests. Therefore it is important to introduce some randomness to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding more data (**timestamp** and **nonce**) to the digest computation.
+Hashing the same message repeatedly results in the same HMAC (hash). If the hash falls into the wrong hands, it can be used to make the same request at a later time. Therefore it is important to introduce entropy to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding more data (**timestamp** and **nonce**) to the hash computation.
 
 ```
-digest = base64encode(hmac("sha256", "secret", "GET+/users/username/account+28jul201712:59:24+123456"))
+value = base64encode(hmac("sha256", "secret", "GET+/users/username/account+28jul201712:59:24+123456"))
 ```
 The additional data (timestamp and nonce) is sent to the receiver for reconstructing the hash.
 
 ```
 GET /users/username/account HTTP/1.1
 Host: example.org
-Authentication: hmac username:123456:[digest]
+Authentication: hmac username:123456:[value]
 Date: 28 jul 2017 12:59:24
 ```
-The nonce is a number we only use once and is regenerated on each subsequent request. The receiver needs to store the nonce ( probably for a particular duration) in order to discard a message with a nonce that has been previously used.
+The nonce is a number we only use once and is regenerated on each subsequent request, even if the request is for the same resource. The receiver reconstructs the hash with the nonce value and if it doesn't match the received hash value, discards the message possibly because the hash has been previously used. This ensures each request is only valid once and only once.
 
 If the timestamp is not within a certain range (say 10 minutes) of the receiver's time, then the receiver can discard the message as it is probably a replay of an earlier message. It is worth noting time-limited authentications can be problematic if the sender and receiver's time is not synchronized.
 

@@ -13,7 +13,7 @@ RESTful services are stateless therefore each request needs to be authenticated 
 
 When looking at any security aspect, often a lot of terms get thrown around, which can be distracting and sometimes overwhelming. Therefore, before looking at the nitty-gritty of securing RESTful APIs it is worth getting some security jargon out of the way.
 
-*Oversimplification Disclaimer - I have tried to explain the security basics in a general context, which might result in missing some of the technical nuances. Most of these terms are also applicable in a more wider security context.*
+*Oversimplification Disclaimer - I have tried to explain the security basics in a general context, which might result in missing some of the technical nuances.*
 
 * **Authentication** - Validation of the sender's identity so that receiver knows who they are talking to; e.g. client sends credentials (either in plaintext or encrypted) to the server that validates them.
 

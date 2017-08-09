@@ -128,15 +128,15 @@ OAuth2 is an open protocol to allow secure authorization in a standard method fr
 
 This allows you to focus on building and scaling your resource APIs independent of authorization.
 
-OAuth2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token, but in essence each flow involves obtaining authorization to get an access token and using the access token to make requests on behalf of the user. An access token is a [JSON web token (JWT)](https://tools.ietf.org/html/rfc7519) encoded in base64URL format that contains a header, payload, and signature. A resource server can authorize the client to access particular resources based on the scopes and claims in the access token.
+OAuth2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token, but in essence each flow involves obtaining authorization to get an access token and using the access token to access protected resources. An access token is a [JSON web token (JWT)](https://tools.ietf.org/html/rfc7519) encoded in base64URL format that contains a header, payload, and signature. A resource server can authorize the client (application) to access particular resources based on the scopes and claims in the access token.
 
-The authorization server provides `/.well-known/openid-configuration` service discovery endpoint to be used by clients and resource APIs to interact with the authorization server.
+The authorization server provides `/.well-known/openid-configuration` service discovery endpoint for clients to get information about interacting with the authorization server.
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
 
 ### OAuth1 or OAuth2
 
-OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but with digital signatures as discussed above, you incur the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, it is no longer possible to make API calls like this:
+OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but with digital signatures as discussed above, you incur the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, this means it is no longer possible to make API calls like this:
 
 ```
 curl --user foo:bar https://api.example.com/users

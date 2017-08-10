@@ -32,10 +32,10 @@ In order to achieve secure communication, be it client to service or service to 
 
 The first problem can be solved using encryption. Encryption is used to achieve **confidentiality** and  means only those with the corresponding secret key can read the message. However encryption alone does not guarantee **integrity**. The second problem can be solved using cryptography which often uses combination of encryption and [hashing](https://en.wikipedia.org/wiki/Cryptographic_hash_function) to achieve **authenticity** and **integrity** in addition to **confidentiality**.
 
-## Symmetric (Private key cryptography)
+### Symmetric (Private key cryptography)
 You share the same secret key between sender and receiver to encrypt and decrypt the message. You can trust the **authenticity** (from a trusted known sender) of the message, its **confidentiality** and **integrity** but **non-repudiation** cannot be guaranteed. Because the secret key could be shared amongst several participants, there is no single identity attached to the key, therefore the receiver knows it came from a source in possession of the key but doesn't know which one. The risk of the key falling in the wrong hands is also higher because it needs to be securely shared amongst the participants, often over the internet. Other options include face-to-face meeting or use of a trusted courier but these can often be impractical. Higher the number of participants, higher is the exposure of the key.
 
-## Asymmetric (Public key cryptography)
+### Asymmetric (Public key cryptography)
 Different key is used between sender and receiver to encrypt and decrypt the message, which gets us around the shared key issue in symmetric key cryptography. In order to solve the first secure communication problem mentioned above, when encrypting, you use the **receiver's public key** to write (encrypt) the message and the receiver uses **their private key** to read (decrypt) the message. This establishes **confidentiality** of the message.
 
 ![end-to-end-encryption.png](../assets/end-to-end-encryption.png "End to End Encryption")
@@ -87,7 +87,7 @@ Host: api.example.com
 Authentication: hmac username:[value]
 ```
 
-** Prevent hash reuse **
+**Prevent hash reuse**
 
 Hashing the same message repeatedly results in the same HMAC (hash). If the hash falls into the wrong hands, it can be used to make the same request at a later time. Therefore it is important to introduce entropy to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding more data (**timestamp** and **nonce**) to the hash computation.
 
@@ -133,7 +133,7 @@ The authorization server provides `/.well-known/openid-configuration` service di
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
 
-** OAuth1 or OAuth2 **
+**OAuth1 or OAuth2**
 
 OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but with digital signatures as discussed above, you incur the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, this means it is no longer possible to make API calls like this:
 

@@ -42,10 +42,10 @@ Different key is used between sender and receiver to encrypt and decrypt the mes
 
 In order to solve the 2nd secure communication problem mentioned above, you use a [digital signature](https://en.wikipedia.org/wiki/Digital_signature). Digitally signing data is equivalent to a physical signature that can only be produced by the signing authority and verified by anyone who has visibility of the signing authority's signature.  Signing uses public key encryption where the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. It is a means of attaching identity to a key. It is discussed in further detail in the section below on [message signing using digital signature](## Message signing using Digital Signature).
 
-# Approaches to securing RESTful APIs
+## Approaches to securing RESTful APIs
 Having covered the security semantics, we can now look at the different techniques to secure RESTful APIs. These techniques are based on the security fundamentals discussed above.
 
-## Basic Authentication
+### Basic Authentication
 The most simple way to authenticate senders is to use HTTP basic authentication. Sender's credentials (username and password) are base64 encoded and sent across in an HTTP header.
 
 ```
@@ -62,7 +62,7 @@ There are a few issues with HTTP Basic Authentication:
 
 Using HTTPS only solves the first issue. Even then, the credentials are only protected until SSL/TLS termination, any internal network routing, logging, etc. can expose the plaintext credentials. Does HTTPS protect the credentials in transit? Yes. Is that enough? Usually, No. Basic Authentication with HTTPS provides you **confidentiality** only for a window during which  SSL/TLS is on. In an enterprise, more often than not SSL/TLS termination occurs much before the request reaches your API server.
 
-## MAC (Message  Authentication Code)
+### MAC (Message  Authentication Code)
 Basic Auth over HTTP exposes credentials in transit and does not guarantee integrity of the message. MAC on the other hand is used to send hashed version of credentials and the message using a secret key. It can be used to **authenticate** a message and verify its **integrity**. MAC is symmetric, i.e. it uses the same key to produce a MAC value for a message and to verify the MAC value for the message.
 
 ![MAC.jpg](../assets/MAC.jpg "MAC")
@@ -87,7 +87,7 @@ Host: api.example.com
 Authentication: hmac username:[value]
 ```
 
-### Prevent hash reuse
+** Prevent hash reuse **
 
 Hashing the same message repeatedly results in the same HMAC (hash). If the hash falls into the wrong hands, it can be used to make the same request at a later time. Therefore it is important to introduce entropy to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding more data (**timestamp** and **nonce**) to the hash computation.
 
@@ -107,7 +107,7 @@ The nonce is a number we only use once and is regenerated on each subsequent req
 If the timestamp is not within a certain range (say 10 minutes) of the receiver's time, then the receiver can discard the message as it is probably a replay of an earlier message. It is worth noting time-limited authentications can be problematic if the sender and receiver's time is not synchronized.
 
 
-## Message signing using Digital Signature
+### Message signing using Digital Signature
 Digital signatures use asymmetric public key cryptography to
 establish **authenticity** (message sent by a known sender), **integrity** (message wasn't tampered with) and **non-repudiation** (message sent by the sender cannot be denied).
 
@@ -119,7 +119,7 @@ A service (when acting as a **receiver**) has a list of **public keys** for all 
 
 Digital signatures can be safely used without SSL (although SSL is still recommended if the data transferred is sensitive). However, this level of security comes with a price: generating and validating signatures can be a complex process.
 
-## OAuth2
+### OAuth2
 
 OAuth2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables [federated security](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/federation) to allow clear separation between your API and the associated authentication and authorization mechanism. This means you can either
 * build out the **authorization server** as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients, or you can
@@ -133,7 +133,7 @@ The authorization server provides `/.well-known/openid-configuration` service di
 
 OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth2. It is a REST-like identity layer on top of OAuth2.
 
-### OAuth1 or OAuth2
+** OAuth1 or OAuth2 **
 
 OAuth1 is a signature based protocol that uses a **digital signature** (usually HMAC-SHA1), ensuring the token secret is never passed in plaintext over the wire. It is highly secure but with digital signatures as discussed above, you incur the cost of using specific hashing algorithms with a strict set of steps. Every major programming language has a library to handle this for you. I have a Java based implementation of message signing [here](https://github.com/hemantksingh/message-signing). But, this means it is no longer possible to make API calls like this:
 
@@ -157,5 +157,5 @@ curl https://api.example.com/profile -H "Authorization: Bearer XXXXXXXXXXX"
 
 The tradeoff is all requests must be made over HTTPS. This provides a good balance between ease of use of APIs and good security practices.
 
-# In summary
+## In summary
 Before deciding on an API security approach, it is important to understand what are you going to secure and what is the sensitivity of the data being managed? APIs handling things like personal data, medical health records or financial data will need a different security approach than an API  handling, say traffic updates. It is also worth defining the scope of your API security. Securing network and server infrastructure for things like intrusion, eves dropping via packet sniffing and physical security often lie outside the scope of API security. Opting for a particular technique may depend on specific security requirements of your application because each technique covers different aspects of security. For example basic authentication without HTTPS can provide authenticity but no integrity or confidentiality. MACs may be sufficient for internal APIs (non public facing) serving a few web applications. For highly sensitive data, digital signatures maybe a necessity, but if you are looking for flexibility and performance at scale OAuth2 Bearer tokens maybe the way to go.

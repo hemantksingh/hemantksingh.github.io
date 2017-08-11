@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Securing REST APIs
-date: '2017-08-01T11:31:00.000-08:00'
+date: '2017-08-10T11:31:00.000-08:00'
 author: Hemant Kumar
 tags: restapi, security, cryptography, authentication, HMAC, OAuth, digital signatures
 categories: kodekitab
 comments: true
-modified_time: '2017-08-01T11:31:00.000-08:00'
+modified_time: '2017-08-10T11:31:00.000-08:00'
 ---
 
 RESTful services are stateless therefore each request needs to be authenticated individually. State in REST terminology means the state of the resource that the API manages, not session state. There maybe good reasons to build a stateful API but that is going against REST principles. It is important to realize that managing sessions is complex and difficult to do securely, as it is prone to replay and impersonation attacks. So what options do we have to secure RESTful services? This post looks into Basic Authentication, MAC (Message Authentication Code), Digital Signatures and OAuth.

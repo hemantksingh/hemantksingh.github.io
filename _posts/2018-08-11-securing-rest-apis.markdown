@@ -21,7 +21,7 @@ When looking at any security aspect, often a lot of terms get thrown around, whi
 
 * **Integrity** - Ensuring message contents of a request haven't changed in transit.
 
-* **Non-repudiation** - Ensuring that the sender cannot deny having sent the message; e.g. your bank cannot deny having sent you a bank statement if it has a valid stamp of the bank on it.
+* **Non-repudiation** - Ensuring that the sender cannot deny having sent the message; e.g. your bank cannot deny having sent you a bank statement if it has a valid stamp of the bank on it and this could be proved to a third party.
 
 * **Confidentiality** - No one can see the message contents in transit from sender to receiver.
 

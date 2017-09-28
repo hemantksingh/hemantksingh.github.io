@@ -23,7 +23,7 @@ The media has called this a surgical strike on black money and corruption. Is th
 ### Removal of counterfeit currency
 **Benefit:** Funding for terror and other subversive activities in counterfeit currency will be removed.
 
-*Does demonetisation achieve removal of counterfeit currency?* Yes! *Was this the only way of going about doing this?* No! A phased out release of new currency would have achieved the same objective without starting a panic that we are seeing today in the financial system. A lot of countries do this all the time in a managed way, by introducing redesigned bills to improve security of the currency. A shock to the system or the so called *surgical strike* does mean less time for the counterfeiters to move their money around but it also means giving less time to genuine traders and small time businesses to get on with their daily trade. That is why we are seeing a lot of disruption to in the unorganised economy.
+*Does demonetisation achieve removal of counterfeit currency?* Yes! *Was this the only way of going about doing this?* No! A phased out release of new currency would have achieved the same objective without starting a panic that we are seeing today in the financial system. A lot of countries do this all the time in a managed way, by introducing redesigned bills to improve security of the currency. A shock to the system or the so called *surgical strike* does mean less time for the counterfeiters to move their money around but it also means giving less time to genuine traders and small time businesses to get on with their daily trade. That is why we are seeing a lot of disruption in the unorganised economy.
 
 ### Stamping out of black money
 **Benefit:** Approximately $14 to $44 billion of back money will be extinguished.

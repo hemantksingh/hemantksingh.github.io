@@ -46,7 +46,7 @@ In order to solve the 2nd secure communication problem mentioned above, you use 
 Having covered the security semantics, we can now look at the different techniques to secure RESTful APIs. These techniques are based on the security fundamentals discussed above.
 
 ### Basic Authentication
-The most simple way to authenticate senders is to use HTTP basic authentication. Sender's credentials (username and password) are base64 encoded and sent across in an HTTP header.
+The most simple way to authenticate senders is to use HTTP basic authentication. Sender's credentials (username and password) are base64-encoded and sent across the network unencrypted in an HTTP header.
 
 ```
 GET / HTTP/1.1
@@ -60,7 +60,7 @@ There are a few issues with HTTP Basic Authentication:
 * Credentials are sent repeatedly, for each request, which widens the attack window.
 * The password may be stored permanently in the browser, if the user requests. The browser caches the password minimum for the length of the window / process, which can be silently used to make requests to the server e.g. in CSRF attacks.
 
-Using HTTPS only solves the first issue. Even then, the credentials are only protected until SSL/TLS termination, any internal network routing, logging, etc. can expose the plaintext credentials. Does HTTPS protect the credentials in transit? Yes. Is that enough? Usually, No. Basic Authentication with HTTPS provides you **confidentiality** only for a window during which  SSL/TLS is on. In an enterprise, more often than not SSL/TLS termination occurs much before the request reaches your API server.
+Using HTTPS can solve the first issue. Even then, the credentials are only protected until SSL/TLS termination. Any internal network routing, logging, etc. can still expose the plaintext credentials. In an enterprise, SSL/TLS termination often occurs much before the request reaches your API server. Does HTTPS protect the credentials in transit? Yes. Is that enough? Usually, No. Basic Authentication with HTTPS provides you **confidentiality** only for a window during which  SSL/TLS is on.
 
 ### MAC (Message  Authentication Code)
 Basic Auth over HTTP exposes credentials in transit and does not guarantee integrity of the message. MAC on the other hand is used to send hashed version of credentials and the message using a secret key. It can be used to **authenticate** a message and verify its **integrity**. MAC is symmetric, i.e. it uses the same key to produce a MAC value for a message and to verify the MAC value for the message.

@@ -126,18 +126,22 @@ Digital signatures can be safely used without SSL (although SSL is still recomme
 
 ### OAuth 2
 
-OAuth 2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables [federated security](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/federation) to allow clear separation between your API and the associated authentication and authorization mechanism. This means you can either
+OAuth 2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables [federated security](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/federation) to allow clear separation between your applications and the associated authentication and authorization mechanism. Other identity protocols like [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [WS-Fed](https://en.wikipedia.org/wiki/WS-Federation) also provide federated security but they are older and relatively more complex than OAuth.  Figure below depicts an [Oauth2 protocol flow](https://tools.ietf.org/html/rfc6749)
 
-* build out the **authorization server** as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients, or you can
-* outsource the **authorization server** as a service that the user trusts, such as a social identity provider like facebook.
+![oauth-flow.png](../assets/oauth-flow.png "OAuth Protocol Flow")
 
-This allows you to focus on building and scaling your resource APIs independent of authorization. However the authorization server and the API do not necessarily have to be on different servers.
+The separation between application (client) and **authorization server** means you can either
+
+* build out the authorization server as a standalone component which is only responsible for obtaining authorization from users and issuing tokens to clients, or you can
+* outsource the authorization server as a service that the user trusts, such as a social identity provider like facebook.
+
+This allows you to focus on building and scaling your APIs (resource server) independent of authorization. However the authorization server and the API do not necessarily have to be on different servers.
 
 OAuth 2 has multiple [flows](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/) called *grant types* for obtaining an access token. [Deciding which grants to implement](https://developer.okta.com/authentication-guide/auth-overview/#choosing-an-oauth-20-flow) depends on the type of client the end user will be using, and the experience you want for your users. In essence each flow involves obtaining authorization to get an access token and using the access token to access protected resources. An access token is a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoded in base64URL format that contains a header, payload, and signature. A **resource server** (API) can [validate the access token](https://developer.okta.com/authentication-guide/tokens/validating-access-tokens#what-to-check-when-validating-an-access-token) and can authorize the client (application) to access particular resources based on the scopes and claims in the access token.
 
 The authorization server provides `/.well-known/openid-configuration` service discovery endpoint for clients to get information about interacting with the authorization server.
 
-OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds identity to OAuth 2. It is a REST-like identity layer on top of OAuth 2 that allows clients to verify the identity of the end-user, as well as to obtain basic profile information about the end-user.
+OAuth is for authorization but lot of applications require to know the users identity too. [OpenID Connect](http://openid.net/connect/) adds authentication to OAuth. It is a REST-like identity layer on top of OAuth 2 that allows clients to verify the identity of the end-user, as well as to obtain basic profile information about the end-user.
 
 **Background**
 

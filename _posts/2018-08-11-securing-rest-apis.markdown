@@ -128,7 +128,7 @@ Digital signatures can be safely used without SSL (although SSL is still recomme
 
 OAuth 2 is an open protocol to allow secure authorization in a standard method from web, mobile and desktop applications. It enables [federated security](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/federation) to allow clear separation between your applications and the associated authentication and authorization mechanism. Other identity protocols like [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [WS-Fed](https://en.wikipedia.org/wiki/WS-Federation) also provide federated security but they are older and relatively more complex than OAuth.  Figure below depicts an [Oauth2 protocol flow](https://tools.ietf.org/html/rfc6749)
 
-![oauth-flow.png](../assets/oauth-flow.png "OAuth Protocol Flow")
+![oauth-protocol-flow.png](../assets/oauth-protocol-flow.png "OAuth Protocol Flow")
 
 The separation between application (client) and **authorization server** means you can either
 

@@ -18,27 +18,44 @@ I have been using Docker for local development, testing and for running apps in 
 
 Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight. It is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
 
-Docker uses the resource isolation features of the Linux kernel such as **Namespaces**, **cgroups** and **capabilities** to create the walls between containers and other processes running in the host.
+At the very basic level Docker uses the resource isolation features of the Linux kernel such as **Namespaces** and **cgroups** to create the walls between containers and other processes running in the host.
 
-*Namesapces* control what processes can see. They allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.
+- *Namesapces* control what processes can see. They allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.
 
-*cgroups* (abbreviated from control groups) control what processes can use by limiting and isolating resource usage (CPU, memory, disk I/O, network, etc.) for a process.
+- *cgroups* (abbreviated from control groups) control what processes can use by limiting and isolating resource usage (CPU, memory, disk I/O, network, etc.) for a process.
 
-*Capabilites* are a set of privileges that can be independently enabled or disabled for a process to provide or restrict access to the system. Removing capabilities can cause applications to break, therefore deciding which ones to keep and remove is a balancing act. Docker containers run with a sensible subset of default capabilities, e.g. a container will not normally be able to modify capabilities for other containers. Apart from the [capabilities removed by default](https://opensource.com/business/14/9/security-for-docker) you can remove or add capabilities while running a container.
+Linux Security Module is another layer of protection that sits on top of namespaces and cgroups.
+
+**AppArmor** can control and audit various process actions such as file (read, write, execute, etc) and system functions (mount, network tcp, etc). Again, while running a docker container you get a sensible set of defaults:
+
+- Preventing writing to `/proc/{num}`, `/proc/sys`, `/sys`
+- Preventing mount
+
+**SELinux** provides a mechanism for supporting access control security policies. Uses labels. Defaults for running docker include:
+
+- Gets access to everything in `/usr` and most things in `/etc`
+- To give more access: relabel content on the host
+- To restrict access to things in `/usr` or things in `/etc`: relabel them
+
+**Seccomp** is another security facility in the Linux kernel that allow an application to define what syscalls it allows or denies. Docker's default seccomp profile is a *whitelist* which specifies the calls that are allowed. Running docker by default
+
+- Prevents ~150 uncommon or dangerous syscalls
+
+**Capabilites** are a set of privileges that can be independently enabled or disabled for a process to provide or restrict access to the system. Removing capabilities can cause applications to break, therefore deciding which ones to keep and remove is a balancing act. Docker containers run with a sensible subset of default capabilities, e.g. a container will not normally be able to modify capabilities for other containers. Apart from the [capabilities removed by default](https://opensource.com/business/14/9/security-for-docker) you can remove or add capabilities while running a container.
 
 ## Security challenges
 
 So what sort of security issues should you be worried about that could affect apps running inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking.
 
-* ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
+- ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
 
-* ***Denial of service***: All containers share the kernel resources. If one container manages to hog kernel resources like CPU, memory or block I/O, it can starve the other containers on the host for resources, resulting in a denial of service attack.
+- ***Denial of service***: All containers share the kernel resources. If one container manages to hog kernel resources like CPU, memory or block I/O, it can starve the other containers on the host for resources, resulting in a denial of service attack.
 
-* ***Container breakouts***: Running as root on the container means you will be root on the host. Therefore you need to worry about *escalated privileges* attack where a user can gain root access on the host due to a vulnerability in the application code. If an attacker gains access to one container that should not allow access to other containers or the host. Therefore it becomes important to run your container with restricted privileges.
+- ***Container breakouts***: Running as root on the container means you will be root on the host. Therefore you need to worry about *escalated privileges* attack where a user can gain root access on the host due to a vulnerability in the application code. If an attacker gains access to one container that should not allow access to other containers or the host. Therefore it becomes important to run your container with restricted privileges.
 
-* ***Tampered images***: You need to be sure that the image that you are running is from a trusted source and not from an attacker who has tricked you. The images that you run should also be up to date, scanned and without any known security vulnerabilities.
+- ***Tampered images***: You need to be sure that the image that you are running is from a trusted source and not from an attacker who has tricked you. The images that you run should also be up to date, scanned and without any known security vulnerabilities.
 
-* ***Secret Leakages***: Secrets for your applications (like API keys and Database passwords) need to be protected from falling into the wrong hands. You need to be very careful before putting these as plain text in source code; for example in a Dockerfile. Once the secret has made it into the Dockerfile, even if you remove the secret later, an attacker can still retrieve it from the history of the Docker image built from the Dockerfile. Ideally using a secret vault for storing application secrets and allowing restricted access to the secret vault serves as a secure mechanism to distribute secrets.
+- ***Secret Leakages***: Secrets for your applications (like API keys and Database passwords) need to be protected from falling into the wrong hands. You need to be very careful before putting these as plain text in source code; for example in a Dockerfile. Once the secret has made it into the Dockerfile, even if you remove the secret later, an attacker can still retrieve it from the history of the Docker image built from the Dockerfile. Ideally using a secret vault for storing application secrets and allowing restricted access to the secret vault serves as a secure mechanism to distribute secrets.
 
 ## Mitigations
 

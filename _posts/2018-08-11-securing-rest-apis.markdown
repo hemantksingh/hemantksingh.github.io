@@ -38,7 +38,7 @@ You share the same secret key between sender and receiver to encrypt and decrypt
 
 ### Asymmetric (Public key cryptography)
 
-Different key is used between sender and receiver to encrypt and decrypt the message, which gets us around the shared key issue we came across in symmetric key cryptography. In order to solve the first secure communication problem mentioned above, when encrypting, you use the **receiver's public key** to write (encrypt) the message and the receiver uses **their private key** to read (decrypt) the message. This establishes **confidentiality** of the message.
+Different key is used between sender and receiver to encrypt and decrypt the message. This gets us beyond the shared key issue in symmetric key cryptography. In order to solve the first secure communication problem mentioned above, when encrypting, you use the **receiver's public key** to write (encrypt) the message and the receiver uses **their private key** to read (decrypt) the message. This establishes **confidentiality** of the message.
 
 ![end-to-end-encryption.png](../assets/end-to-end-encryption.png "End to End Encryption")
 

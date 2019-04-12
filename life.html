@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Politics
-permalink: /politics/
-description: Ramblings of a political nature
+title: Life
+permalink: /life/
+description: Life, politcs, culture and consciousness through a bhartiya lens
 ---
 
 <div class="home">
 
   <ul class="post-list">
     {% for post in site.posts %}
-      {% if post.categories contains 'politics' %}
+      {% if post.categories contains 'life' %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -21,6 +21,6 @@ description: Ramblings of a political nature
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/politicsfeed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/lifefeed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

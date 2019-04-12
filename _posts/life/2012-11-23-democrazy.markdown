@@ -3,8 +3,8 @@ layout: post
 title: Democrazy
 date: '2012-11-22T18:03:00.000-08:00'
 author: Hemant Kumar
-tags:
-categories: politics
+tags: politics
+categories: life
 modified_time: '2015-07-29T22:21:33.441-08:00'
 blogger_id: tag:blogger.com,1999:blog-4346681821231783111.post-6836111133140079040
 blogger_orig_url: http://thehemantkumar.blogspot.com/2012/11/democrazy.html

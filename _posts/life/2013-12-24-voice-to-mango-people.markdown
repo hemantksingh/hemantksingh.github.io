@@ -3,8 +3,8 @@ layout: post
 title: Voice to the Mango People
 date: '2013-12-24T02:21:00.000-08:00'
 author: Hemant Kumar
-tags:
-categories: politics
+tags: politics, aap, anticorruption
+categories: life
 modified_time: '2013-12-24T05:09:24.314-08:00'
 blogger_id: tag:blogger.com,1999:blog-4346681821231783111.post-1328059198720487996
 blogger_orig_url: http://thehemantkumar.blogspot.com/2013/12/voice-to-mango-people.html

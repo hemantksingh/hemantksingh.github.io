@@ -9,5 +9,5 @@ linkedin_username: hemantkrsingh
 footer: © Hemant Kumar | Hosted by GitHub and powered by Jekyll
 markdown: kramdown
 permalink: /:title.html
-gems:
+plugins:
   - jekyll-redirect-from

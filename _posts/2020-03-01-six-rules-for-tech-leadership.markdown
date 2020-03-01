@@ -9,7 +9,7 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. The following six rules by no means is an exhaustive list but I'm hoping people working in technology will find them useful or at least something they can relate to.
+Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. The following six rules by no means is an exhaustive list but I'm hoping people working in technology will find them useful or at the least something they can relate to.
 
 ## Know your goal
 
@@ -30,7 +30,7 @@ Team goals often vary vastly and may even be contrary to each other, resulting i
 
 * Breaking organizational silos e.g. development & operations - changing the org set up by introducing **cross functional teams**
 * Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the right tools (e.g. logging and monitoring tools) and processes in place to keep them running.
-* Adopting similar tool set across build, delivery & ops teams that support collaboration e.g. [GitOps](https://www.gitops.tech/)
+* Adopting similar tool set across build, delivery & ops teams that support collaboration e.g. adopting approaches like [GitOps](https://www.gitops.tech/)
 * Pair programming within teams to prevent single point of failures.
 
 ## Get the business on-board
@@ -62,7 +62,7 @@ Having a visual representation of your technology estate and capabilities allows
 
 Light weight documentation that captures key technology decisions and choices helps in providing context not only to your team but also for future teams, who may want to evolve your technology landscape. [Architecture decision records](https://github.com/joelparkerhenderson/architecture_decision_record) is a useful technique that I have used to capture key architecture decisions on projects for visibility within the team and for external oversight.
 
-Most of our time and energy is spent translating complex business rules into code, rather than thinking about the rules themselves. When you’re thinking in terms of a programming language, code constrains your ability to think, it can make you miss the forest for the trees. Therefore it is crucial to think before writing any code and to document your thinking. This could be your business architecture, system architecture and the associated data flows. Whilst documentation is important, it is also important for it to be easily consumable. Using a standard approach like [C4 model](https://c4model.com/) across all your artifacts for visualising your architecture, goes a long way in communicating and thinking above the code.
+Most of our time and energy is spent translating complex business rules into code, rather than thinking about the rules themselves. When you’re thinking in terms of a programming language, code constrains your ability to think, it can make you miss the forest for the trees. Therefore it is crucial to think before writing any code and to document your thinking. This could be your business architecture, system architecture or the associated data flows. Whilst documentation is important, it is also important for it to be easily consumable. Using a standard approach like [C4 model](https://c4model.com/) across all your artifacts for visualising your architecture, goes a long way in communicating and thinking above the code.
 
 ## Simplify not over engineer
 

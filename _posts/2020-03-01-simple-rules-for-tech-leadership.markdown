@@ -9,11 +9,18 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Over the years I have lead some complex technical pieces of work with teams (distributed and collocated) of sizes varying from 2 to 20, optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, explaining the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find in them something to relate to.
+Over the years I have lead some complex technical pieces of work with distributed as well as collocated teams of sizes varying from 2 to 20. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, explaining the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find in them something to relate to.
 
 ## Know your goal
 
-What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve, gives you the strength and the drive to pursue your goal and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. People are going to take you seriously only if you are clear in your thinking. Enabling others can only begin once you know what you want to achieve. Having a clear purpose and repeating it often makes you lead by example. In a business this could be a shared organisation goal or a team goal.
+What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process. For example at this point I have the following priorities:
+
+* Control and flexibility over the kind of work I do and when it is done
+* Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
+
+Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your own goals with that of the business.
+
+It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. People are going to take you seriously only if you are clear in your thinking. Enabling others can only begin once you know what you want to achieve.
 
 ## Know your team
 
@@ -57,7 +64,7 @@ Having a visual representation of your technology estate and capabilities allows
 
 Light weight documentation that captures key technology decisions and choices helps in providing context not only to your team but also for future teams, who may want to evolve your technology landscape. [Architecture decision records](https://github.com/joelparkerhenderson/architecture_decision_record) is a useful technique that I have used to capture key architecture decisions on projects for visibility within the team and for external oversight.
 
-Most of our time and energy is spent translating complex business rules into code, rather than thinking about the rules themselves. When you’re thinking in terms of a programming language, code constrains your ability to think, it can make you miss the forest for the trees. Therefore it is crucial to document your system architecture as well as your business architecture and the associated data flows. Whilst documentation is important, it is also important for it to be easily consumable.  Using a standard approach like [C4 model](https://c4model.com/) across all your artifacts for visualising your architecture, goes a long way in communicating and thinking above the code.
+Most of our time and energy is spent translating complex business rules into code, rather than thinking about the rules themselves. When you’re thinking in terms of a programming language, code constrains your ability to think, it can make you miss the forest for the trees. Therefore it is crucial to think before writing any code and to document your thinking. This could be your business architecture, system architecture and the associated data flows. Whilst documentation is important, it is also important for it to be easily consumable. Using a standard approach like [C4 model](https://c4model.com/) across all your artifacts for visualising your architecture, goes a long way in communicating and thinking above the code.
 
 ## Simplify not over engineer
 

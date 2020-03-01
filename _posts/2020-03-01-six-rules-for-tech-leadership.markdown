@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple rules for tech leadership
+title: Six rules for tech leadership
 date: '2020-02-29T23:31:00.000-08:00'
 author: Hemant Kumar
 tags: technology, leadership, agile
@@ -9,16 +9,16 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Over the years I have lead some complex technical pieces of work with distributed as well as collocated teams of sizes varying from 2 to 20. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, explaining the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find in them something to relate to.
+Over the years I have lead some complex technical pieces of work with varied teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find in them something to relate to.
 
 ## Know your goal
 
-What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process. For example at this point I have the following priorities:
+What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. For example at this point I have the following priorities:
 
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
 
-Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your own goals with that of the business.
+Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your personal goals with that of the business.
 
 ## Know your team
 
@@ -26,11 +26,11 @@ Get to know your team and the wider business by listening and engaging with them
 
 "*If there is one secret of success, it lies in the ability to get the other person's point of view and see things from that persons's angle as well as your own*" - Henry Ford
 
-Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Empower others by aligning their individual goals with the team or organizational goals. Some strategies that have worked in order to enable teams to be self empowered capable of building, running and supporting their apps are
+Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Empower others by aligning their individual goals with the team or organizational goals. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
 
 * Breaking organizational silos e.g. development & operations - changing the org set up by introducing cross functional teams
-* Training & mentoring dev teams to be more focussed on production readyness and support, right from project kick off. Realizing that it is not just about delivering great apps but also the ability to effectively support them by having the right tools and processes in place.
-* Adopting tools that support collaboration - similar tool set across build, delivery & ops teams.
+* Coaching & mentoring dev teams to be more focussed on production readyness and support, right from project kick off. Realizing that delivering great apps is fine but in order for them to be effective you need the right tools and processes in place to support them.
+* Adopting similar tool set across build, delivery & ops teams that support collaboration.
 * Pair programming within teams to prevent single point of failures.
 
 ## Get the business on-board

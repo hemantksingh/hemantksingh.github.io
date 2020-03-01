@@ -18,9 +18,7 @@ What's most important to you? This is a tough question to answer, because it req
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
 
-Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your own goals with that of the business.
-
-It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. People are going to take you seriously only if you are clear in your thinking. Enabling others can only begin once you know what you want to achieve.
+Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your own goals with that of the business.
 
 ## Know your team
 

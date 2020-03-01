@@ -9,7 +9,7 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find something they can relate to.
+Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. The following six rules by no means is an exhaustive list but I'm hoping people working in technology will find something they can relate to.
 
 ## Know your goal
 
@@ -18,7 +18,7 @@ What's most important to you? This is a tough question to answer, because it req
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
 
-Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given point in time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your personal goals with that of the business.
+Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your personal goals with that of the business.
 
 ## Know your team
 
@@ -70,7 +70,7 @@ Simplicity in software can be elusive because we often do not make the distincti
 
 * What percentage of your software is really complicated? How much of it actually impacts the business? Does the complex part absolutely need to be automated? Can the business deal with it manually or accept it as a risk?
 * Are you designing a system that can never possibly fail? Trying to handle *"every possible thing"* that can go wrong in your system leads to accidental complexity. Perform a cost benefit analysis of your design choices and think if all of them are worth investing time and money.
-* Are you doing premature generalisation? When do you prioritise extensibility and generalisation in your software because each of them has simplicity and cost trade offs.
+* Are you doing premature generalisation? When do you prioritise extensibility and generalisation in your software because each of them has simplicity and cost trade offs?
 * Do you adopt bleeding edge tech or something that works? *Boring is good*. Are you experimenting with new tech at the core of your system or at the periphery?
 * Are you optimising for the things that can be easily seen and measured (e.g. code repetition) while ignoring software complexity that can be hard to measure?
 * Are you a victim of tech overuse? Technology can solve a lot of problems but overusing it can cause more problems that it can solve. *With a hammer everything looks like a nail*. You can let humans deal with the edge cases, especially early on in a project.

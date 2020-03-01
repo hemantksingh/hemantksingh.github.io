@@ -9,7 +9,7 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Over the years I have lead some complex technical pieces of work with varied teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find in them something to relate to.
+Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. This by no means is an exhaustive list but I'm hoping people working in technology will find something they can relate to.
 
 ## Know your goal
 
@@ -28,24 +28,24 @@ Get to know your team and the wider business by listening and engaging with them
 
 Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Empower others by aligning their individual goals with the team or organizational goals. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
 
-* Breaking organizational silos e.g. development & operations - changing the org set up by introducing cross functional teams
-* Coaching & mentoring dev teams to be more focussed on production readyness and support, right from project kick off. Realizing that delivering great apps is fine but in order for them to be effective you need the right tools and processes in place to support them.
-* Adopting similar tool set across build, delivery & ops teams that support collaboration.
+* Breaking organizational silos e.g. development & operations - changing the org set up by introducing **cross functional teams**
+* Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the right tools (e.g. logging and monitoring tools) and processes in place to keep them running.
+* Adopting similar tool set across build, delivery & ops teams that support collaboration e.g. [GitOps](https://www.gitops.tech/)
 * Pair programming within teams to prevent single point of failures.
 
 ## Get the business on-board
 
-Technical leadership is a lot about meeting, influencing, planning and shaping the technical direction than hands-on work. Your hands-on experience may or may not be up to date, however you learn a lot about new tools and practices by seeing what the team is doing. Execs and management don't expect "architect" types to be hands-on. They *do* expect you to be able to talk authoritatively about technical topics at the high level. For example,
+Technical leadership is a lot about meeting, influencing, planning and shaping the technical direction than hands-on work. Your hands-on experience may not be up to date, however you learn a lot about new tools and practices by seeing what the team is doing. Execs and management don't expect "architect" types to be hands-on. They *do* expect you to be able to talk authoritatively about technical topics at the high level. For example,
 
 * What has proven to be useful approach to cloud migrations - IAAS, PAAS, FAAS etc?
-* Impact of moving from capex to opex (e.g. moving from owning a car to renting a car)
+* Impact of moving from capex to opex on budgeting (e.g. moving from owning a car to renting a car)
 * Why invest in adopting continuous integration and continuous delivery?
 * Sharing pitfalls of serverless
 * Explaining where container orchestration has gone wrong on projects
 
 This is the kind of stuff that you pick up through having lots of conversations with different people. The key qualification is your recommendations should be aligned to the experiences and wisdom of devs who actually do stuff. The goal is that if the business believes what the "architect" says, it will help the team to deliver as opposed to creating pain for them.
 
-Before making any technology choices, think critically and innovatively - seeing situations in new ways, being able to deal with uncertainty and ambiguity. Ensure the business goals are clear and aligned with the technical direction you want to pursue. While the execs may find your technical proposal amusing, what they are really interested in is:
+Before making any technology choices, think critically and innovatively - seeing situations in new ways, being able to deal with uncertainty and ambiguity. It is critical to get decisions right early in a project. Ensure the business goals are clear and aligned with the technical direction you want to pursue. While the execs may find your technical proposal amusing, what they are really interested in is:
 
 * Cost
 * Timeline
@@ -79,22 +79,22 @@ Simplicity in software can be elusive because we often do not make the distincti
 
 *Technology can bring benefits if and only if it diminishes a limitation - Eliyahu Goldratt*
 
-Before adopting any new technology, think about:
+Before adopting any new technology, it is important to do an objective evaluation of:
 
 * What is the **power** of the technology?
 * What **limitation** does the technology diminish? How can you prove that the limitation is holding you back? How would you know it was diminishing? What could you measure?
 * What **existing rules** enable us to manage this limitation? Do we need to be wedded to those rules? Who owns the rules? Who might be threatened by dismantling them? How can we make it safe to change? How to create a graceful exit?
 * What **new rules** will we need? How can we safely exploit this new technology? How do we introduce and institutionalise these new rules across the business?
 
-As a principle - chose the best tools and implementations available over standardising on any one language or platform and begrudgingly accepting its inherent limitation. Select a tool/programming languages keeping business goals in mind (objective evaluation) to optimise for the right combination of
+As a principle - chose the best tools and implementations available over standardising on any one language or platform and resentfully accepting its inherent limitation. Select a tool/programming language keeping business goals in mind to optimise for the right combination of
 
-* cost of the service
-    * current cost vs future, cost variance with scale and additional capabilities  
-* cost of operation and support
-* fit for purpose
-    * no lock-in (choice)
-    * ease and speed of development (agility)
-    * tech capability of the business (support)
-    * availability of existing libraries/integrations
-* performance & security
-* openness - can't do it alone, learn from shared practices and best ideas in the open source community, no vendor lock-in, contribute & attract talent. e.g. it is easier to hire engineers for deploying and securing linux based systems than say windows.
+* Cost of the service
+    * Current cost vs future, cost variance with scale and additional capabilities  
+    * Cost of operation and support
+* Fit for purpose
+    * No lock-in (choice)
+    * Ease and speed of development (agility)
+    * Tech capability of the business (support)
+    * Availability of existing libraries/integrations
+* Performance & security
+* Openness - can't do it alone, learn from shared practices and best ideas in the open source community, no vendor lock-in, contribute & attract talent. e.g. in your area it maybe easier to hire engineers for deploying and securing linux based systems than say windows.

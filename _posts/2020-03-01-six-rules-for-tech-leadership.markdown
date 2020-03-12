@@ -94,9 +94,9 @@ As a principle - chose the best tools and implementations available over standar
     * Current cost vs future, cost variance with scale and additional capabilities  
     * Cost of operation and support
 * Fit for purpose
-    * No lock-in (choice)
+    * Minimal lock-in (choice)
     * Ease and speed of development (agility)
     * Tech capability of the business (support)
-    * Availability of existing libraries/integrations
+    * Availability of existing libraries/integrations (flexibility)
 * Performance & security
 * Openness - can't do it alone, learn from shared practices and best ideas in the open source community, no vendor lock-in, contribute & attract talent. e.g. in your area it maybe easier to hire engineers for deploying and securing linux based systems than say windows.

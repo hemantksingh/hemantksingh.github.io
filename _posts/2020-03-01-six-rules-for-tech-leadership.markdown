@@ -13,6 +13,8 @@ Over the years I have lead some complex technical pieces of work with teams of v
 
 ## Know your goal
 
+"*If you don't know where you want to go, then it doesn't matter which path you take*" - Lewis Carroll
+
 What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. For example at this point I have the following priorities:
 
 * Control and flexibility over the kind of work I do and when it is done
@@ -77,7 +79,7 @@ Simplicity in software can be elusive because we often do not make the distincti
 
 ## Adopt tools and tech fit for purpose
 
-*Technology can bring benefits if and only if it diminishes a limitation - Eliyahu Goldratt*
+"*Technology can bring benefits if and only if it diminishes a limitation*" - Eliyahu Goldratt
 
 Before adopting any new technology, it is important to do an objective evaluation of:
 
@@ -92,9 +94,9 @@ As a principle - chose the best tools and implementations available over standar
     * Current cost vs future, cost variance with scale and additional capabilities  
     * Cost of operation and support
 * Fit for purpose
-    * No lock-in (choice)
+    * Minimal lock-in (choice)
     * Ease and speed of development (agility)
     * Tech capability of the business (support)
-    * Availability of existing libraries/integrations
+    * Availability of existing libraries/integrations (flexibility)
 * Performance & security
 * Openness - can't do it alone, learn from shared practices and best ideas in the open source community, no vendor lock-in, contribute & attract talent. e.g. in your area it maybe easier to hire engineers for deploying and securing linux based systems than say windows.

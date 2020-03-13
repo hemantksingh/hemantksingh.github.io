@@ -28,7 +28,7 @@ Simply put agile at scale means breaking up large projects into small pieces, so
 
 ## Digital transformation
 
-Digital transformation entails better understanding of existing customer data sitting in legacy systems. Unlocking this data (often done via APIs) and externalising it to work with partners can create new business opportunities by providing a service anywhere, anytime and on any device.
+Making things digital is what we did 30 years ago. We replaced tapes with cds, letters with email and paper based calculations with spreadsheets. Digital transformation is not about making things digital but about modelling your business around technology. Thinking of technology not as a business support function or a commodity that you can purchase from an IT vendor but as a key differentiator to drive your business model, go to market strategy and better understand customer behaviors. This can mean unlocking data sitting in legacy systems (often done via APIs) and externalising it to work with partners to create new business opportunities by providing a service anywhere, anytime and on any device.
 
 Transform legacy -> Transform customer experience -> Transform business
 

@@ -68,7 +68,7 @@ Most of our time and energy is spent translating complex business rules into cod
 
 ## Simplify not over engineer
 
-Simplicity in software can be elusive because we often do not make the distinction between essential complexity and accidental complexity. Automation is a noble pursuit, however knowing what to automate and when, determines whether you are simplifying or over engineering. Beofore you go on an *"automate everything"* spree it is worth thinking about
+Simplicity in software can be elusive because we often do not make the distinction between essential complexity and accidental complexity. Automation is a noble pursuit, however knowing what to automate and when, determines whether you are simplifying or over engineering. Before you go on an *"automate everything"* spree it is worth thinking about
 
 * What percentage of your software is really complicated? How much of it actually impacts the business? Does the complex part absolutely need to be automated? Can the business deal with it manually or accept it as a risk?
 * Are you designing a system that can never possibly fail? Trying to handle *"every possible thing"* that can go wrong in your system leads to accidental complexity. Perform a cost benefit analysis of your design choices and think if all of them are worth investing time and money.

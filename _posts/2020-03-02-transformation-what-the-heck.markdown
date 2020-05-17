@@ -9,28 +9,27 @@ comments: true
 modified_time: '2020-03-02T23:31:00.000-08:00'
 ---
 
-During my consulting career I have often come across the term *transformation* being banded about ad nauseam in the IT world. Virtually every organization is going through some sort of transformation, be it agile, digital or cultural. In order to understand what this actually means I have tried to declutter some of this terminology.
+During my consulting career I have often come across the term *transformation* being banded about ad nauseam in IT circles. Virtually every organization is going through some sort of transformation, be it agile, digital or cultural. In order to understand what transformation actually means, it is worth digging a bit deeper and  declutter some of this terminology.
+
+Transformation is a word used to [signify intent to make a change](https://www.thoughtworks.com/insights/blog/gut-check-time-do-you-have-what-it-takes-transform), often triggered by an imminent business disaster that is going to affect bottom lines or by a change in the executive. It is generally driven from executives who have a sense of urgency e.g. being driven out of business due to disruption caused by new players in the market. Making things digital is what we did 30 years ago. We replaced tapes with CDs, letters with email and paper based calculations with spreadsheets. **Digital transformation** is not about making things digital but about modelling your business around technology. Thinking of technology not as a business support function or a commodity that you can purchase from an IT vendor but as a key differentiator to drive your business model, your go to market strategy and to better understand customer behaviors. This can mean unlocking data sitting in legacy systems (e.g. via APIs) and externalising it to work with partners to create new business opportunities by providing a service anywhere, anytime and on any device.
 
 ## Agile transformation
 
-Transformation is a word used to [signify intent to make a change](https://www.thoughtworks.com/insights/blog/gut-check-time-do-you-have-what-it-takes-transform), often triggered by an imminent business disaster that is going to affect bottom lines or by a change in the executive. It is generally driven from executives who have a sense of urgency e.g. being driven out of business due to disruption caused by new players in the market.
+Driving business change through agile transformation is modelled around aligning people, processes and products.
 
-Driving business change through agile transformation is modelled around
-
-* people - cultivating an environment for teams to succeed by creating **cross functional teams** setup to deliver incremental value to your customers, frequently
-* processes and tools - adopt processes and tools that help in improving collaboration and breaking silos within the business
-* governance - manage investment risk to understand where your IT spend is going (move from tracking cost, time and resource allocation efficiency to tracking speed and value) and improve delivery assurance to understand what is the progress on your plan
-* customer - manage stakeholder expectations by factoring in opportunity cost and [cost of delay](http://blackswanfarming.com/cost-of-delay/)
+* people - cultivating a supporting environment that emphasizes learning from failures rather than blaming. Setting up teams to succeed by providing them time, space and resources to experiment and learn.
+* processes and tools - adopt processes and tools that help in continuous improvement and better collaboration by breaking silos within the business
+* governance - manage investment risk to 
+    * understand where your IT spend is going. Are you tracking cost, time and resource allocation efficiency or tracking speed and value?
+    * improve delivery assurance by [measuring the progress on your plan](https://www.gov.uk/service-manual/agile-delivery/measuring-reporting-progress)
+* customer - improve product decision making and manage stakeholder expectations by factoring in
+    * [opportunity cost](https://www.investopedia.com/terms/o/opportunitycost.asp) - when business owners have multiple options before them, understanding the potential missed opportunities foregone by choosing one option over another allows for better decision-making.
+    * [cost of delay](http://blackswanfarming.com/cost-of-delay/) - ensure product decisions are made not just by understanding the value of something but also its urgency.
 * money  - move from annual investment cycles to [beyond budgeting](https://bbrt.org/what-is-beyond-budgeting/), switch from [cost accounting to throughput accounting](http://www.informit.com/articles/article.aspx?p=169495&seqNum=12)
 * organisation - changing the organisation structure and culture to optimize for delivering value to your customers
 
 Simply put agile at scale means breaking up large projects into small pieces, so you can release to the market faster, run experiments, get customer feedback and deliver something that the market wants rather than deliver what you think that they may want. This focus on delivering quickly in small increments reduces risk. An all or nothing approach is required if you are launching a rocket into space, not when you are delivering an improvement over your existing reporting app.
 
-## Digital transformation
-
-Making things digital is what we did 30 years ago. We replaced tapes with cds, letters with email and paper based calculations with spreadsheets. Digital transformation is not about making things digital but about modelling your business around technology. Thinking of technology not as a business support function or a commodity that you can purchase from an IT vendor but as a key differentiator to drive your business model, your go to market strategy and to better understand customer behaviors. This can mean unlocking data sitting in legacy systems (often done via APIs) and externalising it to work with partners to create new business opportunities by providing a service anywhere, anytime and on any device.
-
-Transform legacy -> Transform customer experience -> Transform business
 
 ## Building effective teams
 
@@ -54,7 +53,7 @@ Everyone wants autonomy, everyone wants to have freedom to do what they like, bu
 
 Don't mandate how a team should work. Don't say, "You have to do stand ups. You have to do one weekly iterations. If you want your teams to be very agile and adaptive **focus on the outcomes rather than output**. We want to make sure that all code has automated tests, we want to make sure that you do frequent releases, and we expect that, but how you would like to do that is up to you and your team. We're talking about the boundaries of autonomy.
 
-Autonony may also result in reactive solutions to problems. This is where alignment becomes important, because when you're in a larger organization, and you're moving from Start Up to Scale Up, everyone is normally aligned to working on the most urgent thing. In a very early-stage startup, that most urgent thing constantly changes, and as you get bigger and bigger, you need to create levels of alignment.
+Autonomy may also result in reactive solutions to problems. This is where alignment becomes important, because when you're in a larger organization, and you're moving from Start Up to Scale Up, everyone is normally aligned to working on the most urgent thing. In a very early-stage startup, that most urgent thing constantly changes, and as you get bigger and bigger, you need to create levels of alignment.
 
 ### Embracing failure
 
@@ -68,11 +67,11 @@ The reason why we couldn't do it - because of such and such thing e.g. The reaso
 
 There are various aspects of measuring success - cost, modernisation that leads to improvement in quality and performance.
 
-Being able to identify successes and failures is essential to gathering feedback when developing new processes. Many businesses find it very difficult to visualise information or value flow across the organisation (value stream mapping). Without this information, the only lever left with business managers is cost. The most important question then becomes: *Where is my spend going?* Whether that spend actually delivers customer value is anyone's guess.
+Being able to identify successes and failures is essential to gathering feedback when developing new processes. Many businesses find it very difficult to visualise information or value flow across the organisation (value stream mapping). Without this information, the only lever left with business managers is cost. The most important question then becomes: *Where is my spend going?* Whether that spend actually delivers customer value becomes an inessential concern.
 
 Focus on **cost utilization** means that IT budgeting decisions are based on cost estimation of your portfolio. During the planning phase the budgeting exercise allocates fixed amount of money (in batches) to one or more programes consisting of smaller projects. With the budget allocated and the cost fixed we then expect teams to deliver all the agreed features that we think customers want. However, if customer feedback loops have been established via continuously and incremental delivery methods, they may tell you a very different story about what the customer's actually want.
 
-Obession with cost utilization (which is essentially a measure of people busyness) leads to misplaced priorities and bad decisions. Time spent becomes more important than the result. Anything that doesn't generate revenue becomes a cost centre, IT teams end up being treated as cost functions rather than centres of value addition.
+Obsession with cost utilization (which is essentially a measure of people busyness) leads to misplaced priorities and bad decisions. Time spent becomes more important than the result. Anything that doesn't generate revenue becomes a cost centre, IT teams end up being treated as cost functions rather than centres of value addition.
 
 Doug Hubbard in [IT measurement inversion](https://www.cio.com/article/2438748/it-organization/the-it-measurement-inversion.html) suggests that cost has a very limited effect on return on investment whereas the utilization of the system i.e. whether the system is actually going to rollout and whether anyone will use it at all, is the most important factor for ROI analysis.
 

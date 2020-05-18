@@ -17,13 +17,13 @@ Transformation is a word used to [signify intent to make a change](https://www.t
 
 Driving business change through agile transformation is modelled around aligning people, processes and products.
 
-* people - cultivating a supporting environment that emphasizes learning from failures rather than blaming. Setting up teams to succeed by providing them time, space and resources to experiment and learn.
+* people - cultivate a supporting environment that emphasizes learning from failures rather than blaming. Setting up teams to succeed by providing them time, space and resources to experiment and learn.
 * processes and tools - adopt processes and tools that help in continuous improvement and better collaboration by breaking silos within the business
 * governance - manage investment risk to 
     * understand where your IT spend is going. Are you tracking cost, time and resource allocation efficiency or tracking speed and value?
     * improve delivery assurance by [measuring the progress on your plan](https://www.gov.uk/service-manual/agile-delivery/measuring-reporting-progress)
-* customer - improve product decision making and manage stakeholder expectations by factoring in
-    * [opportunity cost](https://www.investopedia.com/terms/o/opportunitycost.asp) - when business owners have multiple options before them, understanding the potential missed opportunities foregone by choosing one option over another allows for better decision-making.
+* customer - manage stakeholder expectations and improve product decision making by factoring in
+    * [opportunity cost](https://www.investopedia.com/terms/o/opportunitycost.asp) - explore multiple options to understand the potential missed opportunities foregone by choosing one option over another.
     * [cost of delay](http://blackswanfarming.com/cost-of-delay/) - ensure product decisions are made not just by understanding the value of something but also its urgency.
 * money  - move from annual investment cycles to [beyond budgeting](https://bbrt.org/what-is-beyond-budgeting/), switch from [cost accounting to throughput accounting](http://www.informit.com/articles/article.aspx?p=169495&seqNum=12)
 * organisation - changing the organisation structure and culture to optimize for delivering value to your customers

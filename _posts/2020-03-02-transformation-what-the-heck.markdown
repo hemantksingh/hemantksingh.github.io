@@ -59,7 +59,7 @@ Autonomy may also result in reactive solutions to problems. This is where alignm
 
 *Learning is the result of every experiment that you run. Failure is learning.*
 
-The impact of a failure isn't bad, provided you learn from it without paying a heavy price for that learning. You can think of failure as a means to blame someone or an opportunity to expose underlying problems so that they can be fixed. If you can get small incremental changes out to customers frequently, you allow yourselves the ability to fail fast and learn cheaply.
+The impact of a failure isn't necessarily bad, provided you learn from it without paying a heavy price. You can think of failure as a means to blame someone or an opportunity to expose underlying problems so that they can be fixed. If you can get small incremental changes out to customers frequently, you allow yourselves the ability to fail fast and learn cheaply.
 
 The reason why we couldn't do it - because of such and such thing e.g. The reason we couldn't drive customer sales up because our assumptions about customer's online usage patterns were wrong.
 

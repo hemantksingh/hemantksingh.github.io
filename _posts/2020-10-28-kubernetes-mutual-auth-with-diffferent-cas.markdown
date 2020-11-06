@@ -9,15 +9,15 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Configuring certificate based mutual authentication in Kubernetes using nginx ingress controller is explained pretty well in [this](https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca) post. However the post assumes that the certificates used for validating the client and the server are issued by the same CA (Certificate Authority). The [nginx ingress controller docs](https://kubernetes.github.io/ingress-nginx/examples/auth/client-certs/) also do not make it absolutely clear how to configure client certificate authentication when using client and server certificates issued by different CAs. I recently came across a scenario where we were using our own internal/private CA for issuing client certificates and a publicly trusted CA for server TLS. This post covers configuring kubernetes nginx ingress to use certificates issued by different CAs on the same host to perform mutual authentication.
+Configuring certificate based mutual authentication in Kubernetes using nginx ingress controller is explained pretty well in [this](https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca) post. However the post assumes that the certificates used for validating the client and the server are issued by the same CA (Certificate Authority). The current [nginx ingress controller docs](https://kubernetes.github.io/ingress-nginx/examples/auth/client-certs/) also do not make it absolutely clear how to configure client certificate authentication when using client and server certificates issued by different CAs. I recently came across a scenario where we were using our own internal/private CA for issuing client certificates and a publicly trusted CA for server TLS. This post covers configuring kubernetes nginx ingress to use certificates issued by different CAs on the same host to perform mutual authentication.
 
 
 ## Generating the certificates
 
-Usually a Certificate Signing Request (CSR) is sent to a public CA to obtain a globally trusted certificate for securing your assets and you would not be in possession of a public CA key and certificate. However, for demonstration purposes below we will generate two separate CA certificates and then generate server and client certificates based on each to configure kubernetes ingress.
+Usually a [Certificate Signing Request](https://en.wikipedia.org/wiki/Certificate_signing_request) (CSR) is sent to a public CA to obtain a globally trusted certificate for securing your assets. You would not be in possession of a public CA key and certificate. However, for demonstration purposes below we will generate two separate CA certificates and then generate server and client certificates based on each to configure kubernetes ingress.
 
 ```sh
-# Generate the public CA Key and Certificate
+# Generate a public CA Key and Certificate
 $ openssl req -x509 -sha256 -newkey rsa:4096 -days 356 -nodes \
 	-keyout public-ca.key \
 	-out public-ca.crt \
@@ -34,7 +34,7 @@ $ openssl x509 -req -sha256 -days 365 \
 	-set_serial 01 \
 	-out server.crt
 
-# Generate the internal CA Key and Certificate
+# Generate an internal CA Key and Certificate
 $ openssl req -x509 -sha256 -newkey rsa:4096 -days 356 -nodes \
 	-keyout internal-ca.key \
 	-out internal-ca.crt \

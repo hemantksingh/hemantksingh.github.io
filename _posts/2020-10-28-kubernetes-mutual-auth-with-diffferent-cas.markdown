@@ -9,7 +9,16 @@ comments: true
 modified_time: '2020-02-29T23:31:00.000-08:00'
 ---
 
-Configuring certificate based mutual authentication in Kubernetes using nginx ingress controller is explained pretty well in [this](https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca) post. However the post assumes that the certificates used for validating the client and the server are issued by the same CA (Certificate Authority). The current [nginx ingress controller docs](https://kubernetes.github.io/ingress-nginx/examples/auth/client-certs/) also do not make it absolutely clear how to configure client certificate authentication when using client and server certificates issued by different CAs. I recently came across a scenario where we were using our own internal/private CA for issuing client certificates and a publicly trusted CA for server TLS. This post covers configuring kubernetes nginx ingress to use certificates issued by different CAs on the same host to perform mutual authentication.
+Configuring certificate based mutual authentication in Kubernetes using nginx ingress controller is explained pretty well in [this](https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca) post. However, the post assumes that the certificates used for validating the client and the server are issued by the same CA (Certificate Authority). The current [nginx ingress controller docs](https://kubernetes.github.io/ingress-nginx/examples/auth/client-certs/) also do not make it absolutely clear how to configure client certificate authentication when using client and server certificates issued by different CAs. I recently came across a scenario where we were using our own internal/private CA for issuing client certificates and a publicly trusted CA for server TLS. This post covers configuring kubernetes nginx ingress to use certificates issued by different CAs on the same host to perform mutual authentication.
+
+
+## What is mutual authentication?
+
+Mutual authentication is also known as 2-way authentication. It is a process in which both the client and server verify each others identity via a Certificate Authority. Certificates provide identity to a machine or a device and the ability to independently verify the issued identity by an external authority such as a CA. Mutual authentication as defined by [codeproject.com](https://www.codeproject.com/Articles/326574/An-Introduction-to-Mutual-SSL-Authentication)
+
+<blockquote>Mutual SSL authentication or certificate based mutual authentication refers to two parties authenticating each other through verifying the provided digital certificate so that both parties are assured of the others’ identity.</blockquote>
+
+![mutual-auth.png](../assets/mutual-auth.png "Mutual authentication")
 
 ## Generating the certificates
 

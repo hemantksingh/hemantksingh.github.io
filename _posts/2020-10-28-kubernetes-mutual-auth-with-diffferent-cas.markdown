@@ -52,7 +52,7 @@ $ openssl req -x509 -sha256 -newkey rsa:4096 -days 356 -nodes \
 $ openssl req -new -nodes -newkey rsa:4096 \
 	-out client.csr \
 	-keyout client.key \
-	-subj '/CN=local-client/O=aks-ingress-client/C=GB'
+	-subj '/CN=internal-client/O=aks-ingress-client/C=GB'
 $ openssl x509 -req -sha256 -days 365 \
 	-in client.csr \
 	-CA internal-ca.crt -CAkey internal-ca.key \

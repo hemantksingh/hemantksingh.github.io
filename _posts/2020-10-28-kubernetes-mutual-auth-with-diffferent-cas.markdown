@@ -82,9 +82,7 @@ $ openssl x509 -req -sha256 -days 365 \
 
 ### Create the kubernetes secrets
 
-Kubermetes requires you to store the certificates as secrets in order for them to be used by oue ingress nginx controller. 
-
-We create 2 separate secrets, one for the internal CA certificate to validate client certificates and the other for server TLS for the client to validate server's identity.
+Kubermetes requires you to store the certificates as secrets in order for them to be used by nginx ingress controller. We create 2 separate secrets, one for the internal CA certificate to validate client certificates and the other for server TLS for the client to validate server's identity.
 
 ```sh
 # Add a secret for the internal CA certificate to validate client certs 

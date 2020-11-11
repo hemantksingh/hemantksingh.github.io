@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kubernetes certificate based mutual auth with different CAs
-date: '2020-02-29T23:31:00.000-08:00'
+date: '2020-10-28T23:31:00.000-08:00'
 author: Hemant Kumar
 tags: kubernetes, aks, mutual-auth, ingress, nginx, ingress-controller
 categories: kodekitab

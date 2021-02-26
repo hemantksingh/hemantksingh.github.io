@@ -9,17 +9,17 @@ comments: true
 modified_time: '2021-02-25T23:31:00.000-08:00'
 ---
 
-I'm not a morning person, but over a period of time I have trained myself to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but regardless of when I wake up I make it a point to start my day with this routine. The routine consists of guided meditation and reflection where I start off my day by reciting a few *mantras* and then remind myself of the following:
+I'm not a morning person, but over a period of time I have trained myself to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but regardless of when I wake up I make it a point to start my day with this routine. The routine consists of guided meditation and reflection where I start off my day by reciting a few *mantras* and then remind myself of some of the teachings of [Guru Gopal Das](https://twitter.com/gaurgopald) and [Dandapani](https://twitter.com/DandapaniLLC) that have resonated with me:
 
 - Life is finite, be the best version of yourself, know yourself, know your goals, hold yourself accountable to your goals and achieve your true potential.
   - we are hear for a limited amount of time, think about the future version of yourself, whether it'll be able to look back and say what an amazing life, I wouldn't have changed it for anything?
-  - in the future you may or may not arrive where you initially set out to but did you arrive at a better place than you started and did you give it your best shot with absolutely everything that you had?
+  - in the future, you may or may not arrive where you initially set out to but did you arrive at a better place than you started and did you give it your best shot with absolutely everything that you had?
   - build extraordinary habits by performing small rituals that constantly remind you of your goals
-  - use affirmation (clear choice of concise words), clear visualization of success and corresponding feeling (how you would feel on being successful) to stay focussed
+  - use affirmation (clear choice of concise words), clear visualization of success and corresponding feeling (feeling of success) to stay focussed
   - stay with a problem long enough to solve it. Keep your awareness on one thing for an extended amount of time. Persevere, stop starting and start finishing
 
 - Increase your standard of living
-  - life is finite, decide who you want to spend it with. material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfillment and joy. Make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout the day
+  - life is finite, decide who you want to spend it with. Material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfillment and joy. Make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout the day
 
 - Go with the flow
   - adapt and adjust to obstacles coming your way rather than being blocked. persevere, find ways, be like the river *ganga* that finds its way to its destination

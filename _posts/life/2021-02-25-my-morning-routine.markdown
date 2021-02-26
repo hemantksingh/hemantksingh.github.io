@@ -9,7 +9,7 @@ comments: true
 modified_time: '2021-02-25T23:31:00.000-08:00'
 ---
 
-I'm not a morning person, but over a period of time I have trained my mind to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but no matter when I wake up I still make it a point to start my day with this routine. The routine consists of guided meditation and reflection where I start off my day by reciting a few *mantras* and then remind myself of the following:
+I'm not a morning person, but over a period of time I have trained myself to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but regardless of when I wake up I still make it a point to start my day with this routine. The routine consists of guided meditation and reflection where I start off my day by reciting a few *mantras* and then remind myself of the following:
 
 - Life is finite, be the best version of yourself, know yourself, know your goals, hold yourself accountable to your goals and achieve your true potential
   - build extraordinary habits by performing small rituals that constantly remind you of your goals
@@ -34,7 +34,7 @@ I'm not a morning person, but over a period of time I have trained my mind to st
 
 - Find real peace
   - learn to be comfortable while being uncomfortable
-  - your intellectual inclination can prevent you from doing mundane tasks, but if you remind yourself of your eventual goals, the mundane tasks can feel like a step towards achieving those goals.
+  - your intellectual inclination can prevent you from doing mundane tasks, but if you remind yourself of your eventual goals, the mundane tasks can feel like steps towards achieving those goals.
   - be aware when your instinctive mind kicks in, its natural tendency is to react (often with emotion) to keep you safe and secure and to keep you away from difficult & complex tasks (in your comfort zone). Call upon your sub conscious and super conscious mind in times of difficulty and stress.
   - zoom out of stressful situations and focus on the intellectual mind (*sukshm buddhi*) rather than the instinctive mind (*sthool buddhi*). Remember all you are trying to get to is a more joyful state, to be free (*mukt*) of sorrow and fear so before getting into an argument or fighting over a position think whether it will lead you towards *mukti*
   

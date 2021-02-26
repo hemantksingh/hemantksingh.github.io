@@ -19,13 +19,14 @@ I'm not a morning person, but over a period of time I have trained myself to sta
   - stay with a problem long enough to solve it. Keep your awareness on one thing for an extended amount of time. Persevere, stop starting and start finishing
 
 - Increase your standard of living
-  - life is finite, decide who you want to spend it with. Material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfillment and joy. Make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout the day
+  - life is finite, decide who you want to spend it with. Material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfillment and joy
+  - make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout your day so that you can focus on the essentials and stay away from distractions
 
 - Go with the flow
-  - adapt and adjust to obstacles coming your way rather than being blocked. persevere, find ways, be like the river *ganga* that finds its way to its destination
+  - adapt and adjust to obstacles coming your way. Persevere, be flexible, be like the river *ganga* that finds its way to its destination inspite of all the hurdles that come its way
   - rather than worrying about things outside your control, focus on the things you control & strive for excellence within your immediate area of impact (e.g. within your team)
   - situations and circumstances are out of your control but how you respond to those situations is completely in your hands
-  - see challenges as opportunities - Thomas Edison
+  - see challenges as opportunities - *Thomas Edison*
 
 - Don't live the life of "I"
   - express gratitude - be grateful that you are safe, sound and alive. You are a tiny spec in this huge cosmos, appreciate the fact that a number of forces (e.g. the environment and people around you) are working in tandem to keep you safe and sound.

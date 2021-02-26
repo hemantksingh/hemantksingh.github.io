@@ -19,7 +19,7 @@ I'm not a morning person, but over a period of time I have trained myself to sta
   - stay with a problem long enough to solve it. Keep your awareness on one thing for an extended amount of time. Persevere, stop starting and start finishing
 
 - Increase your standard of living
-  - life is finite, decide who you want to spend it with. material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfilment and joy. Make a distinction between temporary joy and long term fulfilment and be consciously aware of that throughout the day
+  - life is finite, decide who you want to spend it with. material gains are good for temporary pleasures, however focusing on your life and relationships provides you long lasting fulfillment and joy. Make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout the day
 
 - Go with the flow
   - adapt and adjust to obstacles coming your way rather than being blocked. persevere, find ways, be like the river *ganga* that finds its way to its destination

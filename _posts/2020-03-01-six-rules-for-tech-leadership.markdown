@@ -91,7 +91,7 @@ Before adopting any new technology, it is important to do an objective evaluatio
 As a principle - chose the best tools and implementations available over standardising on any one language or platform and resentfully accepting its inherent limitation. Select a tool/programming language keeping business goals in mind to optimise for the right combination of
 
 * Cost of the service
-    * Current cost vs future, cost variance with scale and additional capabilities  
+    * Runtime cost - current vs future, cost variance with scale and additional capabilities  
     * Cost of operation and support
 * Fit for purpose
     * Minimal lock-in (choice)

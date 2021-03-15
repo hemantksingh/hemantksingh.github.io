@@ -24,11 +24,11 @@ Having a clear purpose and repeating it often gives you the strength and the dri
 
 ## Know your team
 
-Get to know your team and the wider business by listening and engaging with them. It is crucial to be able to connect, build relationships and understand other people’s viewpoints.
+Leadership is about enabling others to achieve their true potential and getting the best out of people. Getting to know your team and the wider business by listening and engaging with them is crucial to be able to connect, build relationships and understand other people’s viewpoints.
 
 "*If there is one secret of success, it lies in the ability to get the other person's point of view and see things from that persons's angle as well as your own*" - Henry Ford
 
-Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Empower others by aligning their individual goals with the team or organizational goals. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
+Empower others by aligning their individual goals with the team or organizational goals. Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
 
 * Breaking organizational silos e.g. development & operations - changing the org set up by introducing **cross functional teams**
 * Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the right tools (e.g. logging and monitoring tools) and processes in place to keep them running.

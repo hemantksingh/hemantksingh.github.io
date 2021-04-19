@@ -28,12 +28,12 @@ I've never been a morning person, but over a period of time I have trained mysel
   - See challenges as opportunities - *Thomas Edison*
 
 - Don't live the life of "I"
-  - Express gratitude - be grateful that you are safe, sound and alive. You are a tiny spec in this vast cosmos, realizing that a number of forces - the environment and the people around you are working in tandem to keep you safe and sound allows you to be appreciative and be thankful.
+  - Express gratitude - be grateful that you are safe, sound and alive. You are a tiny spec in this vast cosmos. Realizing that a number of forces - the environment and the people around you are working in tandem to keep you safe and sound allows you to be appreciative and be thankful.
   - Train yourself to think about others, think about serving, having a positive impact on others, think about what you can give rather than what you can extract from others
   - You will never face rejection when you want to give rather than take from others
 
 - Find real peace
   - Learn to be comfortable while being uncomfortable
   - Your intellectual inclination can prevent you from doing mundane tasks, but if you remind yourself of your eventual goals, the mundane tasks can feel like steps towards achieving those goals.
-  - Be aware of situations like conflicts when your instinctive mind kicks in. Its natural tendency is to react (often with emotion) to keep you safe and secure and to keep you away from difficult & complex tasks (in your comfort zone). Call upon your sub conscious and super conscious mind in times of stress and difficulty.
+  - In situations like conflicts be aware when your instinctive mind kicks in. Its natural tendency is to react (often with emotion) to keep you safe and secure and to keep you away from difficult & complex tasks (in your comfort zone). Call upon your sub conscious and super conscious mind in times of stress and difficulty.
   - Zoom out of stressful situations and focus on the intellectual mind (*sukshm buddhi*) rather than the instinctive mind (*sthool buddhi*). Remember all you are striving for is to get to a more joyful state, to be free (*mukt*) of sorrow, anxitey and fear so before getting into an argument or fighting over a position think whether it will lead you towards freedom (*mukti*)

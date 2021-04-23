@@ -15,7 +15,7 @@ Over the years I have lead some complex technical pieces of work with teams of v
 
 "*If you don't know where you want to go, then it doesn't matter which path you take*" - Lewis Carroll
 
-What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. For example at this point I have the following priorities:
+What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. This is what I have found drives me:
 
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do

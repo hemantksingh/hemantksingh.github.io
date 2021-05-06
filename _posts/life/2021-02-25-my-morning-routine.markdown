@@ -23,10 +23,9 @@ I've never been a morning person, but over a period of time I have trained mysel
   - Make a distinction between temporary joy and long term fulfillment and be consciously aware of that throughout your day, so that you can focus on your life and relationships and stay away from distractions.
 
 - Go with the flow
-  - Adapt and adjust to obstacles coming your way. Persevere, be flexible, be like the river *ganga* that finds its way to its destination inspite of all the hurdles that come its way.
-  - Rather than worrying about things outside your control, focus on the things you control and strive for excellence within your immediate area of impact (e.g. within your team).
-  - Situations and circumstances are out of your control but how you respond to those situations is completely in your hands.
-  - See challenges as opportunities - *Thomas Edison*
+  - Adapt and adjust to obstacles coming your way. Instead of saying '*I can't do that*' ask '*How can I do that?*' A statement closes the mind but a question opens up the mind.  Persevere, be flexible, be like the river *ganga* that finds its way to its destination in spite of all the hurdles that come its way.
+  - Rather than worrying about things outside your control, focus on the things you control and strive for excellence within your immediate area of impact.
+  - See challenges as opportunities - (*Thomas Edison*) Situations and circumstances are out of your control but how you respond to those situations is completely in your hands.
 
 - Don't live the life of "I"
   - Express gratitude - be grateful that you are safe, sound and alive. You are a tiny spec in this vast cosmos. Realizing that a number of forces - the environment and the people around you are working in tandem to keep you safe and sound allows you to be appreciative and be thankful.

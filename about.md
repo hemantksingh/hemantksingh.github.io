@@ -5,7 +5,7 @@ permalink: /about/
 description: Who am I?
 ---
 
-Hemant :) a techie based in Manchester, currently working at a cybersecurity firm - [BeyondTrust](https://www.beyondtrust.com). Working in technology for over a decade I have learnt a few lessons that I try to share in this space. Be it provisioning servers in the cloud, creating business critical applications or leading development teams, I care about how software is built. I believe in lean development, just enough design up-front and delivering effective software through Continuous Delivery.
+Hemant :) a techie based in Manchester, currently working in cybersecurity at [BeyondTrust](https://www.beyondtrust.com). Working in technology for over a decade I have learnt a few lessons that I try to share in this space. Be it provisioning infrastructure in the cloud, creating business critical applications or leading development teams to help them make better decisions, I care about how software is built. I believe in lean development, just enough design up-front and delivering effective software through Continuous Delivery.
 
 I'm interested in infrastructure as code, application security and distributed system design. I also write and speak about designing, testing and securing software. Amidst rambling about stuff I also manage to write some code which is available on my [GitHub](https://github.com/hemantksingh) page. It has a bunch of things, from open source contributions to [what I am currently learning and experimenting](https://github.com/hemantksingh/messup-learn) with.
 

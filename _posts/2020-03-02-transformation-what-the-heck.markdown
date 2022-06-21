@@ -99,4 +99,4 @@ We will know we are successful when we see
 
 ## Summary
 
-Breaking down organizational silos through collaboration, creating cross functional teams with shared objectives that can run rapid experiments and create feedback loops for measuring value from these experiments. Moving an organisation beyond budgeting, throughput accounting and rebuilding it around value streams, around flow and around customers allows you to understand what your customers really value and provide opportunities for building new customer experiences.
+Breaking down organizational silos through collaboration, creating cross functional teams with shared objectives that can run rapid experiments and create feedback loops for measuring value from these experiments. Moving an organisation beyond budgeting, throughput accounting and rebuilding it around value streams, around flow and around customers allows you to understand what your customers really value and provide opportunities for reimagining old processes and building new customer experiences.

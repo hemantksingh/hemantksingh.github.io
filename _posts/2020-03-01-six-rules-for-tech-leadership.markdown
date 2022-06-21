@@ -6,7 +6,7 @@ author: Hemant Kumar
 tags: technology, leadership, agile
 categories: kodekitab
 comments: true
-modified_time: '2020-02-29T23:31:00.000-08:00'
+modified_time: '2022-06-09T18:38:00.000-08:00'
 ---
 
 Over the years I have lead some complex technical pieces of work with teams of varied sizes and location. This has involved optimizing working practices and processes of teams, advising management on building engineering capabilities, agile practices, technical governance and continuous delivery. As a technical leader, I have faced numerous challenges while trying to align team objectives, resolve conflicts, highlighting the importance of cross functional requirements to the business and managing technical risk. Learning from my mistakes I have devised a set of rules to help me overcome these challenges. The following six rules by no means is an exhaustive list but I'm hoping people working in technology will find them useful or at the least something they can relate to.
@@ -15,7 +15,7 @@ Over the years I have lead some complex technical pieces of work with teams of v
 
 "*If you don't know where you want to go, then it doesn't matter which path you take*" - Lewis Carroll
 
-What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. For example at this point I have the following priorities:
+What's most important to you? This is a tough question to answer, because it requires you to think long and deep. Knowing yourself and knowing exactly what you want to achieve is a continuous process, therefore your answer may change over time. This is what I have found drives me:
 
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
@@ -24,14 +24,14 @@ Having a clear purpose and repeating it often gives you the strength and the dri
 
 ## Know your team
 
-Get to know your team and the wider business by listening and engaging with them. It is crucial to be able to connect, build relationships and understand other people’s viewpoints.
+Leadership is about enabling others to achieve their true potential by letting them be the best version of themsleves. Getting to know your team and the wider business by listening and engaging with them is crucial to be able to connect, build relationships and understand other people’s viewpoints.
 
-"*If there is one secret of success, it lies in the ability to get the other person's point of view and see things from that persons's angle as well as your own*" - Henry Ford
+"*If there is one secret of success, it lies in the ability to get the other person's point of view and see things from that person's angle as well as your own*" - Henry Ford
 
-Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Empower others by aligning their individual goals with the team or organizational goals. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
+Empower others by aligning their individual goals with the team or organizational goals. Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
 
 * Breaking organizational silos e.g. development & operations - changing the org set up by introducing **cross functional teams**
-* Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the right tools (e.g. logging and monitoring tools) and processes in place to keep them running.
+* Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the appropriate level of operational excellence, security, reliability, performance efficiency, cost optimization and sustainability in place for them to be successful.
 * Adopting similar tool set across build, delivery & ops teams that support collaboration e.g. adopting approaches like [GitOps](https://www.gitops.tech/)
 * Pair programming within teams to prevent single point of failures.
 
@@ -91,7 +91,7 @@ Before adopting any new technology, it is important to do an objective evaluatio
 As a principle - chose the best tools and implementations available over standardising on any one language or platform and resentfully accepting its inherent limitation. Select a tool/programming language keeping business goals in mind to optimise for the right combination of
 
 * Cost of the service
-    * Current cost vs future, cost variance with scale and additional capabilities  
+    * Runtime cost - current vs future, cost variance with scale and additional capabilities  
     * Cost of operation and support
 * Fit for purpose
     * Minimal lock-in (choice)

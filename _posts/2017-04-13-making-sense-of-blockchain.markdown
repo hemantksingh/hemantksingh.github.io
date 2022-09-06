@@ -53,7 +53,7 @@ A way to generate a small, unique “fingerprint” for any data allowing quick 
 
 You can use the FITS model - Fraud, Intermediaries, Throughput, Stable data to understand the possibility of using blockchain applications in a particular environment. This could include
 
-* Fraud - an environment which has a history and likelihood of fraud involved in various transactions, making international finance businesses the early adopters of blockchain.
+* Fraud - an environment which has a history and likelihood of fraud involved in various transactions, making international payments a great example of early adopters of blockchain.
 * Intermediaries or middle men - areas where there are a lot of intermediaries involved who do not provide a lot of value, the application of blockchain can reduce transaction times from days to minutes by taking the middle men out.
 * Throughput - environments with high throughput or number of transactions per second (tps). Bitcoin, currently can only process 7 transactions per second. Visa processes around 1,700 transactions per second on average, claiming to be able to support 24,000 tps. Mastercard utilizes a network that claims to handle around 5,000 tps. Researchers are working on increasing the Bitcoin throughput.
 * Stable data - For a blockchain application you do not want volatile data, rather you want things that are going to stay the same for a while e.g. land ownership titles and personal information.

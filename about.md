@@ -5,9 +5,7 @@ permalink: /about/
 description: Who am I?
 ---
 
-<img src="./assets/hk-snowden-peak.jpg" title="Snowden peak" width="950" height="400"/>
-
-<br></br>
+<img src="{{ site.url }}/assets/hk-snowden-peak.jpg" title="Snowden peak" width="750" height="400"/>
 
 Hemant :) a techie based in Manchester, currently working at [InfinityWorks](https://www.infinityworks.com/) - part of Accenture. Working in technology for over a decade I have learnt a few lessons that I try to share here. Be it securing infrastructure in the cloud, creating business critical applications or leading engineering teams to help them make better decisions, I care about how software is built and the impact technology can have on improving human condition. I believe in lean development, just enough design up-front and delivering effective software through Continuous Delivery.
 

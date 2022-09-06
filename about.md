@@ -5,6 +5,10 @@ permalink: /about/
 description: Who am I?
 ---
 
+<img src="./assets/hk-snowden-peak.jpg" title="Snowden peak" width="950" height="400"/>
+
+<br></br>
+
 Hemant :) a techie based in Manchester, currently working at [InfinityWorks](https://www.infinityworks.com/) - part of Accenture. Working in technology for over a decade I have learnt a few lessons that I try to share here. Be it securing infrastructure in the cloud, creating business critical applications or leading engineering teams to help them make better decisions, I care about how software is built and the impact technology can have on improving human condition. I believe in lean development, just enough design up-front and delivering effective software through Continuous Delivery.
 
 I'm interested in cloud engineering, application security and using data to drive decision making. I also write and speak about designing, testing and securing software. Amidst rambling about stuff I also manage to write some code which is available on my [GitHub](https://github.com/hemantksingh) page. It has a bunch of things, from open source contributions to [what I am currently learning and experimenting](https://github.com/hemantksingh/messup-learn) with.

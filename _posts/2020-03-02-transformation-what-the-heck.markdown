@@ -9,9 +9,9 @@ comments: true
 modified_time: '2020-03-02T23:31:00.000-08:00'
 ---
 
-During my consulting career I have often come across the term *transformation* being banded about ad nauseam in IT circles. Virtually every organization is going through some sort of transformation, be it agile, digital or cultural. In order to understand what transformation actually means, it is worth digging a bit deeper and  declutter some of this terminology.
+During my consulting career I have often come across the term *transformation* being banded about ad nauseam in IT circles. Virtually every organization is going through some sort of transformation, be it agile, digital or cultural. To truly understand what transformation means, it is necessary to dig deeper and clarify some of the terminology that is often used.
 
-Transformation is a word used to [signify intent to make a change](https://www.thoughtworks.com/insights/blog/gut-check-time-do-you-have-what-it-takes-transform), often triggered by an imminent business disaster that is going to affect bottom lines or by a change in the executive. It is generally driven from executives who have a sense of urgency e.g. being driven out of business due to disruption caused by new players in the market. Making things digital is what we did 30 years ago. We replaced tapes with CDs, letters with email and paper based calculations with spreadsheets. **Digital transformation** is not about making things digital but about modelling your business around technology. Thinking of technology not as a business support function or a commodity that you can purchase from an IT vendor but as a key differentiator to drive your business model, your go to market strategy and to better understand customer behaviors. This can mean unlocking data sitting in legacy systems (e.g. via APIs) and externalising it to work with partners to create new business opportunities by providing a service anywhere, anytime and on any device. Or it could mean [building a data driven business](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/three-keys-to-building-a-data-driven-strategy) that combines multiple sources of data across the business, builds analytics models for predicting and optimizing outcomes and then transform the business based on the models so that data yields better results.
+Transformation is a word used to [signify intent to make a change](https://www.thoughtworks.com/insights/blog/gut-check-time-do-you-have-what-it-takes-transform), often triggered by an imminent business disaster that is going to affect bottom lines or by a change in the executive. It is generally driven from executives who have a sense of urgency e.g. being driven out of business due to disruption caused by new players in the market. Making things digital is what we did 30 years ago. We replaced tapes with CDs, letters with email and paper based calculations with spreadsheets. **Digital transformation** is not about making things digital but about modelling your business around technology. Thinking of technology not as a business support function or a commodity that you can purchase from an IT vendor but as a key differentiator to better understand your customer behaviors and drive your market strategy. This can mean unlocking data sitting in legacy systems (e.g. via APIs) and externalising it to work with partners to create new business opportunities by providing a service anywhere, anytime and on any device. It could also mean [building a data driven business](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/three-keys-to-building-a-data-driven-strategy) that combines multiple sources of data across the business, builds analytics models for predicting and optimizing outcomes and then transform the business based on the models so that data yields better return on investment.
 
 ## Agile transformation
 
@@ -30,8 +30,14 @@ Driving business change through agile transformation is modelled around aligning
 
 Simply put agile at scale means breaking up large projects into small pieces, so you can release to the market faster, run experiments, get customer feedback and deliver something that the market wants rather than deliver what you think that they may want. This focus on delivering quickly in small increments reduces risk. An all or nothing approach is required if you are launching a rocket into space, not when you are delivering an improvement over your existing reporting app.
 
+## Cultural transformation
 
-## Building effective teams
+Culture is often what people do organically, it is not what you say, it is about what you do. It is about specific behaviours that help in building effective teams e.g.
+
+* having a shared purpose
+* establish safety and openness - ability to express vulnerability and know each others background, goals, strengths and weaknesses
+* discourage blame - say no to talented jerks - scientific experiments have shown jerks diminish a team's performance by 30-40%
+* keep the culture alive (culture capture) - seek and provide constructive feedback. What excites the team, what frustrates them, what is their biggest challenge?
 
 Applying the [agile principles in practice](https://www.forbes.com/sites/forbestechcouncil/2019/07/16/agile-might-be-dead-but-agility-isnt/?mkt_tok=eyJpIjoiWVdFM1pqa3pNVFV5TURWbSIsInQiOiJBVXNEeWJza1wvVDhjRnVKVDZkcmU2S214OVJ2Mk5qV3VjcmdqV2prVGFQZERwSllZRE5PMlVVM1ErcnIrNkMrZlE4VG1lTWFkMFlVc1U2SDBzd3RITW9CdlFvY1JSNnZ5Nmt4NXJpejBtUVFPMm1qakxOVDhNdEU3TDJhb0FPQUUifQ%3D%3D#6c8e0d5b1245) without worrying too much about the methodology is critical to **being agile rather than doing agile**. Too much emphasis on process, stops people from thinking what they are doing and whether they are doing it right. For example, the value of processes like **daily standups** is their ability to create a safe space for team-members to hold each other accountable against the shared objectives rather than perform a daily morning ninja routine of *what I did yesterday and what I will be doing today*.
 
@@ -81,7 +87,7 @@ One way of measuring value of features is using [cost of delay]( http://blackswa
 
 How do we know what we are building is the right thing faster? Whether the assumptions we are making are correct? How do we quickly test those assumptions?
 
-The point of a lean startup is to cheaply find out whether people are going to use new features in a system by running small experiments.
+A lean business can cheaply find out whether people are going to use new features in a system by running small experiments.
 
 * Tackling the most important problems that add value, not optimizing for the case where we think we are right (For established products, with a well proven business model, two-thirds of the time the features that we want to build have 0 or negative value. In new product development 90% of the time they have no value)
 * By creating feedback loops to validate assumptions

@@ -10,7 +10,7 @@ modified_time: '2022-02-21T19:26:00.000-08:00'
 redirect_from: "/kodekitab/2017/04/13/making-sense-of-blockchain.html/"
 ---
 
- **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of banking transactions. Government agencies provide evidence of land titles, vehicle registration records, health and education records etc by maintaining a transaction log. They provide trust by maintaining a central store for recording transactions that can be relied upon to verify each transaction. The onus of maintaining the security and sanctity of this central store also lies with the authority owning it. This gives the central authority or the intermediary facilitating commerce between the transacting parties, huge responsibility as well as control. The intermediary pretty much dictates the rules of commerce that every transacting party needs to abide by. Sometimes the intermediary gets it right but occasionally it can also be a single point of failure e.g. in the global financial crash of 2008, banks were at the center of the economic turmoil.
+ **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of banking transactions. Government agencies provide evidence of land titles, vehicle registration records, health and education records etc by maintaining a transaction log. They provide trust by maintaining a central store for recording transactions that can be relied upon to verify each transaction. The onus of maintaining the transactions accurately and securely on the central store also lies with the authority owning it. This gives the central authority or the intermediary facilitating commerce between the transacting parties, huge responsibility as well as control. The intermediary pretty much dictates the rules of commerce that every transacting party needs to abide by. Sometimes the intermediary gets it right but occasionally it can also be a single point of failure e.g. in the global financial crash of 2008, banks were at the center of the economic turmoil.
 
 * Can a centralized authority with utmost power be trusted to run and meddle with entire economic systems?
 * Should the monetary supply and monetary policy be set by a computer where it could not be corrupted by humans, thereby preventing government overreach?
@@ -19,11 +19,12 @@ redirect_from: "/kodekitab/2017/04/13/making-sense-of-blockchain.html/"
 
 ## What is blockchain?
 
-Shortly after the 2008 global financial crisis, a [white paper](https://bitcoin.org/en/bitcoin-paper) by an unknown entity Satoshi Nakamoto emerged. The paper introduced a new peer to peer financial system where payments are based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party. The system would use a new digital crypto currency called Bitcoin. The technology invented to power this new system was called blockchain. Simply put, a blockchain is a continuously updated record of who holds what.
+Shortly after the 2008 global financial crisis, a [white paper](https://bitcoin.org/en/bitcoin-paper) by an unknown entity Satoshi Nakamoto emerged. The paper introduced a new peer to peer financial system where payments are based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party. The system would use a new digital crypto currency called Bitcoin. The technology invented to power this new system was called blockchain. Simply put, a blockchain is a continuously updated decentralized record of who holds what.
 
 ### Decentralized trust and control
 
-Blockchain attempts to reduce the cost and increase trust in business transactions by using an immutable distributed transaction store on peer to peer networks rather than a central store. Rather than a single authority like a bank responsible for maintaining all transactions, it is now a group of people running blockchain software that do this. They ensure that the information stored in the distributed store is immutable and verifiable by applying techniques like cryptography and hashing. The list of transactions, also known as a **distributed ledger** is decentralized and available for everyone to see and verify. The distributed nature of the blockchain makes it tamper evident and unhackable because if a block is messed with, everyone gets to know about it and it is rejected by the system. Trust is inherently built into the system.
+Blockchain transfers control and decision-making from a centralized entity (individual, organization, or group thereof) to a distributed network. [Decentralized networks](https://aws.amazon.com/blockchain/decentralization-in-blockchain/) strive to reduce the level of trust that participants must place in one another, and deter their ability to exert authority or control over one another in ways that degrade the functionality of the network.
+Blockchain attempts to reduce the cost and increase trust in business transactions by using an immutable distributed transaction store on peer to peer networks rather than a central store. Rather than a single authority like a bank responsible for maintaining transactions, it is now a group of people running blockchain software that do this. They ensure that the information stored in the distributed store is immutable and verifiable by applying techniques like cryptography and hashing. The list of transactions, also known as a **distributed ledger** is available for everyone to see and verify. The distributed nature of the blockchain makes it tamper evident and unhackable because if a block of transactions is messed with, everyone gets to know about it and as long as the bad actors are outnumbered by the good ones it is rejected by the system. Trust is inherently built into the system.
 
 ![Blockchain]({{ site.url }}/assets/blockchain.jpg)
 
@@ -52,17 +53,20 @@ A way to generate a small, unique “fingerprint” for any data allowing quick 
 
 You can use the FITS model - Fraud, Intermediaries, Throughput, Stable data to understand the possibility of using blockchain applications in a particular environment. This could include
 
-* Fraud - an environment which has a history and likelihood of fraud involved in various transactions, making international finance businesses the early adopters of blockchain.
+* Fraud - an environment which has a history and likelihood of fraud involved in various transactions, making international payment providers early adopters of blockchain.
 * Intermediaries or middle men - areas where there are a lot of intermediaries involved who do not provide a lot of value, the application of blockchain can reduce transaction times from days to minutes by taking the middle men out.
 * Throughput - environments with high throughput or number of transactions per second (tps). Bitcoin, currently can only process 7 transactions per second. Visa processes around 1,700 transactions per second on average, claiming to be able to support 24,000 tps. Mastercard utilizes a network that claims to handle around 5,000 tps. Researchers are working on increasing the Bitcoin throughput.
 * Stable data - For a blockchain application you do not want volatile data, rather you want things that are going to stay the same for a while e.g. land ownership titles and personal information.
 
 ### Impact on financial services
 
-* Due to the lack of trust, very little data is shared amongst financial institutions. Blockchain reduces this trust deficit and can allow seamless transfer of digital assets within a business network and better sharing of data across businesses.
-* Creation of secured, shared data with common standards - a public distributed ledger that keeps a record of all financial transactions.
-* Reduced need for reconciliation at both ends of the business (purchaser and supplier).
-* Certification of documents without having to go to a central certifying authority.
+Bitcoin is the best-known application of blockchain technology. The prevailing view is that blockchain will cause two main shifts in the way banks do business
+
+1. The first is in its broad potential to bring financial institutions closer together and make global collaboration easier.
+   * Due to the lack of trust, very little data is shared amongst financial institutions. Blockchain reduces this trust deficit and can allow seamless transfer of digital assets within a business network and better sharing of data across businesses.
+   * Creation of secured, shared data with common standards - a public distributed ledger that allows automatic synchronization and removes inefficiencies due to variations in internal processes and data formats within the systems at different institutions.
+2. The second is by creating real efficiencies in the way the bank processes data.
+   * Simplification of payments infrastructure, the use of smart contracts to standardise post-trade processes without having to rely on a central certifying authority, and efficiently connecting parties in trade finance and syndicated lending by reducing the need for reconciliation at both ends of the business (purchaser and supplier).
 
 ### Impact on Public Key Infrastructure (PKI)
 

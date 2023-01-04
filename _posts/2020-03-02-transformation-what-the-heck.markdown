@@ -6,7 +6,7 @@ author: Hemant Kumar
 tags: technology, transformation, agile, digital, business
 categories: kodekitab
 comments: true
-modified_time: '2020-03-02T23:31:00.000-08:00'
+modified_time: '2023-01-04T23:31:00.000-08:00'
 ---
 
 During my consulting career I have often come across the term *transformation* being banded about ad nauseam in IT circles. Virtually every organization is going through some sort of transformation, be it agile, digital or cultural. To truly understand what transformation means, it is necessary to dig deeper and clarify some of the terminology that is often used.

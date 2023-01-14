@@ -6,7 +6,7 @@ author: Hemant Kumar
 tags: life
 categories: life
 comments: true
-modified_time: '2022-01-05T05:37:00.000-08:00'
+modified_time: '2022-01-14T05:37:00.000-08:00'
 ---
 
 I've never been a morning person, but over a period of time I have trained myself to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but regardless of when I wake up I make it a point to start my day with this routine. The routine consists of guided meditation and reflection where I start off my day by reciting a few *mantras* and then remind myself of some of the teachings of [Guru Gopal Das](https://twitter.com/gaurgopald) and [Dandapani](https://twitter.com/DandapaniLLC) that have resonated with me. I am still a work in progress and in no way claim to have mastered all of their teachings but being reminded of them at the beginning of my day, everyday helps me focus on the things that really matter.
@@ -25,13 +25,13 @@ I've never been a morning person, but over a period of time I have trained mysel
   - Rather than worrying about things outside your control, focus on the things you control and strive for excellence within your circle of influence. The positive energy we exert will cause our circle of influence to expand.
   - See challenges as opportunities - (*Thomas Edison*) Situations and circumstances are out of your control but how you respond to those situations is completely in your hands.
 
-- Don't live the life of "I". Pursuing personal well-being is a worthwhile goal, however it can have an even greater effect if it is done with the intention of benefiting others and improving the overall human condition.
+- Don't live the life of "I". Pursuing personal well-being is a worthwhile goal, however it can have an even greater effect if it is done with the intention of benefiting others and improving human condition in general.
   - Instead of trying to get something from the world, consider what you can offer. You are more likely to be welcomed and appreciated when you approach things with a giving, rather than a taking, mindset. Instead of focusing only on your own rights, consider also your responsibilities, and the ways in which you can make a positive impact on others through service and selflessness.
   - Notice the good. Take time out each day to notice what’s going right, and be grateful for what you have. It’s probably a lot. As a tiny spec in this vast cosmos, it is important to recognise that a variety of forces in the universe, both natural and interpersonal, are working together to keep you safe and sound. This realisation can help you to be more appreciative and cultivate a sense of gratitude.
 
 - Find real peace. Learn to be comfortable while being uncomfortable.
   - Doing repetitive or mundane tasks can be frustrating and generate negative feelings. It can be tempting to avoid these tasks if you are someone who enjoys intellectual pursuits, but reminding yourself of your long-term goals can help these tasks feel more meaningful and important as steps towards achieving those goals.
-  - During stressful or contentious situations, be aware of when your instinctive mind is activated. This part of your mind drives emotional reactions that are designed to protect you and keep you in your comfort zone, even if it means avoiding challenges or difficulties.
+  - During stressful or contentious situations, be aware of when your instinctive mind kicks in. This part of your mind drives emotional reactions that are designed to protect you and keep you in your comfort zone, even if it means avoiding challenges or difficulties.
     - Silence can be a virtue in situations where your opinions and ideas are challenged and even discarded. Pause, maintain composure, take a moment to call upon your sub conscious and think wether your next course of action is going to allow you to objectively handle the situation at hand.
     - Keeping a distance from the issue at hand is hard because it can engross you completely, however take the time to realise that you are not the issue itself. Detachment from your instinctive mind can help in separation of emotions, thoughts (arising from facing rejection, anger or fear) from your real self.
     - Zoom out of stressful situations and learn to let things go. Remember, at the end of the day all you are striving for is to be free (*mukt*) of sorrow, anxiety and fear - to be in a tranquil state of well being, so before getting into an argument or fighting over a position think whether it will lead you towards freedom (*mukti*).

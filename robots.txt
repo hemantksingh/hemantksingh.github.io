@@ -1,0 +1,10 @@
+User-agent: *
+
+#Sitemap
+Sitemap: https://hemantkumar.net/feed.xml
+
+#Life Sitemap
+Sitemap: https://hemantkumar.net/lifefeed.xml
+
+#Kodekitab Sitemap
+Sitemap: https://hemantkumar.net/kodekitabfeed.xml

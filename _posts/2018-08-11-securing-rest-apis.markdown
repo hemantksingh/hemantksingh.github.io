@@ -115,13 +115,15 @@ If the timestamp is not within a certain range (say 10 minutes) of the receiver'
 
 Digital signatures use asymmetric public key cryptography to establish **authenticity** (message sent by a known sender), **integrity** (message wasn't tampered with) and **non-repudiation** (message sent by the sender cannot be denied).
 
-When signing, the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. A **timestamp** and **nonce** are used to generate the signature, to prevent reuse against [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+When signing, the sender uses **their private key** to write message's signature, and the receiver uses the **sender's public key** to check if it's really from the sender. A unique identifier for the message like **timestamp** and **nonce** is also used to generate the signature, to prevent reuse against [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ![message-signing.jpg](../assets/message-signing.jpg "Message Signing")
 
-A service (when acting as a **receiver**) has a list of **public keys** for all other services that want to talk to it and provides its **public key** (when acting as a **sender**) to other services that it wants to talk to.
+$Sign(Message, sk) = Signature$ &nbsp;&nbsp;&nbsp;&nbsp; $Verify(Message, Signature, pk)$
 
-Digital signatures can be safely used without SSL (although SSL is still recommended if the data transferred is sensitive). However, this level of security comes with a price: generating and validating signatures can be costly and complex.
+When you have verified that the signature against a given message is valid, you can be extremely confident that the only way some one could have produced it is if they knew the private key, associated with the public key that you used to verify the message.
+
+A service when acting as a **receiver** has a list of **public keys** for all other services that want to send messages to it. The same service, when acting as the **sender** can provides its **public key** to other services that it wants to send messages to.
 
 ### OAuth 2
 

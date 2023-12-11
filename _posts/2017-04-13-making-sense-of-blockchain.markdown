@@ -10,11 +10,11 @@ modified_time: '2022-02-21T19:26:00.000-08:00'
 redirect_from: "/kodekitab/2017/04/13/making-sense-of-blockchain.html/"
 ---
 
- **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Financial institutions like banks provide this trust by maintaining a true record of banking transactions. Government agencies provide evidence of land titles, vehicle registration records, health and education records etc by maintaining a transaction log. They provide trust by maintaining a central store for recording transactions that can be relied upon to verify each transaction. The onus of maintaining the transactions accurately and securely on the central store also lies with the authority owning it. This gives the central authority or the intermediary facilitating commerce between the transacting parties, huge responsibility as well as control. The intermediary pretty much dictates the rules of commerce that every transacting party needs to abide by. Sometimes the intermediary gets it right but occasionally it can also be a single point of failure e.g. in the global financial crash of 2008, banks were at the center of the economic turmoil.
+ **Trust** is fundamental to commerce. Any business transaction is based upon trust and requires secure way of transferring assets between transacting parties. Banks provide this trust by maintaining a true record of financial transactions. Government agencies provide evidence of land titles, vehicle registration records, health and education records etc by maintaining a transaction log. They provide trust by maintaining a central ledger for recording transactions that can be relied upon to verify each transaction. The onus of maintaining the transactions accurately and securely on the central ledger also lies with the authority owning it. This grants significant responsibility and control to the central authority or intermediary facilitating commerce between transacting parties. The intermediary essentially establishes the rules of commerce that every transacting party must adhere to. While the intermediary often operates effectively, it can occasionally become a single point of failure, as seen in the global financial crash of 2008 where banks were at the epicenter of the economic turmoil.
 
-* Can a centralized authority with utmost power be trusted to run and meddle with entire economic systems?
-* Should the monetary supply and monetary policy be set by a computer where it could not be corrupted by humans, thereby preventing government overreach?
-* Is the transaction store owned by the central authority tamper evident and prevent any illegitimate records being added or updated? Is it independently and transparently verifiable in case of a dispute?
+* Can a centralised authority with utmost power be trusted to run and meddle with entire economic systems?
+* Could the monetary supply and monetary policy be set by a computer where it could not be corrupted by humans, thereby preventing government overreach?
+* Is the transaction ledger owned by the central authority tamper evident and prevent any illegitimate records being added or updated? Is it independently and transparently verifiable in case of a dispute?
 * Are the intermediaries efficient in fulfilling monetary transactions? Communication over the internet takes place at a mind boggling rate but systems with layers of middlemen can take days to clear and reconcile.
 
 ## What is blockchain?
@@ -24,20 +24,20 @@ Shortly after the 2008 global financial crisis, a [white paper](https://bitcoin.
 ### Decentralized trust and control
 
 Blockchain transfers control and decision-making from a centralized entity (individual, organization, or group thereof) to a distributed network. [Decentralized networks](https://aws.amazon.com/blockchain/decentralization-in-blockchain/) strive to reduce the level of trust that participants must place in one another, and deter their ability to exert authority or control over one another in ways that degrade the functionality of the network.
-Blockchain attempts to reduce the cost and increase trust in business transactions by using an immutable distributed transaction store on peer to peer networks rather than a central store. Rather than a single authority like a bank responsible for maintaining transactions, it is now a group of people running blockchain software that do this. They ensure that the information stored in the distributed store is immutable and verifiable by applying techniques like cryptography and hashing. The list of transactions, also known as a **distributed ledger** is available for everyone to see and verify. The distributed nature of the blockchain makes it tamper evident and unhackable because if a block of transactions is messed with, everyone gets to know about it and as long as the bad actors are outnumbered by the good ones it is rejected by the system. Trust is inherently built into the system.
+Blockchain attempts to reduce the cost and increase trust in business transactions by using an immutable distributed transaction ledger on peer to peer networks rather than a central ledger. Rather than a single authority like a bank responsible for maintaining transactions, it is now a group of people running blockchain software that do this. They ensure that the information stored in the distributed ledger is immutable and verifiable by applying techniques like cryptography and hashing. The list of transactions, also known as a **distributed ledger** is available for everyone to see and verify. The distributed nature of the blockchain makes it tamper evident and unhackable because if a block of transactions is messed with, everyone gets to know about it and as long as the bad actors are outnumbered by the good ones it is rejected by the system. Trust is inherently built into the system.
 
 ![Blockchain]({{ site.url }}/assets/blockchain.jpg)
 
 ### Underlying technology
 
-* **Peer to peer network**
-A group of computers that can communicate among themselves without relying on a single central authority or having a single point of failure.
+* **Asymmetric cryptography using digital signatures**
+A way to verify that a message was sent by the known sender, that the only way some one could have produced it is if they knew the private key, associated with the public key that you used to verify the message.
 
-* **Asymmetric cryptography**
-A way to send a message encrypted for specific recipients such that anyone can verify the sender’s authenticity but only intended recipients can read the message contents.
+* **Peer to peer network**
+A ledger containing the record of all the messages is copied on a group of computers rather than relying on a single authority to maintain the records on a central computer. This decentralization removes the need to trust a single authority but with as many copies of the ledger as the number of computers in the network, which version of the ledger is to be trusted? This is the problem addressed in the original Bitcoin paper. The solution offered is to trust whichever ledger has the most computational work put in to it.
 
 * **Cryptographic hashing**
-A way to generate a small, unique “fingerprint” for any data allowing quick comparison of large data sets and a secure way to [verify data has not been altered](https://www.miracl.com/press/the-essence-of-the-blockchain).
+A way to generate a small, unique “fingerprint” for any data allowing quick comparison of large data sets and a secure way to [verify data has not been altered](https://www.miracl.com/press/the-essence-of-the-blockchain). Some computational work must be carried out to generate the fingerprint or hash in the desired format and update the decentralized ledger. This is known as *Proof or Work*.
 
 #### How do we ensure the rules are being followed?
 
@@ -45,7 +45,7 @@ A way to generate a small, unique “fingerprint” for any data allowing quick 
 
 * Periodically bookkeepers are allowed to add money to their own accounts, thereby creating money out of thin air. But this is only allowed according to very constrained rules. Those rules include a very slow gradual rate of money creation, until no more money can be created.
 
-* Math based voting system to determine what the majority thinks. Bitcoin requires bookkeepers to solve a very special math problem to vote. Voting has a cost in terms of electricity and computing power, making it prohibitively costly for anyone to control the vote. This is called *"Proof of work"* explained in the Bitcoin white paper *"one vote per CPU"* instead of one vote per person.
+* Math based voting system to determine what the majority thinks. Bitcoin requires bookkeepers to solve a very special math problem to vote. This is called *"Proof of work"* explained in the Bitcoin white paper *"one vote per CPU"* instead of one vote per person.
 
 * Voting is allowed to happen every 10 minutes to allow all bookkeepers to stay synchronized. Each new group of transactions that gets approved is called a block and these blocks are grouped together in a chain called the **blockchain**.
 

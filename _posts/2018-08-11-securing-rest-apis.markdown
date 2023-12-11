@@ -94,12 +94,13 @@ Authentication: hmac username:[value]
 
 #### Prevent hash reuse
 
-Hashing the same message repeatedly results in the same HMAC (hash). If the hash falls into the wrong hands, it can be used to make the same request at a later time. Therefore it is important to introduce entropy to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding more data (**timestamp** and **nonce**) to the hash computation.
+Hashing the same message repeatedly results in the same HMAC (hash). If the hash falls into the wrong hands, it can be used to make the same request at a later time. Therefore it is important to introduce entropy to the hash generation to prevent a [replay attack](https://en.wikipedia.org/wiki/Replay_attack). This is done by adding a **timestamp** and **nonce** to the hash computation. The nonce is a number we only use once and is regenerated on each subsequent request, even if the request is for the same resource.
 
 ```
 value = base64encode(hmac("sha256", "secret", "GET+/users/username/account+28jul201712:59:24+123456"))
 ```
-The additional data (timestamp and nonce) is sent to the receiver for reconstructing the hash.
+
+The additional data - timestamp and nonce is sent to the receiver for reconstructing the hash.
 
 ```
 GET /users/username/account HTTP/1.1
@@ -107,7 +108,8 @@ Host: example.org
 Authentication: hmac username:123456:[value]
 Date: 28 jul 2017 12:59:24
 ```
-The nonce is a number we only use once and is regenerated on each subsequent request, even if the request is for the same resource. The receiver reconstructs the hash with the nonce value and if it doesn't match the received hash value, discards the message possibly because the hash has been previously used. This ensures each request is only valid once and only once.
+
+The receiver reconstructs the hash with the nonce value and if it doesn't match the received hash value, discards the message possibly because the hash has been previously used. This ensures each request is only valid once and only once.
 
 If the timestamp is not within a certain range (say 10 minutes) of the receiver's time, then the receiver can discard the message as it is probably a replay of an earlier message. It is worth noting time-limited authentications can be problematic if the sender and receiver's time is not synchronized.
 
@@ -115,7 +117,7 @@ If the timestamp is not within a certain range (say 10 minutes) of the receiver'
 
 Digital signatures use asymmetric public key cryptography to establish **authenticity** (message sent by a known sender), **integrity** (message wasn't tampered with) and **non-repudiation** (message sent by the sender cannot be denied).
 
-When signing, the sender uses their private key (also called a secret key, abbreviated to sk) to write message's signature, and the receiver uses the sender's public key to check if it's really from the sender. A unique identifier for the message like **timestamp** and **nonce** is also used to generate the signature, to prevent reuse against [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+When signing, the sender uses their private key (also called a secret key, abbreviated to sk) to write message's signature, and the receiver uses the sender's public key to check if it's really from the sender. Again, to ensure a message cannot be duplicated and reused in a [replay attack](https://en.wikipedia.org/wiki/Replay_attack) a unique identifier for the message like **timestamp** and **nonce** is also used while generating the signature.
 
 ![message-signing.jpg](../assets/message-signing.jpg "Message Signing")
 

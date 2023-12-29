@@ -20,18 +20,18 @@ What's most important to you? This is a tough question to answer, because it req
 * Control and flexibility over the kind of work I do and when it is done
 * Have a positive influence and a wider impact on a number of people (colleagues or customers) based on what I do
 
-Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. However, working in a business you also have certain immediate priorities at a given time. This could be a shared organisation goal or a team goal. The idea is to find that sweet spot where you align your personal goals with that of the business.
+Having a clear purpose and repeating it often gives you the strength and the drive to lead by example and take others with you on the journey, even in the face of resistance. It is only when you have a clear understanding of what you want that you are going to be able to articulate it to others. Enabling others can only begin once you know what you want to achieve. People are going to take you seriously only if you are clear in your thinking. Working a job however, requires a focus on immediate priorities, whether they be organisational or team-oriented goals. The key is discovering the optimal balance where your personal objectives align harmoniously with those of the business.
 
 ## Know your team
 
-Leadership is about enabling others to achieve their true potential by letting them be the best version of themsleves. Getting to know your team and the wider business by listening and engaging with them is crucial to be able to connect, build relationships and understand other people’s viewpoints.
+Leadership is about enabling others to achieve their true potential by letting them be the best version of themselves. Getting to know your team and the wider business by listening and engaging with them is crucial to be able to connect, build relationships and understand other people’s viewpoints.
 
 "*If there is one secret of success, it lies in the ability to get the other person's point of view and see things from that person's angle as well as your own*" - Henry Ford
 
 Empower others by aligning their individual goals with the team or organizational goals. Team goals often vary vastly and may even be contrary to each other, resulting in **silos** e.g Development teams want to push new features and functionality quickly to customers where as Operations want the systems to be resilient and can be averse to rapid change. Collaboration, not only within teams but across teams is required to figure out how disparate goals can be met keeping the overall business goals in mind. Some strategies that have worked for me in enabling teams to be self empowered capable of building, running and supporting their apps are
 
 * Breaking organizational silos e.g. development & operations - changing the org set up by introducing **cross functional teams**
-* Coaching & mentoring dev teams to be focussed on production readyness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the appropriate level of operational excellence, security, reliability, performance efficiency, cost optimization and sustainability in place for them to be successful.
+* Coaching & mentoring dev teams to be focussed on production readiness and support, right from project kick off. Delivering great apps is fine but in order for them to be effective you need the appropriate level of operational excellence, security, reliability, performance efficiency, cost optimization and sustainability in place for them to be successful.
 * Adopting similar tool set across build, delivery & ops teams that support collaboration e.g. adopting approaches like [GitOps](https://www.gitops.tech/)
 * Pair programming within teams to prevent single point of failures.
 
@@ -54,7 +54,7 @@ Before making any technology choices, think critically and innovatively - seeing
 * Resources required
 * Customer impact
 
-## Visualize your tech strategy
+## Visualise your tech strategy
 
 Having a visual representation of your technology estate and capabilities allows you to
 
@@ -91,12 +91,12 @@ Before adopting any new technology, it is important to do an objective evaluatio
 As a principle - chose the best tools and implementations available over standardising on any one language or platform and resentfully accepting its inherent limitation. Select a tool/programming language keeping business goals in mind to optimise for the right combination of
 
 * Cost of the service
-    * Runtime cost - current vs future, cost variance with scale and additional capabilities  
-    * Cost of operation and support
+  * Runtime cost - current vs future, cost variance with scale and additional capabilities  
+  * Cost of operation and support
 * Fit for purpose
-    * Minimal lock-in (choice)
-    * Ease and speed of development (agility)
-    * Tech capability of the business (support)
-    * Availability of existing libraries/integrations (flexibility)
+  * Minimal lock-in (choice)
+  * Ease and speed of development (agility)
+  * Tech capability of the business (support)
+  * Availability of existing libraries/integrations (flexibility)
 * Performance & security
 * Openness - can't do it alone, learn from shared practices and best ideas in the open source community, no vendor lock-in, contribute & attract talent. e.g. in your area it maybe easier to hire engineers for deploying and securing linux based systems than say windows.

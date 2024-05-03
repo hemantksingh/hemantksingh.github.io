@@ -41,7 +41,8 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
+    max-width: 100%; /* Ensures image doesn't grow larger than container */
+    height: auto; /* Allows height to adjust proportionally */
     vertical-align: middle;
 }
 

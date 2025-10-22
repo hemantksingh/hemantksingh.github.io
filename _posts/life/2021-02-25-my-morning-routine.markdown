@@ -9,7 +9,7 @@ comments: true
 modified_time: '2022-01-14T05:37:00.000-08:00'
 ---
 
-I've never been a morning person, but over a period of time I have trained myself to start my morning with a routine that helps me setup for the day. Now I must admit, not all my mornings are early but regardless of when I wake up I make it a point to start my day with this routine. The routine consists of guided meditation and affirmation where I start off my day by reciting a few *mantras* and then remind myself of some of the teachings of [Guru Gopal Das](https://x.com/gaurgopald) and [Dandapani](https://x.com/DandapaniLLC) that have resonated with me. I am still a work in progress and in no way claim to have mastered all of their teachings but being reminded of them at the beginning of my day, everyday helps me focus on the things that really matter.
+Everyone has a morning routine of some sort — whether by design or by default. Mine isn’t always early, but it’s intentional. No matter when I wake up, I try to begin with a few quiet moments of guided meditation and affirmation. I recite a *mantra* and then remind myself of some of the teachings of [Guru Gopal Das](https://x.com/gaurgopald) and [Dandapani](https://x.com/DandapaniLLC) that have resonated with me. I’m far from mastering their teachings, but returning to them each morning helps me focus on what truly matters.
 
 <img src="{{ site.url }}/assets/lake-como.jpg" title="Lake Como" width="750" height="400"/>
 

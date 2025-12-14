@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Think Docker! Think Security!
+title: Think Docker, Think Security
 date: '2016-11-07T07:23:00.000-08:00'
 author: Hemant Kumar
 tags: docker, microservices, security, devops
@@ -14,11 +14,11 @@ Docker allows you to completely abstract the underlying operating system and run
 
 I have been using Docker for local development, testing and for running apps in production. Docker is pretty swift to get started with, allows rapid app development, setting up builds and running tests in a repeatable and consistent manner. You can get an application running on your local machine with all its dependencies (web servers, databases) in fairly quick time. Does that mean you ship your machine to production? Probably not! Because you are working with the Docker abstraction, do you need to worry about any underlying security risks, is it all taken care of or should you even care?
 
-## The basics
+## Isolation
 
 Docker is a virtualization technique used to create isolated environments called *containers* for running your applications. A container is quite like a VM but light-weight. It is a bare minimum linux machine with minimum packages installed which means it uses less CPU, less memory and less disk space than a full blown VM. Containers are more like application runtime environments that sit on top of the OS (Docker host) and create an isolated environment in which to run your application.
 
-At the very basic level Docker uses the resource isolation features of the Linux kernel such as **Namespaces** and **cgroups** to create the walls between containers and other processes running in the host.
+Docker uses the resource isolation features of the Linux kernel such as **Namespaces** and **cgroups** to create the walls between containers and other processes running in the host.
 
 - *Namesapces* control what processes can see. They allow resources to have separate values on the host and in the container; for example PID 1 inside a container is not PID 1 on the host.  However not all resources that a container has access to are *namespaced* i.e they are not isolated on the host and in the containers. Containers running on the same host still share the same operating system kernel and any kernel modules.
 
@@ -45,7 +45,7 @@ Linux Security Module is another layer of protection that sits on top of namespa
 
 ## Security challenges
 
-So what sort of security issues should you be worried about that could affect apps running inside containers? I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below. The following is not a comprehensive list but one that should get you thinking.
+I was at a GOTO conference in Stockholm earlier in the year and [Adrian Mout](https://twitter.com/adrianmouat) speaking on Docker security highlighted some security issues mentioned below, that could affect your apps running inside containers. The following is not a comprehensive list but one that should get you thinking.
 
 - ***Kernel exploits***: The kernel is shared amongst all the containers and the host. A flaw in the kernel could be exploited by a container process which will bring down the entire host.
 
@@ -69,7 +69,7 @@ Having gone through key Docker security issues, lets look at some ways to preven
 
 ### Run containers with
 
-* Minimum set of privileges (non admin). When a vulnerability is exploited, it generally provides the attacker with access and privileges equal to those of the application or process that has been compromised. Ensuring that containers operate with the least privileges and access required to get the job done reduces your exposure to risk. A docker container runs as root by default, if there is no user specified. Create a non privileged user and switch to it using a `USER` statement before an entrypoint script in the `Dockerfile`.
+* Least privilege (non admin). When a vulnerability is exploited, it generally provides the attacker with access and privileges equal to those of the application or process that has been compromised. Ensuring that containers operate with the least privileges and access required to get the job done reduces your exposure to risk. A docker container runs as root by default, if there is no user specified. Create a non privileged user and switch to it using a `USER` statement before an entrypoint script in the `Dockerfile`.
 
 * Limited file system (Readonly access). Prevents attackers from writing a script and tricking your application from running it. This can be done by passing `--read-only` flag to `docker run`.
 

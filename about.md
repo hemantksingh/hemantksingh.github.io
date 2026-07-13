@@ -22,11 +22,11 @@ Be it technology modernisation, Data and AI strategy, or just helping engineerin
 
 ### What I do
 
-I currently head up R&D at [Finova](https://www.finova.tech/). I've spent most of my career modernising legacy tech and building engineering and data teams — across financial services, the public sector and healthcare — and that's taught me how to get teams delivering at pace while keeping governance and security front of mind.
+I currently head up R&D at [Finova](https://www.finova.tech/). I've spent most of my career modernising legacy tech and building engineering and data teams - across financial services, the public sector and healthcare - and that's taught me how to get teams delivering at pace while keeping governance and security front of mind.
 
-Before Finova, I built products at SAAS companies and helped organisations transform at IT consultancies, most recently as an Engineering Manager at Accenture, where I guided client executives through cloud migrations and tech strategy, and ran a security community of practice to develop cybersecurity skills across Accenture UK engineering.
+Before Finova, I built products at SAAS companies and helped organisations transform at IT consultancies, most recently at Accenture, where I guided client executives through modernisation, data and tech strategy, and ran a security community of practice to develop cybersecurity skills across Accenture UK engineering.
 
-I'm interested in creating environments where experimentation, learning, curiosity and a bit of bravery are encouraged — spaces where it's safe to ask questions, and where "that's how it's always worked" is a red flag, not a reason. I like keeping up with what's new, but I pick technology because the evidence says it solves a problem, not because it's on a conference slide. I also write and speak about designing, testing and securing software. Amidst rambling about stuff I also manage to write some code which is available on my [GitHub](https://github.com/hemantksingh) page. It has a bunch of things, from open source contributions to [what I am currently learning and experimenting](https://github.com/hemantksingh/messup-learn) with.
+I'm interested in creating environments where experimentation, learning, curiosity and a bit of bravery are encouraged - spaces where it's safe to ask questions, and where "that's how it's always worked" is a red flag, not a reason. I like keeping up with what's new, but I pick technology because the evidence says it solves a problem, not because it's on a conference slide. I also write and speak about designing, testing and securing software. Amidst rambling about stuff I also manage to write some code which is available on my [GitHub](https://github.com/hemantksingh) page. It has a bunch of things, from open source contributions to [what I am currently learning and experimenting](https://github.com/hemantksingh/messup-learn) with.
 
 ### Beyond work
 

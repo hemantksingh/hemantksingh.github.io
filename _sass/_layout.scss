@@ -345,3 +345,81 @@
         }
     }
 }
+
+
+
+/**
+ * Home page
+ */
+.home-hero {
+    margin-top: $spacing-unit / 2;
+
+    h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+        line-height: 1.15;
+        margin-bottom: $spacing-unit / 2;
+    }
+}
+
+.home-cta {
+    display: flex;
+    gap: $spacing-unit / 2;
+    margin: $spacing-unit 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 5px;
+    background-color: $brand-color;
+    border: 1px solid $brand-color;
+    color: #fff;
+    text-align: center;
+
+    &:visited {
+        color: #fff;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: darken($brand-color, 8%);
+    }
+}
+
+.cta-button--secondary {
+    background-color: transparent;
+    color: $brand-color;
+
+    &:visited {
+        color: $brand-color;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: darken($brand-color, 15%);
+    }
+}
+
+.post-discuss {
+    margin-top: $spacing-unit;
+    padding-top: $spacing-unit / 2;
+    border-top: 1px solid $grey-color-light;
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+@include media-query($on-palm) {
+    .home-hero h1 {
+        font-size: 28px;
+    }
+
+    .home-cta {
+        flex-direction: column;
+
+        .cta-button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}

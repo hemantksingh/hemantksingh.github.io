@@ -1,8 +1,10 @@
 # Running the website locally
 
 ```sh
-docker run -it -v $(pwd):/srv/jekyll -p 3000:4000 jekyll/jekyll:3.5 jekyll serve
+docker run -it -v $(pwd):/site -w /site -p 3000:4000 ruby:3.3 sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
 ```
+
+The `Gemfile` pins the `github-pages` gem, so the local build uses the same Jekyll version and plugins (including `jekyll-seo-tag` and `jekyll-redirect-from`) as GitHub Pages.
 
 The website can then be accessed on <http://localhost:3000>
 

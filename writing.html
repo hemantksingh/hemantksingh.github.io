@@ -1,0 +1,26 @@
+---
+layout: page
+title: Writing
+permalink: /writing/
+description: Lessons I've learnt while writing code, grappling with engineering problems and helping teams deliver — with the occasional reflection on life.
+redirect_from:
+  - /kodekitab/
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories.first %} • {{ post.categories.first }}{% endif %}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

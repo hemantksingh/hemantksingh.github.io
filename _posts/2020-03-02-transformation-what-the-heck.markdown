@@ -25,7 +25,7 @@ Driving business change through agile transformation is modelled around aligning
 * customer - manage stakeholder expectations and improve product decision making by factoring in
   * [opportunity cost](https://www.investopedia.com/terms/o/opportunitycost.asp) - explore multiple options to understand the potential missed opportunities foregone by choosing one option over another.
   * [cost of delay](http://blackswanfarming.com/cost-of-delay/) - ensure product decisions are made not just by understanding the value of something but also its urgency.
-* money  - move from annual investment cycles to [beyond budgeting](https://bbrt.org/what-is-beyond-budgeting/), switch from [cost accounting to throughput accounting](http://www.informit.com/articles/article.aspx?p=169495&seqNum=12)
+* money  - move from annual investment cycles to [beyond budgeting](https://bbrt.org/), switch from [cost accounting to throughput accounting](http://www.informit.com/articles/article.aspx?p=169495&seqNum=12)
 * organisation - changing the organisation structure and culture to optimize for delivering value to your customers
 
 Simply put agile at scale means breaking up large projects into small pieces, so you can release to the market faster, run experiments, get customer feedback and deliver something that the market wants rather than deliver what you think that they may want. This focus on delivering quickly in small increments reduces risk. An all or nothing approach is required if you are launching a rocket into space, not when you are delivering an improvement over your existing website.

@@ -6,8 +6,6 @@ permalink: /about/
 
 <div class="about-hero">
   <div class="about-hero-text" markdown="1">
-<p class="about-eyebrow">Engineering, Data, AI &amp; Security</p>
-
 ## Hi, I'm Hemant :)
 
 <p class="about-lede">A techie based in Manchester. Working in technology for over 15 years, I care about how software is built, who builds it, and its potential to improve lives.</p>

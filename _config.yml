@@ -1,13 +1,56 @@
 # Site settings
 title: Hemant Kumar
-description: > # this means to ignore newlines until "baseurl:"
+tagline: "Engineering, Data, AI & Security"
+description: "A techie in Manchester, heading up R&D at Finova. Writing about building software, data and AI — and the teams and people that make them work."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://hemantkumar.net" # the base hostname & protocol for your site
+author:
+  name: Hemant Kumar
+  twitter: _hemantksingh
 twitter_username: _hemantksingh
 github_username:  hemantksingh
 linkedin_username: hemantkrsingh
 footer: © Hemant Kumar | Hosted by GitHub and powered by Jekyll
 markdown: kramdown
 permalink: /:title.html
+
+# jekyll-seo-tag settings
+twitter:
+  username: _hemantksingh
+  card: summary_large_image
+social:
+  name: Hemant Kumar
+  links:
+    - https://www.linkedin.com/in/hemantkrsingh
+    - https://github.com/hemantksingh
+    - https://twitter.com/_hemantksingh
+logo: /assets/hk-portrait.jpg
+
+# Default social sharing image (og:image / twitter:image) for every page
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/hk-social-card.jpg
+
+# Privacy-friendly analytics (https://www.goatcounter.com). Register a free
+# account and set your code here to enable; nothing loads until it is set.
+# goatcounter_code: hemantk
+
+# Primary call to action. Set this to the LinkedIn newsletter subscribe URL
+# once the newsletter exists; until then the homepage CTA falls back to the
+# LinkedIn profile.
+# newsletter_url: https://www.linkedin.com/newsletters/...
+
+# Curated navigation — pages appear in the header only if listed here
+nav_pages:
+  - title: About
+    url: /about/
+  - title: Writing
+    url: /writing/
+  - title: Life
+    url: /life/
+
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag

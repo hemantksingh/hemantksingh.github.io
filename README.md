@@ -1,12 +1,25 @@
 # Running the website locally
 
+## Prerequisites
+
+* [Docker CLI](https://docs.docker.com/reference/cli/docker/) — used to run Jekyll in a container, so no local Ruby setup is needed. Only the client CLI is required (`brew install docker`); the daemon is provided by colima.
+* [colima](https://github.com/abiosoft/colima) — a lightweight Linux VM that provides the Docker daemon on macOS (`brew install colima`), as a free alternative to Docker Desktop. Its docker context is selected automatically on first start.
+* `make` — ships with the Xcode Command Line Tools on macOS.
+
+## Serving the site
+
 ```sh
-docker run -it -v $(pwd):/site -w /site -p 3000:4000 ruby:3.3 sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+make            # or: make serve PORT=3000
 ```
 
-The `Gemfile` pins the `github-pages` gem, so the local build uses the same Jekyll version and plugins (including `jekyll-seo-tag` and `jekyll-redirect-from`) as GitHub Pages.
+The website can then be accessed on <http://localhost:4000> (or the port you chose).
 
-The website can then be accessed on <http://localhost:3000>
+The `serve` target starts colima if it isn't already running, then serves the site with Jekyll in a `ruby:3.3` container. Notes:
+
+* The host and container ports must match. In development `jekyll serve` rewrites `site.url` to the local server address (`http://localhost:4000`), and the site references images via `{{ site.url }}` — with a mismatched mapping (e.g. `-p 3000:4000`) the pages load but the images 404. The Makefile keeps the two in sync via the `PORT` variable.
+* The `hk_site_bundle` named Docker volume caches the installed gems, so `bundle install` is only slow on the first run.
+* The `Gemfile` pins the `github-pages` gem, so the local build uses the same Jekyll version and plugins (including `jekyll-seo-tag` and `jekyll-redirect-from`) as GitHub Pages.
+* The serve command includes `--force_polling` because file-watch events sometimes don't cross the macOS bind mount.
 
 ## Domain configuration
 

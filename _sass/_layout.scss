@@ -362,6 +362,16 @@
     }
 }
 
+.home-hero-photo {
+    flex-basis: 30%;
+
+    img {
+        border-radius: 50%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+}
+
 .home-cta {
     display: flex;
     gap: $spacing-unit / 2;
@@ -412,6 +422,15 @@
 @include media-query($on-palm) {
     .home-hero h1 {
         font-size: 28px;
+    }
+
+    .home-hero-photo {
+        width: 200px;
+        margin: 0 auto;
+
+        img {
+            max-height: none;
+        }
     }
 
     .home-cta {

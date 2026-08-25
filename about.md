@@ -20,7 +20,7 @@ Be it technology modernisation, Data and AI strategy, or just helping engineerin
 
 ### What I do
 
-I currently head up R&D at [Finova](https://www.finova.tech/), where we're building next generation of AI enabled mortgage lending products. I've spent most of my career modernising legacy tech and building engineering and data teams - across financial services, the public sector and healthcare - and that's taught me how to get teams delivering at pace while keeping governance and security front of mind. If all that unglamorous untangling of legacy systems left me with one conviction, it's that modernisation is what makes innovation possible - you can't build what's next on a platform stuck in the past.
+I currently head up R&D at [Finova](https://www.finova.tech/), where we're building the next generation of AI-enabled mortgage lending products. I've spent most of my career modernising legacy tech and building engineering and data teams - across financial services, the public sector and healthcare - and that's taught me how to get teams delivering at pace while keeping governance and security front of mind. If all that unglamorous untangling of legacy systems left me with one conviction, it's that modernisation is what makes innovation possible - you can't build what's next on a platform stuck in the past.
 
 Before Finova, I built products at SaaS companies and helped organisations transform at global consultancies, most recently at Accenture, where I guided client executives through modernisation, data and tech strategy, and ran a security community of practice to develop cybersecurity skills across Accenture UK engineering.
 
